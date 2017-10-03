@@ -80,6 +80,12 @@
     <Compile Include="ContpaqiReporteSaldosMovtos.Designer.cs">
       <DependentUpon>ContpaqiReporteSaldosMovtos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FacturaPedidoComercial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacturaPedidoComercial.Designer.cs">
+      <DependentUpon>FacturaPedidoComercial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,9 @@
     <EmbeddedResource Include="ContpaqiReporteSaldosMovtos.resx">
       <DependentUpon>ContpaqiReporteSaldosMovtos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FacturaPedidoComercial.resx">
+      <DependentUpon>FacturaPedidoComercial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,19 +197,19 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <COMReference Include="Microsoft.Office.Interop.Excel">
-      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>8</VersionMinor>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
       <Lcid>0</Lcid>
       <WrapperTool>primary</WrapperTool>
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
-    <COMReference Include="Microsoft.Office.Interop.Word">
-      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
-      <VersionMajor>8</VersionMajor>
-      <VersionMinor>6</VersionMinor>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>7</VersionMinor>
       <Lcid>0</Lcid>
       <WrapperTool>primary</WrapperTool>
       <Isolated>False</Isolated>
