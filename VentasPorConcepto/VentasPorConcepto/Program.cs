@@ -18,7 +18,8 @@ namespace VentasPorConcepto
             //Application.Run(new InventarioCapas());
             //Application.Run(new ContpaqiReporteSaldosMovtos());
             //Application.Run(new Form1());
-            Application.Run(new ReporteNominas());
+            //Application.Run(new ReporteNominas());
+            Application.Run(new FacturaPedidoComercial());
         }
     }
 }

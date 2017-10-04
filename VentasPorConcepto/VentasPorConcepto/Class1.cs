@@ -9,6 +9,8 @@ using System.IO;
 using System.Data;
 using MyExcel = Microsoft.Office.Interop.Excel;
 using System.Drawing;
+using System.Data.SqlClient;
+using LibreriaDoctos;
 
 namespace VentasPorConcepto
 {
@@ -84,9 +86,14 @@ namespace VentasPorConcepto
     
     class Class1
     {
+        
+        ClassConexion lcon = new ClassConexion();
+
         public string llaveregistry = "SOFTWARE\\Computación en Acción, SA CV\\AdminPAQ";
         public OleDbConnection _conexion;
         private DataTable DatosFacturaAbono = null;
+
+        private DataTable DatosReporte = null;
 
         public List<RegConcepto> _RegClasificaciones = new List<RegConcepto>();
 
@@ -195,6 +202,10 @@ namespace VentasPorConcepto
 
 
         }
+
+
+        
+
         public OleDbConnection mAbrirRutaGlobal(out string amensaje)
         {
             amensaje = "";
@@ -275,6 +286,48 @@ namespace VentasPorConcepto
             mySqlDataAdapter.Fill(ds);
 
             DatosFacturaAbono = ds.Tables[0];
+
+        }
+
+
+        public void mTraerInformacionComercial(StringBuilder lquery, string mEmpresa)
+        {
+            SqlConnection _conexion1 = new SqlConnection();
+                //            rutadestino = "c:\\compacw\\empresas\\adtala2";
+                string rutadestino = mEmpresa;
+
+                string sempresa = rutadestino.Substring(rutadestino.LastIndexOf("\\") + 1);
+
+                string server = Properties.Settings.Default.server;
+                string user = Properties.Settings.Default.user;
+                string pwd = Properties.Settings.Default.password;
+                //sempresa = GetSettingValueFromAppConfigForDLL("empresa");
+                //string lruta3 = obc.ToString();
+                string lruta4 = @rutadestino;
+                _conexion1 = new SqlConnection();
+                string Cadenaconexion1 = "data source =" + server + ";initial catalog = " + sempresa + ";user id = " + user + "; password = " + pwd + ";";
+                _conexion1.ConnectionString = Cadenaconexion1;
+                _conexion1.Open();
+
+
+
+
+                DataSet ds = new DataSet();
+
+            string lsql = lquery.ToString();
+            SqlDataAdapter mySqlDataAdapter = new SqlDataAdapter(lsql,_conexion1);
+            
+            
+
+            //mySqlDataAdapter.SelectCommand.Connection = _conexion1;
+
+            //mySqlDataAdapter.SelectCommand.Connection = _conexion1;
+            //mySqlDataAdapter.SelectCommand.CommandText = lsql;
+
+            mySqlDataAdapter.Fill(ds);
+
+            DatosReporte = ds.Tables[0];
+            _conexion1.Close();
 
         }
 
@@ -758,6 +811,122 @@ Cheque"	Devoluciones
             //listacapas.Clear();
             //listacapas = sortedlist;
 
+        }
+
+
+        public void mReportePedidoFacturaComercial(string mEmpresa, DateTime lfechai, DateTime lfechaf)
+        {
+            MyExcel.Workbook newWorkbook = mIniciarExcel();
+            int lrenglon = 6;
+            int lrengloninicial = 6;
+            int lrengloniniciaconcepto = 6;
+            int lrenglontempo = 6;
+            MyExcel.Worksheet sheet = newWorkbook.Sheets[1];
+
+            configuracionencabezadoPedidoFacturaComercial(sheet, mEmpresa, "Facturas y Pedidos", lrenglon, lfechai, lfechaf);
+
+            //mResetearrTotales();
+
+            string lconcepto = "";
+
+
+            string lcliente = "";
+            //sheet.get_Range("B" + lrengloninicial, "V" + lrengloninicial).Borders[MyExcel.XlBordersIndex.xlEdgeBottom].LineStyle = 1;
+            int lmismoconcepto = 0;
+            lrenglon += 1;
+            lrengloniniciaconcepto = lrenglon;
+            decimal dos, tres;
+            int lcolumna;
+            foreach (DataRow row in DatosReporte.Rows)
+            {
+                //Fecha	# pedidos	cliente	importe	pendiente de facturar	# de factura	cliente	importe	Impuesto	Retención	Total
+                // Prog.	Fecha	Folio	Proveedor	Producto	"Cantidad Solicitada"	"Cantidad Pendiente"
+
+                lcolumna = 1;
+                //sheet.Cells[lrenglon, lcolumna++].value = lrenglon; //Folio Cargo
+                DateTime dfecha =  DateTime.Parse(row["cfecha"].ToString().Trim());
+
+                DateTime dfechav = DateTime.Parse(row["CFECHAVENCIMIENTO"].ToString().Trim()); 
+                string fecha2 = dfecha.Day.ToString().PadLeft(2,'0') + "/" + dfecha.Month.ToString().PadLeft(2, '0') + "/" + dfecha.Year.ToString().PadLeft(4, '0');
+                string fechav = dfechav.Day.ToString().PadLeft(2, '0') + "/" + dfechav.Month.ToString().PadLeft(2, '0') + "/" + dfechav.Year.ToString().PadLeft(4, '0');
+
+
+                sheet.Cells[lrenglon, lcolumna++].value = row["CCODIGOCLIENTE"].ToString().Trim();
+                sheet.Cells[lrenglon, lcolumna++].value = row["CRAZONSOCIAL"].ToString().Trim(); //Serie Cargo
+
+                sheet.Cells[lrenglon, lcolumna++].value = row["CCODIGOAGENTE"].ToString().Trim(); 
+                sheet.Cells[lrenglon, lcolumna++].value = row["CNOMBREAGENTE"].ToString().Trim(); //Serie Cargo
+                sheet.Cells[lrenglon, lcolumna++].value = row["foliopedido"].ToString().Trim(); //Fecha Cargo
+                sheet.Cells[lrenglon, lcolumna++].value = "'" + fecha2; //C
+                sheet.Cells[lrenglon, lcolumna++].value = row["foliofactura"].ToString().Trim(); //C
+                sheet.Cells[lrenglon, lcolumna++].value = row["CCODIGOPRODUCTO"].ToString().Trim(); //C
+                sheet.Cells[lrenglon, lcolumna++].value = row["CNOMBREPRODUCTO"].ToString().Trim(); //C
+                sheet.Cells[lrenglon, lcolumna++].value = row["CVALORCLASIFICACION"].ToString().Trim(); //importe
+                sheet.Cells[lrenglon, lcolumna++].value = row["CNOMBREMONEDA"].ToString().Trim(); //pendiente de facturar
+
+                sheet.Cells[lrenglon, lcolumna++].value = row["CPRECIOCAPTURADO"].ToString().Trim(); //importe
+                sheet.Cells[lrenglon, lcolumna++].value = row["CUNIDADESCAPTURADAS"].ToString().Trim(); //pendiente de facturar
+                sheet.Cells[lrenglon, lcolumna++].value = row["cneto"].ToString().Trim(); //pendiente de facturar
+                sheet.Cells[lrenglon, lcolumna++].value = row["ctotal"].ToString().Trim(); //importe
+                sheet.Cells[lrenglon, lcolumna++].value = "'" + fechav;
+
+                sheet.get_Range("L" + lrenglon.ToString(), "N" + lrenglon.ToString()).Style = "Currency";
+
+                lrenglon++;
+
+
+            }
+            sheet.Cells.EntireColumn.AutoFit();
+            return;
+        }
+
+        private void configuracionencabezadoPedidoFacturaComercial(MyExcel.Worksheet sheet, string Empresa, string texto, int lrenglon, DateTime lfecha1, DateTime lfecha2)
+        {
+            EncabezadoEmpresa(sheet, Empresa, texto);
+            int lcolumna = 1;
+
+            sheet.Cells[1, 6].value = "Fecha Inicial";
+            sheet.Cells[2, 6].value = "Fecha Final";
+
+
+            
+            string fecha2 = lfecha1.Day.ToString().PadLeft(2, '0') + "/" + lfecha1.Month.ToString().PadLeft(2, '0') + "/" + lfecha1.Year.ToString().PadLeft(4, '0');
+            string fecha3 = lfecha2.Day.ToString().PadLeft(2, '0') + "/" + lfecha2.Month.ToString().PadLeft(2, '0') + "/" + lfecha2.Year.ToString().PadLeft(4, '0');
+
+            sheet.Cells[1, 7].value = "'" + fecha2;
+            sheet.Cells[2, 7].value = "'" + fecha3;
+
+
+
+            //            Codigo cliente	Descr Cliente	Codigo agente	Desc agente	pedido	Fecha factura	Nombre factura	codigo articolo (principal)	desc articolo	
+            //Classificacions	moneda ($ orPesos)	precio unitario	quantidad	precio total	TOTAL	fecha vencimiento
+
+
+
+            sheet.Cells[lrenglon, lcolumna++].value = "Codigo cliente";
+            sheet.Cells[lrenglon, lcolumna++].value = "Descr Cliente";
+            sheet.Cells[lrenglon, lcolumna++].value = "Codigo agente";
+            sheet.Cells[lrenglon, lcolumna++].value = "Desc agente";
+            sheet.Cells[lrenglon, lcolumna++].value = "pedido";
+            sheet.Cells[lrenglon, lcolumna++].value = "Fecha factura";
+
+            sheet.Cells[lrenglon, lcolumna++].value = "Nombre factura";
+
+            sheet.Cells[lrenglon, lcolumna++].value = "codigo articulo";
+            sheet.Cells[lrenglon, lcolumna++].value = "desc articulo";
+            sheet.Cells[lrenglon, lcolumna++].value = "Classificacions";
+            sheet.Cells[lrenglon, lcolumna++].value = "moneda";
+            sheet.Cells[lrenglon, lcolumna++].value = "precio unitario";
+            sheet.Cells[lrenglon, lcolumna++].value = "quantidad";
+            sheet.Cells[lrenglon, lcolumna++].value = "precio total";
+
+            sheet.Cells[lrenglon, lcolumna++].value = "TOTAL";
+            sheet.Cells[lrenglon, lcolumna++].value = "fecha vencimiento";
+
+            sheet.get_Range("A" + lrenglon, "P" + lrenglon).Borders[MyExcel.XlBordersIndex.xlInsideHorizontal].LineStyle = 1;
+            sheet.get_Range("A" + lrenglon, "P" + lrenglon).Borders[MyExcel.XlBordersIndex.xlInsideVertical].LineStyle = 1;
+            sheet.get_Range("A" + lrenglon, "P" + lrenglon).Borders[MyExcel.XlBordersIndex.xlEdgeBottom].LineStyle = 1;
+            sheet.get_Range("A" + lrenglon, "P" + lrenglon).Borders[MyExcel.XlBordersIndex.xlEdgeTop].LineStyle = 1;
         }
 
         public void mReporteInventarioCapas(string mEmpresa, string lfechai, string lfechaf)
