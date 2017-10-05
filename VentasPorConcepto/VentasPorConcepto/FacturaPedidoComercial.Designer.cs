@@ -46,9 +46,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(46, 215);
+            this.button1.Location = new System.Drawing.Point(33, 145);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(320, 23);
+            this.button1.Size = new System.Drawing.Size(605, 23);
             this.button1.TabIndex = 1;
             this.button1.Text = "Ejecutar Reporte";
             this.button1.UseVisualStyleBackColor = true;
@@ -98,14 +98,19 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(778, 262);
+            this.ClientSize = new System.Drawing.Size(683, 213);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.empresasComercial1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FacturaPedidoComercial";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FacturaPedidoComercial";
             this.Load += new System.EventHandler(this.FacturaPedidoComercial_Load);
             this.ResumeLayout(false);
