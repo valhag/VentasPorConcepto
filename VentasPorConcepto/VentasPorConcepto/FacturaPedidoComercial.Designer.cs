@@ -1,4 +1,6 @@
-﻿namespace VentasPorConcepto
+﻿
+
+namespace VentasPorConcepto
 {
     partial class FacturaPedidoComercial
     {
