@@ -89,22 +89,29 @@ select * from admMonedas
 
             StringBuilder lquery = new StringBuilder();
 
-            lquery.Append("select cl.ccodigocliente, cl.crazonsocial, a.CCODIGOAGENTE, a.CNOMBREAGENTE, dp.cfolio as foliopedido, d.CFECHA,d.CFOLIO as foliofactura,p.CCODIGOPRODUCTO, p.CNOMBREPRODUCTO, "); 
-lquery.Append("c.cvalorclasificacion, mon.CNOMBREMONEDA, m.CPRECIOCAPTURADO, m.CUNIDADESCAPTURADAS, m.cneto, m.ctotal, d.CFECHAVENCIMIENTO ");
+            lquery.Append("select cl.ccodigocliente, cl.crazonsocial, a.CCODIGOAGENTE, a.CNOMBREAGENTE, dp.cfolio as foliopedido, d.CFECHA,d.CFOLIO as foliofactura,p.CCODIGOPRODUCTO, p.CNOMBREPRODUCTO, ");
+            lquery.Append("c.cvalorclasificacion, mon.CNOMBREMONEDA, m.CPRECIOCAPTURADO, m.CUNIDADESCAPTURADAS, m.cneto, m.ctotal, d.CFECHAVENCIMIENTO, ");
+            lquery.Append("c2.cvalorclasificacion as cvalorclasificacion2 , c3.cvalorclasificacion as cvalorclasificacion3, c4.cvalorclasificacion as cvalorclasificacion4,c5.cvalorclasificacion as cvalorclasificacion5,c6.cvalorclasificacion as cvalorclasificacion6, ");
+            lquery.Append("m.cporcentajedescuento1, m.cdescuento1,m.Cimpuesto1 ");
             lquery.Append("from admmovimientos m ");
             lquery.Append("join admProductos p on m.CIDPRODUCTO = p.CIDPRODUCTO ");
             lquery.Append("join admDocumentos d on d.CIDDOCUMENTO = m.CIDDOCUMENTO ");
             lquery.Append("join admClientes cl on cl.CIDCLIENTEPROVEEDOR = d.CIDCLIENTEPROVEEDOR ");
             lquery.Append("join admAgentes a on a.CIDAGENTE = d.CIDAGENTE ");
             lquery.Append("join admClasificacionesValores c on c.CIDVALORCLASIFICACION = p.CIDVALORCLASIFICACION1 ");
+            lquery.Append("join admClasificacionesValores c2 on c2.CIDVALORCLASIFICACION = p.CIDVALORCLASIFICACION2 ");
+            lquery.Append("join admClasificacionesValores c3 on c3.CIDVALORCLASIFICACION = p.CIDVALORCLASIFICACION3 ");
+            lquery.Append("join admClasificacionesValores c4 on c4.CIDVALORCLASIFICACION = p.CIDVALORCLASIFICACION4 ");
+            lquery.Append("join admClasificacionesValores c5 on c5.CIDVALORCLASIFICACION = p.CIDVALORCLASIFICACION5 ");
+            lquery.Append("join admClasificacionesValores c6 on c6.CIDVALORCLASIFICACION = p.CIDVALORCLASIFICACION6 ");
             lquery.Append("join admMonedas mon on mon.CIDMONEDA = d.CIDMONEDA ");
             lquery.Append("left join admMovimientos mp on mp.CIDMOVIMIENTO = m.CIDMOVTOORIGEN ");
             lquery.Append("and mp.CIDDOCUMENTODE = 2 ");
             lquery.Append("left join admDocumentos dp on mp.CIDDOCUMENTO = dp.CIDDOCUMENTO ");
-            lquery.Append("and c.CIDCLASIFICACION = 25 ");
+            lquery.Append("and (c.CIDCLASIFICACION = 25  or c2.CIDCLASIFICACION = 26 or c3.CIDCLASIFICACION = 27 or c4.CIDCLASIFICACION = 28 or c5.CIDCLASIFICACION = 29 or c5.CIDCLASIFICACION = 30)");
             lquery.Append("where m.CIDDOCUMENTODE = 4 ");
             lquery.Append(" and d.ccancelado = 0 ");
-            lquery.Append(" and d.cfecha between '" + sfecha1 + "' and '" + sfecha2 + "' " );
+            lquery.Append(" and d.cfecha between '" + sfecha1 + "' and '" + sfecha2 + "' ");
             lquery.Append(" order by d.cfecha asc, d.CFOLIO asc ");
 
 //lquery.Append(" and dtos(d.cfecha) between '" + sfecha1 + "' and '" + sfecha2 + "' and d.ccancelado = 0 " );

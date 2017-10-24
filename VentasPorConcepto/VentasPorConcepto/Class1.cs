@@ -844,33 +844,49 @@ Cheque"	Devoluciones
 
                 lcolumna = 1;
                 //sheet.Cells[lrenglon, lcolumna++].value = lrenglon; //Folio Cargo
-                DateTime dfecha =  DateTime.Parse(row["cfecha"].ToString().Trim());
+                DateTime dfecha = DateTime.Parse(row["cfecha"].ToString().Trim());
 
-                DateTime dfechav = DateTime.Parse(row["CFECHAVENCIMIENTO"].ToString().Trim()); 
-                string fecha2 = dfecha.Day.ToString().PadLeft(2,'0') + "/" + dfecha.Month.ToString().PadLeft(2, '0') + "/" + dfecha.Year.ToString().PadLeft(4, '0');
+                DateTime dfechav = DateTime.Parse(row["CFECHAVENCIMIENTO"].ToString().Trim());
+                string fecha2 = dfecha.Day.ToString().PadLeft(2, '0') + "/" + dfecha.Month.ToString().PadLeft(2, '0') + "/" + dfecha.Year.ToString().PadLeft(4, '0');
                 string fechav = dfechav.Day.ToString().PadLeft(2, '0') + "/" + dfechav.Month.ToString().PadLeft(2, '0') + "/" + dfechav.Year.ToString().PadLeft(4, '0');
 
 
                 sheet.Cells[lrenglon, lcolumna++].value = row["CCODIGOCLIENTE"].ToString().Trim();
                 sheet.Cells[lrenglon, lcolumna++].value = row["CRAZONSOCIAL"].ToString().Trim(); //Serie Cargo
 
-                sheet.Cells[lrenglon, lcolumna++].value = row["CCODIGOAGENTE"].ToString().Trim(); 
+                sheet.Cells[lrenglon, lcolumna++].value = row["CCODIGOAGENTE"].ToString().Trim();
                 sheet.Cells[lrenglon, lcolumna++].value = row["CNOMBREAGENTE"].ToString().Trim(); //Serie Cargo
                 sheet.Cells[lrenglon, lcolumna++].value = row["foliopedido"].ToString().Trim(); //Fecha Cargo
                 sheet.Cells[lrenglon, lcolumna++].value = "'" + fecha2; //C
                 sheet.Cells[lrenglon, lcolumna++].value = row["foliofactura"].ToString().Trim(); //C
                 sheet.Cells[lrenglon, lcolumna++].value = row["CCODIGOPRODUCTO"].ToString().Trim(); //C
                 sheet.Cells[lrenglon, lcolumna++].value = row["CNOMBREPRODUCTO"].ToString().Trim(); //C
+
                 sheet.Cells[lrenglon, lcolumna++].value = row["CVALORCLASIFICACION"].ToString().Trim(); //importe
+                sheet.Cells[lrenglon, lcolumna++].value = row["CVALORCLASIFICACION2"].ToString().Trim(); //importe
+                sheet.Cells[lrenglon, lcolumna++].value = row["CVALORCLASIFICACION3"].ToString().Trim(); //importe
+                sheet.Cells[lrenglon, lcolumna++].value = row["CVALORCLASIFICACION4"].ToString().Trim(); //importe
+                sheet.Cells[lrenglon, lcolumna++].value = row["CVALORCLASIFICACION5"].ToString().Trim(); //importe
+                sheet.Cells[lrenglon, lcolumna++].value = row["CVALORCLASIFICACION6"].ToString().Trim(); //importe
+
                 sheet.Cells[lrenglon, lcolumna++].value = row["CNOMBREMONEDA"].ToString().Trim(); //pendiente de facturar
 
                 sheet.Cells[lrenglon, lcolumna++].value = row["CPRECIOCAPTURADO"].ToString().Trim(); //importe
+
+                sheet.Cells[lrenglon, lcolumna++].value = row["CPORCENTAJEDESCUENTO1"].ToString().Trim(); //importe
+
                 sheet.Cells[lrenglon, lcolumna++].value = row["CUNIDADESCAPTURADAS"].ToString().Trim(); //pendiente de facturar
                 sheet.Cells[lrenglon, lcolumna++].value = row["cneto"].ToString().Trim(); //pendiente de facturar
+
+
+                sheet.Cells[lrenglon, lcolumna++].value = row["CDESCUENTO1"].ToString().Trim(); //pendiente de facturar
+                sheet.Cells[lrenglon, lcolumna++].value = row["CIMPUESTO1"].ToString().Trim(); //pendiente de facturar
+
+
                 sheet.Cells[lrenglon, lcolumna++].value = row["ctotal"].ToString().Trim(); //importe
                 sheet.Cells[lrenglon, lcolumna++].value = "'" + fechav;
 
-                sheet.get_Range("L" + lrenglon.ToString(), "N" + lrenglon.ToString()).Style = "Currency";
+                sheet.get_Range("Q" + lrenglon.ToString(), "X" + lrenglon.ToString()).Style = "Currency";
 
                 lrenglon++;
 
@@ -889,7 +905,7 @@ Cheque"	Devoluciones
             sheet.Cells[2, 6].value = "Fecha Final";
 
 
-            
+
             string fecha2 = lfecha1.Day.ToString().PadLeft(2, '0') + "/" + lfecha1.Month.ToString().PadLeft(2, '0') + "/" + lfecha1.Year.ToString().PadLeft(4, '0');
             string fecha3 = lfecha2.Day.ToString().PadLeft(2, '0') + "/" + lfecha2.Month.ToString().PadLeft(2, '0') + "/" + lfecha2.Year.ToString().PadLeft(4, '0');
 
@@ -903,30 +919,43 @@ Cheque"	Devoluciones
 
 
 
-            sheet.Cells[lrenglon, lcolumna++].value = "Codigo cliente";
-            sheet.Cells[lrenglon, lcolumna++].value = "Descr Cliente";
-            sheet.Cells[lrenglon, lcolumna++].value = "Codigo agente";
-            sheet.Cells[lrenglon, lcolumna++].value = "Desc agente";
-            sheet.Cells[lrenglon, lcolumna++].value = "pedido";
-            sheet.Cells[lrenglon, lcolumna++].value = "Fecha factura";
+            sheet.Cells[lrenglon, lcolumna++].value = "Codigo Cliente / Codice Cliente";
+            sheet.Cells[lrenglon, lcolumna++].value = "Nombre Cliente / Cliente";
+            sheet.Cells[lrenglon, lcolumna++].value = "Codigo Agente / Codice Agente";
+            sheet.Cells[lrenglon, lcolumna++].value = "Agente / Agente";
+            sheet.Cells[lrenglon, lcolumna++].value = "Pedido / Comanda";
+            sheet.Cells[lrenglon, lcolumna++].value = "Fecha Factura / Data Fattura";
 
-            sheet.Cells[lrenglon, lcolumna++].value = "Nombre factura";
+            sheet.Cells[lrenglon, lcolumna++].value = "Número Factura / Numero Fattura";
 
-            sheet.Cells[lrenglon, lcolumna++].value = "codigo articulo";
-            sheet.Cells[lrenglon, lcolumna++].value = "desc articulo";
-            sheet.Cells[lrenglon, lcolumna++].value = "Classificacions";
-            sheet.Cells[lrenglon, lcolumna++].value = "moneda";
-            sheet.Cells[lrenglon, lcolumna++].value = "precio unitario";
-            sheet.Cells[lrenglon, lcolumna++].value = "quantidad";
-            sheet.Cells[lrenglon, lcolumna++].value = "precio total";
+            sheet.Cells[lrenglon, lcolumna++].value = "Codigo Articulo / Codice Articolo";
+            sheet.Cells[lrenglon, lcolumna++].value = "Descripcion Articulo / Descrizione Articolo";
+            sheet.Cells[lrenglon, lcolumna++].value = "Clasificación 1/ Classificazione 1";
+            sheet.Cells[lrenglon, lcolumna++].value = "Clasificación 2/ Classificazione 2";
+            sheet.Cells[lrenglon, lcolumna++].value = "Clasificación 3/ Classificazione 3";
+            sheet.Cells[lrenglon, lcolumna++].value = "Clasificación 4/ Classificazione 4";
+            sheet.Cells[lrenglon, lcolumna++].value = "Clasificación 5/ Classificazione 5";
+            sheet.Cells[lrenglon, lcolumna++].value = "Clasificación 6/ Classificazione 6";
+            sheet.Cells[lrenglon, lcolumna++].value = "Moneda / Moneta";
+            sheet.Cells[lrenglon, lcolumna++].value = "Precio Unitario / Prezzo Unitario";
 
-            sheet.Cells[lrenglon, lcolumna++].value = "TOTAL";
-            sheet.Cells[lrenglon, lcolumna++].value = "fecha vencimiento";
+            sheet.Cells[lrenglon, lcolumna++].value = "% Descuento / % Sconto";
+            // % Descuento / % Sconto
 
-            sheet.get_Range("A" + lrenglon, "P" + lrenglon).Borders[MyExcel.XlBordersIndex.xlInsideHorizontal].LineStyle = 1;
-            sheet.get_Range("A" + lrenglon, "P" + lrenglon).Borders[MyExcel.XlBordersIndex.xlInsideVertical].LineStyle = 1;
-            sheet.get_Range("A" + lrenglon, "P" + lrenglon).Borders[MyExcel.XlBordersIndex.xlEdgeBottom].LineStyle = 1;
-            sheet.get_Range("A" + lrenglon, "P" + lrenglon).Borders[MyExcel.XlBordersIndex.xlEdgeTop].LineStyle = 1;
+            sheet.Cells[lrenglon, lcolumna++].value = "Cantidad / Quantità";
+            sheet.Cells[lrenglon, lcolumna++].value = "Importe Total / Totale";
+
+            sheet.Cells[lrenglon, lcolumna++].value = "Importe Descuento / Quantità scontata";
+            sheet.Cells[lrenglon, lcolumna++].value = "I.V.A";
+            //
+            //  
+            sheet.Cells[lrenglon, lcolumna++].value = "Total Factura / Totale fattura";
+            sheet.Cells[lrenglon, lcolumna++].value = "Fecha Vencimiento / Data di Scadenza";
+
+            sheet.get_Range("A" + lrenglon, "X" + lrenglon).Borders[MyExcel.XlBordersIndex.xlInsideHorizontal].LineStyle = 1;
+            sheet.get_Range("A" + lrenglon, "X" + lrenglon).Borders[MyExcel.XlBordersIndex.xlInsideVertical].LineStyle = 1;
+            sheet.get_Range("A" + lrenglon, "X" + lrenglon).Borders[MyExcel.XlBordersIndex.xlEdgeBottom].LineStyle = 1;
+            sheet.get_Range("A" + lrenglon, "X" + lrenglon).Borders[MyExcel.XlBordersIndex.xlEdgeTop].LineStyle = 1;
         }
 
         public void mReporteInventarioCapas(string mEmpresa, string lfechai, string lfechaf)
