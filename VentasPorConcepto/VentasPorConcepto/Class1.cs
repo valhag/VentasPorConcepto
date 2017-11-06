@@ -153,6 +153,138 @@ namespace VentasPorConcepto
 
         }
 
+
+        public void mTestFotos()
+        {
+            MyExcel.Workbook newWorkbook = mIniciarExcel();
+            int lrenglon = 6;
+            int lrengloninicial = 6;
+            int lrengloniniciaconcepto = 6;
+            int lrenglontempo = 6;
+            MyExcel.Worksheet sheet = newWorkbook.Sheets[1];
+
+
+            string ruta = @"C:\Users\victor\Pictures\Saved Pictures";
+
+            sheet.Rows[lrenglon].RowHeight = 100;
+            sheet.Columns["M"].ColumnWidth = 50;
+
+            string lstrPicture = ruta + @"\azael2.jpg";
+            //sheet.Cells[5,5].Pictures().Insert(lstrPicture);
+
+
+            sheet.Rows[lrenglon].RowHeight = 100;
+            sheet.Columns["M"].ColumnWidth = 50;
+
+            Microsoft.Office.Interop.Excel.Range oRange = (Microsoft.Office.Interop.Excel.Range)sheet.Cells[lrenglon, 13];
+            Microsoft.Office.Interop.Excel.Range oRange1 = (Microsoft.Office.Interop.Excel.Range)sheet.Cells[lrenglon+1, 13];
+            float Left = (float)((double)oRange.Left);
+            float Top = (float)((double)oRange.Top);
+            const float ImageSize = 64;
+
+            float height = (float)((double)oRange1.Top - (double)oRange.Top);
+            sheet.Shapes.AddPicture(lstrPicture, Microsoft.Office.Core.MsoTriState.msoFalse, Microsoft.Office.Core.MsoTriState.msoCTrue, Left+75, Top,ImageSize, height);
+
+            lrenglon++;
+            lstrPicture = ruta + @"\azael3.jpg";
+
+
+            sheet.Rows[lrenglon].RowHeight = 100;
+            sheet.Columns["M"].ColumnWidth = 50;
+
+            oRange = (Microsoft.Office.Interop.Excel.Range)sheet.Cells[lrenglon, 13];
+            oRange1 = (Microsoft.Office.Interop.Excel.Range)sheet.Cells[lrenglon + 1, 13];
+            Left = (float)((double)oRange.Left);
+            Top = (float)((double)oRange.Top);
+            
+
+            height = (float)((double)oRange1.Top - (double)oRange.Top);
+            sheet.Shapes.AddPicture(lstrPicture, Microsoft.Office.Core.MsoTriState.msoFalse, Microsoft.Office.Core.MsoTriState.msoCTrue, Left + 75, Top, ImageSize, height);
+
+
+
+
+
+            /*
+            sheet.Cells[lrenglon, lcolumna++].value = row["CCODIGOCLIENTE"].ToString().Trim();
+
+            Rows(CStr(lRenglon)).RowHeight = 100
+                Columns("M").ColumnWidth = 50
+
+
+            //configuracionencabezadoPedidoFacturaComercial(sheet, mEmpresa, "Facturas y Pedidos", lrenglon, lfechai, lfechaf);
+
+            //mResetearrTotales();
+
+            string lconcepto = "";
+
+
+            string lcliente = "";
+            //sheet.get_Range("B" + lrengloninicial, "V" + lrengloninicial).Borders[MyExcel.XlBordersIndex.xlEdgeBottom].LineStyle = 1;
+            int lmismoconcepto = 0;
+            lrenglon += 1;
+            lrengloniniciaconcepto = lrenglon;
+            decimal dos, tres;
+            int lcolumna;
+            foreach (DataRow row in DatosReporte.Rows)
+            {
+                //Fecha	# pedidos	cliente	importe	pendiente de facturar	# de factura	cliente	importe	Impuesto	Retención	Total
+                // Prog.	Fecha	Folio	Proveedor	Producto	"Cantidad Solicitada"	"Cantidad Pendiente"
+
+                lcolumna = 1;
+                //sheet.Cells[lrenglon, lcolumna++].value = lrenglon; //Folio Cargo
+                DateTime dfecha = DateTime.Parse(row["cfecha"].ToString().Trim());
+
+                DateTime dfechav = DateTime.Parse(row["CFECHAVENCIMIENTO"].ToString().Trim());
+                string fecha2 = dfecha.Day.ToString().PadLeft(2, '0') + "/" + dfecha.Month.ToString().PadLeft(2, '0') + "/" + dfecha.Year.ToString().PadLeft(4, '0');
+                string fechav = dfechav.Day.ToString().PadLeft(2, '0') + "/" + dfechav.Month.ToString().PadLeft(2, '0') + "/" + dfechav.Year.ToString().PadLeft(4, '0');
+
+
+                sheet.Cells[lrenglon, lcolumna++].value = row["CCODIGOCLIENTE"].ToString().Trim();
+                sheet.Cells[lrenglon, lcolumna++].value = row["CRAZONSOCIAL"].ToString().Trim(); //Serie Cargo
+
+                sheet.Cells[lrenglon, lcolumna++].value = row["CCODIGOAGENTE"].ToString().Trim();
+                sheet.Cells[lrenglon, lcolumna++].value = row["CNOMBREAGENTE"].ToString().Trim(); //Serie Cargo
+                sheet.Cells[lrenglon, lcolumna++].value = row["foliopedido"].ToString().Trim(); //Fecha Cargo
+                sheet.Cells[lrenglon, lcolumna++].value = "'" + fecha2; //C
+                sheet.Cells[lrenglon, lcolumna++].value = row["foliofactura"].ToString().Trim(); //C
+                sheet.Cells[lrenglon, lcolumna++].value = row["CCODIGOPRODUCTO"].ToString().Trim(); //C
+                sheet.Cells[lrenglon, lcolumna++].value = row["CNOMBREPRODUCTO"].ToString().Trim(); //C
+
+                sheet.Cells[lrenglon, lcolumna++].value = row["CVALORCLASIFICACION"].ToString().Trim(); //importe
+                sheet.Cells[lrenglon, lcolumna++].value = row["CVALORCLASIFICACION2"].ToString().Trim(); //importe
+                sheet.Cells[lrenglon, lcolumna++].value = row["CVALORCLASIFICACION3"].ToString().Trim(); //importe
+                sheet.Cells[lrenglon, lcolumna++].value = row["CVALORCLASIFICACION4"].ToString().Trim(); //importe
+                sheet.Cells[lrenglon, lcolumna++].value = row["CVALORCLASIFICACION5"].ToString().Trim(); //importe
+                sheet.Cells[lrenglon, lcolumna++].value = row["CVALORCLASIFICACION6"].ToString().Trim(); //importe
+
+                sheet.Cells[lrenglon, lcolumna++].value = row["CNOMBREMONEDA"].ToString().Trim(); //pendiente de facturar
+
+                sheet.Cells[lrenglon, lcolumna++].value = row["CPRECIOCAPTURADO"].ToString().Trim(); //importe
+
+                sheet.Cells[lrenglon, lcolumna++].value = row["CPORCENTAJEDESCUENTO1"].ToString().Trim(); //importe
+
+                sheet.Cells[lrenglon, lcolumna++].value = row["CUNIDADESCAPTURADAS"].ToString().Trim(); //pendiente de facturar
+                sheet.Cells[lrenglon, lcolumna++].value = row["cneto"].ToString().Trim(); //pendiente de facturar
+
+
+                sheet.Cells[lrenglon, lcolumna++].value = row["CDESCUENTO1"].ToString().Trim(); //pendiente de facturar
+                sheet.Cells[lrenglon, lcolumna++].value = row["CIMPUESTO1"].ToString().Trim(); //pendiente de facturar
+
+
+                sheet.Cells[lrenglon, lcolumna++].value = row["ctotal"].ToString().Trim(); //importe
+                sheet.Cells[lrenglon, lcolumna++].value = "'" + fechav;
+
+                sheet.get_Range("Q" + lrenglon.ToString(), "X" + lrenglon.ToString()).Style = "Currency";
+
+                lrenglon++;
+
+
+            }
+            sheet.Cells.EntireColumn.AutoFit();*/
+            return;
+        }
+
         public List<RegEmpresa> mCargarEmpresas(out string amensaje)
         {
 
