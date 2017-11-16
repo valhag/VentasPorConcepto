@@ -29,26 +29,37 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
+            this.seleccionEmpresa1 = new InterfazArchivoAdmin.SeleccionEmpresa();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(114, 220);
+            this.button1.Location = new System.Drawing.Point(12, 90);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(359, 23);
+            this.button1.Size = new System.Drawing.Size(542, 23);
             this.button1.TabIndex = 2;
             this.button1.Text = "Ejecutar Reporte";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // seleccionEmpresa1
+            // 
+            this.seleccionEmpresa1.Location = new System.Drawing.Point(11, 24);
+            this.seleccionEmpresa1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.seleccionEmpresa1.Name = "seleccionEmpresa1";
+            this.seleccionEmpresa1.Size = new System.Drawing.Size(557, 61);
+            this.seleccionEmpresa1.TabIndex = 3;
+            // 
             // ReporteFotos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(551, 330);
+            this.ClientSize = new System.Drawing.Size(579, 129);
+            this.Controls.Add(this.seleccionEmpresa1);
             this.Controls.Add(this.button1);
             this.Name = "ReporteFotos";
             this.Text = "ReporteFotos";
+            this.Load += new System.EventHandler(this.ReporteFotos_Load);
             this.ResumeLayout(false);
 
         }
@@ -56,5 +67,6 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
+        private InterfazArchivoAdmin.SeleccionEmpresa seleccionEmpresa1;
     }
 }
