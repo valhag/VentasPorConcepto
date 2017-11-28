@@ -20,11 +20,11 @@ namespace VentasPorConcepto
         private void button1_Click(object sender, EventArgs e)
         {
 
-           /* DateTime lfecha = dateTimePicker1.Value;
+            DateTime lfecha = dateTimePicker1.Value;
             string sfecha1 = lfecha.Year.ToString() + lfecha.Month.ToString().PadLeft(2, '0') + lfecha.Day.ToString().PadLeft(2, '0');
 
             DateTime lfecha2 = dateTimePicker2.Value;
-            string sfecha2 = lfecha2.Year.ToString() + lfecha2.Month.ToString().PadLeft(2, '0') + lfecha2.Day.ToString().PadLeft(2, '0');*/
+            string sfecha2 = lfecha2.Year.ToString() + lfecha2.Month.ToString().PadLeft(2, '0') + lfecha2.Day.ToString().PadLeft(2, '0');
 
             string lquery;
 
@@ -38,7 +38,8 @@ namespace VentasPorConcepto
 " join mgw10005 m5 on m5.cidprodu01 = m10.cidprodu01" + 
 " join mgw10026 m26 on m5.cidunida01 = m26.cidunidad" + 
 " where m8.ciddocum02 = 17 and m8.ccancelado = 0 " +
-" and m10.cunidade03 > 0 " + 
+" and m10.cunidade03 > 0 " +
+" and dtos(m8.cfecha) between '" + sfecha1 + "' and '" + sfecha2 + "'" +
 " order by m2.ccodigoc01";
 
 
