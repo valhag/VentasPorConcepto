@@ -374,6 +374,20 @@ namespace VentasPorConcepto
 
         }
 
+        public MyExcel.Workbook mIniciarExcel(string ruta)
+        {
+            MyExcel.Application excelApp = new MyExcel.Application();
+            excelApp.Visible = true;
+            //MyExcel.Workbook newWorkbook = excelApp.Workbooks.Add();
+
+            //MyApp.Visible = false;
+            MyExcel.Workbook newWorkbook = excelApp.Workbooks.Open(@ruta);
+
+            //newWorkbook.Worksheets.Add();
+            return newWorkbook;
+
+        }
+
 
         public void mTraerDataset(List<string> lquery, string mEmpresa)
         {
@@ -1352,9 +1366,9 @@ Cheque"	Devoluciones
         }
 
 
-        public void mReporteFotos(string mEmpresa)
+        public void mReporteFotos(string mEmpresa, string rutaarchivoexcel)
         {
-            MyExcel.Workbook newWorkbook = mIniciarExcel();
+            MyExcel.Workbook newWorkbook = mIniciarExcel(@rutaarchivoexcel);
             int lrenglon = 3;
             int lrengloninicial = 3;
             int lrengloniniciaconcepto = 3;
@@ -1376,10 +1390,13 @@ Cheque"	Devoluciones
             lrenglon = 8;
             lrengloniniciaconcepto = lrenglon;
             decimal dos, tres;
-            int lcolumna;
+            int lcolumna=1;
             string lProveedorPrevio = "";
             DateTime dfecha;
             string lfecha;
+
+            sheet.Range["A9:AH32000"].Delete();
+
             foreach (DataRow row in DatosReporteAdminpaq.Rows)
             {
                 //select m2.ccodigoc01, m2.crazonso01, m8.creferen01,  ;
@@ -1407,7 +1424,10 @@ Cheque"	Devoluciones
                 lcolumna = 1;
 
 
-                sheet.Cells[lrenglon, lcolumna++].value = row["creferen01"].ToString().Trim(); //Folio Cargo
+               // sheet.Cells[lrenglon, lcolumna++].value = row["creferen01"].ToString().Trim(); //Folio Cargo
+
+                sheet.Cells[lrenglon, lcolumna++].value = row["cseriedo01"].ToString().Trim() + "-" + row["cfolio"].ToString().Trim(); //Folio Cargo
+
                 lcolumna++;
 
                 dfecha = DateTime.Parse(row["cfecha"].ToString().Trim());
