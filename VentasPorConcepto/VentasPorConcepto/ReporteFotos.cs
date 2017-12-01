@@ -58,7 +58,13 @@ namespace VentasPorConcepto
 
         private void ReporteFotos_Load(object sender, EventArgs e)
         {
+            textBox1.Text = Properties.Settings.Default.Archivo;
+        }
 
+        private void ReporteFotos_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Properties.Settings.Default.Archivo = textBox1.Text;
+            Properties.Settings.Default.Save();
         }
     }
 }

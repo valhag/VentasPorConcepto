@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ReporteAntSaldos.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="VentasPorConcepto.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
     <Setting Name="server" Type="System.String" Scope="User">
@@ -12,6 +12,9 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="password" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Archivo" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>
