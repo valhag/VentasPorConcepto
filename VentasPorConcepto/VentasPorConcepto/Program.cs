@@ -20,7 +20,8 @@ namespace VentasPorConcepto
             //Application.Run(new Form1());
             //Application.Run(new ReporteNominas());
             //Application.Run(new FacturaPedidoComercial());
-            Application.Run(new ReporteFotos());
+            //Application.Run(new ReporteFotos());
+            Application.Run(new Usuarios());
         }
     }
 }

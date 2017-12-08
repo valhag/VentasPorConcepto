@@ -94,6 +94,9 @@ namespace VentasPorConcepto
         private DataTable DatosFacturaAbono = null;
 
         private DataTable DatosReporte = null;
+        private DataTable DatosMaestro = null;
+        private DataTable DatosDetalle = null;
+        private DataTable DatosEmpresas = null;
 
         private DataTable DatosReporteAdminpaq = null;
 
@@ -438,6 +441,68 @@ namespace VentasPorConcepto
 
         }
 
+
+
+        public void mTraerInformacionComercial2(string lquery, string mEmpresa)
+        {
+            SqlConnection _conexion1 = new SqlConnection();
+            //            rutadestino = "c:\\compacw\\empresas\\adtala2";
+            string rutadestino = mEmpresa;
+
+            string sempresa ;
+
+            string server = Properties.Settings.Default.server;
+            string user = Properties.Settings.Default.user;
+            string pwd = Properties.Settings.Default.password;
+            sempresa = rutadestino;
+            //string lruta3 = obc.ToString();
+            string lruta4 = @rutadestino;
+            _conexion1 = new SqlConnection();
+            string Cadenaconexion1 = "data source =" + server + ";initial catalog = " + sempresa + ";user id = " + user + "; password = " + pwd + ";";
+            _conexion1.ConnectionString = Cadenaconexion1;
+            _conexion1.Open();
+
+
+
+
+            DataSet ds = new DataSet();
+
+            string lsql = lquery.ToString();
+            SqlDataAdapter mySqlDataAdapter = new SqlDataAdapter(lsql, _conexion1);
+
+
+
+            //mySqlDataAdapter.SelectCommand.Connection = _conexion1;
+
+            //mySqlDataAdapter.SelectCommand.Connection = _conexion1;
+            //mySqlDataAdapter.SelectCommand.CommandText = lsql;
+
+            mySqlDataAdapter.Fill(ds);
+
+            DatosMaestro = ds.Tables[0];
+            DatosDetalle = ds.Tables[1];
+            _conexion1.Close();
+
+            string Cadenaconexion2 = "data source =" + server + ";initial catalog = 'CompacWAdmin';user id = " + user + "; password = " + pwd + ";";
+            _conexion1.ConnectionString = Cadenaconexion2;
+            _conexion1.Open();
+
+
+
+
+            DataSet ds1 = new DataSet();
+
+            string lsql2 = "SELECT  [CIDEMPRESA] " + 
+      " ,[CNOMBREEMPRESA] " + 
+  " FROM [Empresas]";
+            SqlDataAdapter mySqlDataAdapter1 = new SqlDataAdapter(lsql2, _conexion1);
+            mySqlDataAdapter1.Fill(ds1);
+
+            DatosEmpresas = ds1.Tables[0];
+
+           
+
+        }
 
         public void mTraerInformacionComercial(StringBuilder lquery, string mEmpresa)
         {
@@ -1070,6 +1135,126 @@ Cheque"	Devoluciones
                 sheet.get_Range("Q" + lrenglon.ToString(), "X" + lrenglon.ToString()).Style = "Currency";
 
                 lrenglon++;
+
+
+            }
+            sheet.Cells.EntireColumn.AutoFit();
+            return;
+        }
+        public void mReporteUsuarios()
+        {
+            MyExcel.Workbook newWorkbook = mIniciarExcel();
+            int lrenglon = 1;
+            int lrengloninicial = 1;
+            int lrengloniniciaconcepto = 6;
+            int lrenglontempo = 6;
+            MyExcel.Worksheet sheet = newWorkbook.Sheets[1];
+
+            //configuracionencabezadoPedidoFacturaComercial(sheet, mEmpresa, "Facturas y Pedidos", lrenglon, lfechai, lfechaf);
+
+            sheet.Cells[2, 1].value = "Reporte de Usuario";
+
+            //mResetearrTotales();
+
+            string lconcepto = "";
+
+
+            string lcliente = "";
+            //sheet.get_Range("B" + lrengloninicial, "V" + lrengloninicial).Borders[MyExcel.XlBordersIndex.xlEdgeBottom].LineStyle = 1;
+            int lmismoconcepto = 0;
+            lrenglon += 1;
+            lrengloniniciaconcepto = lrenglon;
+            decimal dos, tres;
+            int lcolumna = 1;
+            int idusuario=0;
+            int idusuarioant = 0;
+            string sGrupo = "", sGrupoAnterior = "";
+            foreach (DataRow row in DatosDetalle.Rows)
+            {
+                //Fecha	# pedidos	cliente	importe	pendiente de facturar	# de factura	cliente	importe	Impuesto	Retención	Total
+                // Prog.	Fecha	Folio	Proveedor	Producto	"Cantidad Solicitada"	"Cantidad Pendiente"
+
+                string sNombre = "", sNombreLargo = "";
+               // string sGrupo = "";
+                idusuario = int.Parse(row["idusuario"].ToString().Trim());
+                if (idusuario != idusuarioant)
+                {
+                    string cadenaempresas = "";
+                    foreach (DataRow rowm in DatosMaestro.Rows)
+                    {
+                        int idusuariom = int.Parse(rowm["idusuario"].ToString().Trim());
+                        if (idusuariom == idusuario)
+                        {
+                           
+                             sNombre = rowm["NOMBRE"].ToString().Trim();
+                             sNombreLargo = rowm["NOMBRELARGO"].ToString().Trim();
+                             sGrupo = rowm["GRUPO"].ToString().Trim();
+                             if (rowm["PROCESO"].ToString().Trim() == "E0")
+                                 cadenaempresas = "Todas las empresas";
+                             else
+                             {
+                                 string lnoempresa = rowm["PROCESO"].ToString().Trim();
+                                 int   noempresa = int.Parse(lnoempresa.Substring(lnoempresa.IndexOf('E', 0)+1));
+                                 foreach (DataRow rowe in DatosEmpresas.Rows)
+                                 {
+
+                                     if (int.Parse(rowe[0].ToString()) == noempresa)
+                                     {
+                                         cadenaempresas += rowe[1].ToString() + ",";
+                                     }
+ 
+                                 }
+                             }
+                        }
+                    }
+                    lrenglon += 2;
+                    sheet.Cells[lrenglon++, lcolumna].value = "Datos Generales";
+                    sheet.Cells[lrenglon++, lcolumna].value = "Nombre " + sNombre;
+                    sheet.Cells[lrenglon++, lcolumna].value = "Nombre Largo " + sNombreLargo;
+                    sheet.Cells[lrenglon++, lcolumna].value = "Grupo " + sGrupo;
+                    sheet.Cells[lrenglon++, lcolumna].value = "Empresas a las que tiene acceso ";
+                    sheet.Cells[lrenglon++, lcolumna].value = cadenaempresas;
+                    //lrenglon++;
+
+                    lrenglon++;
+                    sheet.Cells[lrenglon++, lcolumna].value = "DERECHOS Y BARRA DE ACCESO ";
+                    sheet.Cells[lrenglon, lcolumna].value = "Modulo ";
+                    sheet.Cells[lrenglon, lcolumna+1].value = "Derechos de Acceso ";
+                    sheet.Cells[lrenglon, lcolumna + 2].value = "Visualizar en Barra de Acceso ";
+                    
+                    idusuarioant = idusuario;
+                }
+                sGrupo = row["grupo"].ToString().Trim();
+                lrenglon++;
+                if (sGrupo != sGrupoAnterior)
+                {
+                    lrenglon++;
+                    sGrupoAnterior = sGrupo;
+                    sheet.Cells[lrenglon++, lcolumna].value = row["grupo"].ToString().Trim();
+                    sheet.Cells[lrenglon-1, lcolumna].Font.Bold = true;
+                    //sheet.get_Range("A" + 9, "AE" + lrenglon).Font.Bold = true;
+                    lrenglon++;
+                }
+                sheet.Cells[lrenglon, lcolumna].value = row["Proceso"].ToString().Trim();
+
+                if ( row["Estado"].ToString().Trim() == "2")
+                {
+                    sheet.Cells[lrenglon, lcolumna+1].value = "Si";
+                    sheet.Cells[lrenglon, lcolumna + 2].value = "Si";
+                }
+                if (row["Estado"].ToString().Trim() == "1")
+                {
+                    sheet.Cells[lrenglon, lcolumna + 1].value = "Si";
+                    sheet.Cells[lrenglon, lcolumna + 2].value = "No";
+                }
+                if (row["Estado"].ToString().Trim() == "0")
+                {
+                    sheet.Cells[lrenglon, lcolumna + 1].value = "No";
+                    sheet.Cells[lrenglon, lcolumna + 2].value = "No";
+                }
+                //lrenglon++;
+
+
 
 
             }
