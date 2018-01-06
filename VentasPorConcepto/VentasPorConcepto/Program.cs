@@ -15,13 +15,14 @@ namespace VentasPorConcepto
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new InventarioCapas());
+            Application.Run(new CapasComercial());
+
             //Application.Run(new ContpaqiReporteSaldosMovtos());
             //Application.Run(new Form1());
             //Application.Run(new ReporteNominas());
             //Application.Run(new FacturaPedidoComercial());
             //Application.Run(new ReporteFotos());
-            Application.Run(new Usuarios());
+            //Application.Run(new Usuarios());
         }
     }
 }

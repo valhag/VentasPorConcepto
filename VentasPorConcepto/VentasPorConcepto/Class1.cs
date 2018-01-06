@@ -93,7 +93,7 @@ namespace VentasPorConcepto
         public OleDbConnection _conexion;
         private DataTable DatosFacturaAbono = null;
 
-        private DataTable DatosReporte = null;
+        public DataTable DatosReporte = null;
         private DataTable DatosMaestro = null;
         private DataTable DatosDetalle = null;
         private DataTable DatosEmpresas = null;
@@ -422,6 +422,53 @@ namespace VentasPorConcepto
         }
 
 
+        public void mTraerDatasetComercial(List<string> lquery, string sEmpresa)
+        {
+            SqlConnection _conexion1 = new SqlConnection();
+            //            rutadestino = "c:\\compacw\\empresas\\adtala2";
+            string rutadestino = sEmpresa;
+
+            string sempresa = rutadestino.Substring(rutadestino.LastIndexOf("\\") + 1);
+
+            string server = Properties.Settings.Default.server;
+            string user = Properties.Settings.Default.user;
+            string pwd = Properties.Settings.Default.password;
+            //sempresa = GetSettingValueFromAppConfigForDLL("empresa");
+            //string lruta3 = obc.ToString();
+            string lruta4 = @rutadestino;
+            _conexion1 = new SqlConnection();
+            string Cadenaconexion1 = "data source =" + server + ";initial catalog = " + sempresa + ";user id = " + user + "; password = " + pwd + ";";
+            _conexion1.ConnectionString = Cadenaconexion1;
+            _conexion1.Open();
+
+
+
+            DataSet ds = new DataSet();
+            SqlDataAdapter mySqlDataAdapter = new SqlDataAdapter();
+            string nombretabla = "Tabla";
+            int indice = 1;
+            foreach (string lista in lquery)
+            {
+                SqlCommand mySqlCommand = new SqlCommand(lista, _conexion1);
+                mySqlDataAdapter.SelectCommand = mySqlCommand;
+                mySqlDataAdapter.Fill(ds, nombretabla + indice.ToString());
+                indice++;
+            }
+
+
+            //connection.Open();
+            //oledbAdapter = new OleDbDataAdapter(firstSql, connection);
+            //oledbAdapter.Fill(ds, "First Table");
+            //oledbAdapter.SelectCommand.CommandText = secondSql;
+            //oledbAdapter.Fill(ds, "Second Table");
+            //oledbAdapter.Dispose();
+            //connection.Close();
+
+            Datos = ds;
+
+        }
+
+
         public void mTraerInformacionPrimerReporte(string lquery, string mEmpresa)
         {
             OleDbConnection lconexion = new OleDbConnection();
@@ -503,6 +550,59 @@ namespace VentasPorConcepto
            
 
         }
+
+
+
+        public void mTraerInformacionClasificacionesComercial(StringBuilder lquery, string mEmpresa)
+        {
+            SqlConnection _conexion1 = new SqlConnection();
+                //            rutadestino = "c:\\compacw\\empresas\\adtala2";
+                string rutadestino = mEmpresa;
+
+                string sempresa = rutadestino.Substring(rutadestino.LastIndexOf("\\") + 1);
+
+                string server = Properties.Settings.Default.server;
+                string user = Properties.Settings.Default.user;
+                string pwd = Properties.Settings.Default.password;
+                //sempresa = GetSettingValueFromAppConfigForDLL("empresa");
+                //string lruta3 = obc.ToString();
+                string lruta4 = @rutadestino;
+                _conexion1 = new SqlConnection();
+                string Cadenaconexion1 = "data source =" + server + ";initial catalog = " + sempresa + ";user id = " + user + "; password = " + pwd + ";";
+                _conexion1.ConnectionString = Cadenaconexion1;
+                _conexion1.Open();
+
+
+
+
+                DataSet ds = new DataSet();
+
+            string lsql = lquery.ToString();
+            SqlDataAdapter mySqlDataAdapter = new SqlDataAdapter(lsql,_conexion1);
+            
+            
+
+            //mySqlDataAdapter.SelectCommand.Connection = _conexion1;
+
+            //mySqlDataAdapter.SelectCommand.Connection = _conexion1;
+            //mySqlDataAdapter.SelectCommand.CommandText = lsql;
+
+            mySqlDataAdapter.Fill(ds);
+
+            DataTable DatosClasif = ds.Tables[0];
+
+            foreach (DataRow row in ds.Tables[0].Rows)
+            {
+                RegConcepto clasif = new RegConcepto();
+                clasif.id = long.Parse(row["CIDVALORCLASIFICACION"].ToString());
+                clasif.Nombre = row["CVALORCLASIFICACION"].ToString();
+                _RegClasificaciones.Add(clasif);
+            }
+
+            _conexion1.Close();
+
+        }
+
 
         public void mTraerInformacionComercial(StringBuilder lquery, string mEmpresa)
         {
@@ -2052,6 +2152,48 @@ Devolución
                 }
             }
             //return _RegClasificaciones;
+        }
+
+        public void mCargarClasificacionesComercial(string mEmpresa, int clasificacion)
+        {
+
+
+            int clasif = clasificacion + 24;
+            //List<RegConcepto> _RegFacturas = new List<RegConcepto>();
+            _RegClasificaciones.Clear();
+            if (mEmpresa.IndexOf("\\") != -1)
+            {
+                OleDbConnection lconexion = new OleDbConnection();
+
+                lconexion = mAbrirConexionOrigen(mEmpresa);
+
+                if (lconexion != null)
+                {
+                    OleDbCommand lsql = new OleDbCommand("select cidvalor01,ccodigov01,cvalorcl01 from mgw10020 where cidclasi01 = " + clasif, lconexion);
+                    OleDbDataReader lreader = null;
+                    try
+                    {
+                        lreader = lsql.ExecuteReader();
+                    }
+                    catch (Exception eeee)
+                    {
+
+                    }
+                    _RegClasificaciones.Clear();
+                    if (lreader.HasRows)
+                    {
+                        while (lreader.Read())
+                        {
+                            RegConcepto lRegConcepto = new RegConcepto();
+                            lRegConcepto.Codigo = lreader[1].ToString();
+                            lRegConcepto.Nombre = lreader[2].ToString();
+                            lRegConcepto.id = long.Parse(lreader[0].ToString());
+                            _RegClasificaciones.Add(lRegConcepto);
+                        }
+                    }
+                    lreader.Close();
+                }
+            }
         }
 
         public void mBorraElememento(RegConcepto clasif)

@@ -60,6 +60,12 @@
     <Compile Include="Ajuste.Designer.cs">
       <DependentUpon>Ajuste.cs</DependentUpon>
     </Compile>
+    <Compile Include="CapasComercial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapasComercial.Designer.cs">
+      <DependentUpon>CapasComercial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Catalogo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     </Compile>
     <EmbeddedResource Include="Ajuste.resx">
       <DependentUpon>Ajuste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapasComercial.resx">
+      <DependentUpon>CapasComercial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogo.resx">
       <DependentUpon>Catalogo.cs</DependentUpon>

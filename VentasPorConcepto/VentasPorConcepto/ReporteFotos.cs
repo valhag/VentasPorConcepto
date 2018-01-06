@@ -32,7 +32,7 @@ namespace VentasPorConcepto
 
             string archivo = @textBox1.Text;
 
-            lquery = "select m2.ccodigoc01, m2.crazonso01, m8.creferen01, m8.ctextoex01, m8.ctextoex02, m8.ctextoex03, " + 
+            lquery = "select m2.ccodigoc01, m2.crazonso01, m8.creferen01, m8.ctextoex01, m8.ctextoex02 as m8te2 , m8.ctextoex03 as m8te3, " + 
 " m8.cfecha, m8.cfechaen01, m8.cfechave01, m5.cnomaltern, m5.ccodigop01, m5.cnombrep01, m10.cunidades, m26.cdesplie01, m10.cprecioc01, m10.ctotal,m10.creferen01 as creferen02, m10.ctextoex02, m10.ctextoex03, m10.cunidade03, m8.cfolio, m8.cseriedo01 " + 
 " from mgw10008 m8 " + 
 " join mgw10002 m2 on m8.cidclien01 = m2.cidclien01" + 
