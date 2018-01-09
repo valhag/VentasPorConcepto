@@ -934,6 +934,229 @@ Cheque"	Devoluciones
 
         }
 
+
+        private void mConfigurarObjetosSQLImpresion()
+        {
+            DataTable Productos = Datos.Tables[0];
+            DataTable InventarioInicialentradas = Datos.Tables[1];
+            DataTable InventarioInicialsalidas = Datos.Tables[2];
+            DataTable capasinicialentradas = Datos.Tables[3];
+            DataTable capasinicialsalidas = Datos.Tables[4];
+            DataTable Movimientosentradas = Datos.Tables[5];
+            DataTable Movimientossalidas = Datos.Tables[6];
+            DataTable capasenperiodoentradas = Datos.Tables[7];
+            DataTable capasenperiodosalidas = Datos.Tables[8];
+
+            listaprods.Clear();
+            listacapas.Clear();
+
+            DataRow xxx;
+            DataTable table1 = new DataTable();
+            table1.Columns.Add("uno", typeof(int));
+            table1.Columns.Add("dos", typeof(double));
+            table1.Columns.Add("tres", typeof(double));
+            table1.Columns.Add("cuatro", typeof(double));
+            table1.Columns.Add("cinco", typeof(double));
+            table1.Columns.Add("seis", typeof(double));
+            table1.Columns.Add("siete", typeof(double));
+            xxx = table1.Rows.Add(0, 0, 0, 0, 0, 0, 0);
+
+            var inventarioinicial = from p in Productos.AsEnumerable()
+                                    //from e in InventarioInicialentradas.AsEnumerable()
+                                    join e in InventarioInicialentradas.AsEnumerable() on (string)p["idprodue"].ToString() equals (string)e["idprodue"].ToString() into tempp
+                                    from e1 in tempp.DefaultIfEmpty(xxx)
+                                    join s in InventarioInicialsalidas.AsEnumerable() on (string)e1[0].ToString() equals (string)s["idprodus"].ToString() into temp
+                                    from s1 in temp.DefaultIfEmpty(xxx)
+                                    join me in Movimientosentradas.AsEnumerable() on (string)s1[0].ToString() equals (string)me["idprodue"].ToString() into temp1
+                                    from move in temp1.DefaultIfEmpty(xxx)
+                                    join ms in Movimientossalidas.AsEnumerable() on (string)s1[0].ToString() equals (string)ms["idprodus"].ToString() into temp2
+                                    from movs in temp2.DefaultIfEmpty(xxx)
+                                    select new
+                                    {
+                                        Id = p.Field<int>(0).ToString(),
+                                        Nombre = p.Field<string>(2).ToString(),
+                                        Salidas = s1.Field<double>(4).ToString() ?? string.Empty,
+                                        Entradas = e1.Field<double>(1),
+                                        Codigo = p.Field<string>(1).ToString(),
+                                        Metodo = p.Field<int>(3).ToString(),
+                                        MovEntradas = move.Field<double>(1),
+                                        MovSalidas = movs.Field<double>(1),
+                                        clasif1 = p.Field<string>(4).ToString(),
+                                        clasif2 = p.Field<string>(5).ToString(),
+                                        clasif3 = p.Field<string>(6).ToString(),
+                                        clasif4 = p.Field<string>(7).ToString(),
+                                        clasif5 = p.Field<string>(8).ToString(),
+                                        clasif6 = p.Field<string>(9).ToString()
+                                    };
+            //Codigo = e.Field<string>(1).ToString()
+            //Metodo = e.Field<int>(3).ToString()
+            string nombre = "";
+            double saldo = 0;
+            int cuantosprods = 0;
+            foreach (var saldos in inventarioinicial)
+            {
+                RegProducto lprod = new RegProducto();
+                nombre = saldos.Nombre;
+               /* lprod.IdProducto = int.Parse(saldos.Id);
+                lprod.NombreProducto = saldos.Nombre;
+                lprod.CodigoProducto = saldos.Codigo;
+                lprod.metodocosteo = int.Parse(saldos.Metodo);
+                saldo = saldos.Entradas - double.Parse(saldos.Salidas);
+                lprod.Existencia = saldo;
+                lprod.EntradasPeriodo = saldos.MovEntradas;
+                lprod.SalidasPeriodo = saldos.MovSalidas;
+                lprod.Clasif1 = saldos.clasif1;
+                lprod.Clasif2 = saldos.clasif2;
+                lprod.Clasif3 = saldos.clasif3;
+                lprod.Clasif4 = saldos.clasif4;
+                lprod.Clasif5 = saldos.clasif5;
+                lprod.Clasif6 = saldos.clasif6;*/
+                listaprods.Add(lprod);
+
+            }
+
+            //and (string)e["cidcapa"].ToString() equals (string)s["cidcapa"].ToString() into UP
+
+            DataRow zz;
+            DataTable table = new DataTable();
+            table.Columns.Add("uno", typeof(double));
+            table.Columns.Add("dos", typeof(double));
+            table.Columns.Add("tres", typeof(double));
+            table.Columns.Add("cuatro", typeof(double));
+            table.Columns.Add("cinco", typeof(double));
+            table.Columns.Add("seis", typeof(double));
+            table.Columns.Add("siete", typeof(double));
+            table.Columns.Add("ocho", typeof(double));
+            table.Columns.Add("nueve", typeof(double));
+            table.Columns.Add("diez", typeof(double));
+            table.Columns.Add("once", typeof(double));
+            zz = table.Rows.Add(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+            var capasinicial = from capaseinicial in capasinicialentradas.AsEnumerable()
+                               join capassinicial in capasinicialsalidas.AsEnumerable() on
+                               new
+                               {
+                                   cidprodu01 = capaseinicial["cidprodu01"].ToString(),
+                                   cidcapa = capaseinicial["cidcapa"].ToString()
+                               }
+                               equals
+                               new
+                               {
+                                   cidprodu01 = capassinicial["cidprodu01"].ToString(),
+                                   cidcapa = capassinicial["cidcapa"].ToString()
+                               } into temp
+                               from s1 in temp.DefaultIfEmpty(zz)
+                               join capassalidasperiodo in capasenperiodosalidas.AsEnumerable() on
+                               new
+                               {
+                                   cidprodu01 = capaseinicial["cidprodu01"].ToString(),
+                                   cidcapa = capaseinicial["cidcapa"].ToString()
+                               }
+                               equals
+                               new
+                               {
+                                   cidprodu01 = capassalidasperiodo["cidprodu01"].ToString(),
+                                   cidcapa = capassalidasperiodo["cidcapa"].ToString()
+                               } into temp2
+                               from s2 in temp2.DefaultIfEmpty(zz)
+                               /*join capasentradasperiodo in capasenperiodoentradas.AsEnumerable() on
+                               new
+                               {
+                                   cidprodu01 = capaseinicial["cidprodu01"].ToString(),
+                                   //cidcapa = capaseinicial["cidcapa"].ToString()
+                               }
+                                * 
+                               equals
+                               new
+                               {
+                                   cidprodu01 = capasentradasperiodo["cidprodu01"].ToString(),
+                                   //cidcapa = capasentradasperiodo["cidcapa"].ToString()
+                               } into temp3
+                               from s3 in temp3.DefaultIfEmpty(zz)*/
+                               select new
+                               {
+                                   cidprodu = capaseinicial.Field<decimal>(0),
+                                   cidcapa = capaseinicial.Field<decimal>(1),
+                                   cfecha = capaseinicial.Field<string>(2),
+                                   unidadesentrada = capaseinicial.Field<double>(3),
+                                   unidadessalida = s1.Field<double>(2).ToString() ?? string.Empty,
+                                   unidadesperiodosalida = s2.Field<double>(2).ToString() ?? string.Empty,
+                                   costo = capaseinicial.Field<double>(4),
+                                   almacen = capaseinicial.Field<string>(5)
+                               };
+            decimal existenciacapae = 0;
+            decimal existenciacapas = 0;
+
+            foreach (var capa in capasinicial)
+            {
+                RegCapas capalocal = new RegCapas();
+                capalocal.Fecha = capa.cfecha;
+                capalocal.IdProducto = int.Parse(capa.cidprodu.ToString());
+                existenciacapae = decimal.Parse(capa.unidadesentrada.ToString()); //- capas.unidadessalida;
+
+                existenciacapas = decimal.Parse(capa.unidadessalida.ToString()); //- capas.unidadessalida;
+                capalocal.ExistenciaInicial = existenciacapae - existenciacapas;
+                //capalocal.ExistenciaEntradasPeriodo = decimal.Parse(capa.unidadesperiodoentrada);
+                //if (capalocal.ExistenciaEntradasPeriodo > 0)
+                // capalocal.ExistenciaInicial = 0;
+                capalocal.ExistenciaSalidasPeriodo = decimal.Parse(capa.unidadesperiodosalida);
+                capalocal.ExistenciaFinal = capalocal.ExistenciaEntradasPeriodo + capalocal.ExistenciaSalidasPeriodo;
+                //capalocal.idcapae = long.Parse(capa.idcapae);
+                //capalocal.idcapas = long.Parse(capa.idcapas);
+                capalocal.idcapa = long.Parse(capa.cidcapa.ToString());
+                capalocal.costo = decimal.Parse(capa.costo.ToString());
+                capalocal.almacen = capa.almacen;
+                if (existenciacapae - existenciacapas != 0)
+                    listacapas.Add(capalocal);
+            }
+            var capassoloentrdas = from capaseinicial in capasenperiodoentradas.AsEnumerable()
+                                   join capassalidasperiodo in capasenperiodosalidas.AsEnumerable() on
+                               new
+                               {
+                                   cidprodu01 = capaseinicial["cidprodu01"].ToString(),
+                                   cidcapa = capaseinicial["cidcapa"].ToString()
+                               }
+                               equals
+                               new
+                               {
+                                   cidprodu01 = capassalidasperiodo["cidprodu01"].ToString(),
+                                   cidcapa = capassalidasperiodo["cidcapa"].ToString()
+                               } into temp2
+                                   from s2 in temp2.DefaultIfEmpty(zz)
+                                   select new
+                                   {
+                                       cidprodu = capaseinicial.Field<decimal>(0),
+                                       cidcapa = capaseinicial.Field<decimal>(1),
+                                       //cfecha = capaseinicial.Field<string>(2),
+                                       unidadesentrada = 0,
+                                       unidadesperiodoentrada = capaseinicial.Field<double>(2),
+                                       costo = capaseinicial.Field<double>(3),
+                                       unidadesperiodosalida = s2.Field<double>(2).ToString() ?? string.Empty,
+                                       almacen = capaseinicial.Field<string>(4)
+                                   };
+            foreach (var capa in capassoloentrdas)
+            {
+                RegCapas capalocal = new RegCapas();
+                //capalocal.Fecha = capa.cfecha;
+                capalocal.IdProducto = int.Parse(capa.cidprodu.ToString());
+                existenciacapae = decimal.Parse(capa.unidadesentrada.ToString()); //- capas.unidadessalida;
+                existenciacapas = 0; //- capas.unidadessalida;
+                capalocal.ExistenciaInicial = existenciacapae - existenciacapas;
+                capalocal.ExistenciaEntradasPeriodo = decimal.Parse(capa.unidadesperiodoentrada.ToString());
+                capalocal.ExistenciaSalidasPeriodo = decimal.Parse(capa.unidadesperiodosalida);
+                capalocal.ExistenciaFinal = capalocal.ExistenciaEntradasPeriodo + capalocal.ExistenciaSalidasPeriodo;
+                capalocal.costo = decimal.Parse(capa.costo.ToString());
+                capalocal.almacen = capa.almacen;
+                listacapas.Add(capalocal);
+            }
+            listacapas = listacapas.OrderBy(o => o.IdProducto).ToList();
+            //sortedlist.Clear();
+            //sortedlist = listacapas.OrderBy(o => o.IdProducto).ToList();
+            //listacapas.Clear();
+            //listacapas = sortedlist;
+
+        }
+
         private void mConfigurarObjetosImpresion()
         {
             DataTable Productos = Datos.Tables[0];
@@ -1427,7 +1650,8 @@ Cheque"	Devoluciones
         public void mReporteInventarioCapas(string mEmpresa, string lfechai, string lfechaf)
         {
 
-            mConfigurarObjetosImpresion();
+            //mConfigurarObjetosImpresion();
+            mConfigurarObjetosSQLImpresion();
 
 
             MyExcel.Workbook newWorkbook = mIniciarExcel();
