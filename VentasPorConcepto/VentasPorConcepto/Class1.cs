@@ -590,7 +590,7 @@ namespace VentasPorConcepto
             mySqlDataAdapter.Fill(ds);
 
             DataTable DatosClasif = ds.Tables[0];
-
+            _RegClasificaciones.Clear();
             foreach (DataRow row in ds.Tables[0].Rows)
             {
                 RegConcepto clasif = new RegConcepto();
@@ -997,7 +997,7 @@ Cheque"	Devoluciones
             {
                 RegProducto lprod = new RegProducto();
                 nombre = saldos.Nombre;
-               /* lprod.IdProducto = int.Parse(saldos.Id);
+                lprod.IdProducto = int.Parse(saldos.Id);
                 lprod.NombreProducto = saldos.Nombre;
                 lprod.CodigoProducto = saldos.Codigo;
                 lprod.metodocosteo = int.Parse(saldos.Metodo);
@@ -1010,7 +1010,7 @@ Cheque"	Devoluciones
                 lprod.Clasif3 = saldos.clasif3;
                 lprod.Clasif4 = saldos.clasif4;
                 lprod.Clasif5 = saldos.clasif5;
-                lprod.Clasif6 = saldos.clasif6;*/
+                lprod.Clasif6 = saldos.clasif6;
                 listaprods.Add(lprod);
 
             }
@@ -1036,26 +1036,26 @@ Cheque"	Devoluciones
                                join capassinicial in capasinicialsalidas.AsEnumerable() on
                                new
                                {
-                                   cidprodu01 = capaseinicial["cidprodu01"].ToString(),
+                                   cidprodu01 = capaseinicial["cidproducto"].ToString(),
                                    cidcapa = capaseinicial["cidcapa"].ToString()
                                }
                                equals
                                new
                                {
-                                   cidprodu01 = capassinicial["cidprodu01"].ToString(),
+                                   cidprodu01 = capassinicial["cidproducto"].ToString(),
                                    cidcapa = capassinicial["cidcapa"].ToString()
                                } into temp
                                from s1 in temp.DefaultIfEmpty(zz)
                                join capassalidasperiodo in capasenperiodosalidas.AsEnumerable() on
                                new
                                {
-                                   cidprodu01 = capaseinicial["cidprodu01"].ToString(),
+                                   cidprodu01 = capaseinicial["cidproducto"].ToString(),
                                    cidcapa = capaseinicial["cidcapa"].ToString()
                                }
                                equals
                                new
                                {
-                                   cidprodu01 = capassalidasperiodo["cidprodu01"].ToString(),
+                                   cidprodu01 = capassalidasperiodo["cidproducto"].ToString(),
                                    cidcapa = capassalidasperiodo["cidcapa"].ToString()
                                } into temp2
                                from s2 in temp2.DefaultIfEmpty(zz)
@@ -1075,8 +1075,8 @@ Cheque"	Devoluciones
                                from s3 in temp3.DefaultIfEmpty(zz)*/
                                select new
                                {
-                                   cidprodu = capaseinicial.Field<decimal>(0),
-                                   cidcapa = capaseinicial.Field<decimal>(1),
+                                   cidprodu = capaseinicial.Field<int>(0),
+                                   cidcapa = capaseinicial.Field<int>(1),
                                    cfecha = capaseinicial.Field<string>(2),
                                    unidadesentrada = capaseinicial.Field<double>(3),
                                    unidadessalida = s1.Field<double>(2).ToString() ?? string.Empty,
@@ -1109,25 +1109,26 @@ Cheque"	Devoluciones
                 if (existenciacapae - existenciacapas != 0)
                     listacapas.Add(capalocal);
             }
+            
             var capassoloentrdas = from capaseinicial in capasenperiodoentradas.AsEnumerable()
                                    join capassalidasperiodo in capasenperiodosalidas.AsEnumerable() on
                                new
                                {
-                                   cidprodu01 = capaseinicial["cidprodu01"].ToString(),
+                                   cidprodu01 = capaseinicial["cidproducto"].ToString(),
                                    cidcapa = capaseinicial["cidcapa"].ToString()
                                }
                                equals
                                new
                                {
-                                   cidprodu01 = capassalidasperiodo["cidprodu01"].ToString(),
+                                   cidprodu01 = capassalidasperiodo["cidproducto"].ToString(),
                                    cidcapa = capassalidasperiodo["cidcapa"].ToString()
                                } into temp2
                                    from s2 in temp2.DefaultIfEmpty(zz)
                                    select new
                                    {
-                                       cidprodu = capaseinicial.Field<decimal>(0),
-                                       cidcapa = capaseinicial.Field<decimal>(1),
-                                       //cfecha = capaseinicial.Field<string>(2),
+                                       //cidprodu = capaseinicial.Field<decimal>(0),
+                                       cidprodu = capaseinicial.Field<int>(0),
+                                       cidcapa = capaseinicial.Field<int>(1),
                                        unidadesentrada = 0,
                                        unidadesperiodoentrada = capaseinicial.Field<double>(2),
                                        costo = capaseinicial.Field<double>(3),
@@ -1137,7 +1138,6 @@ Cheque"	Devoluciones
             foreach (var capa in capassoloentrdas)
             {
                 RegCapas capalocal = new RegCapas();
-                //capalocal.Fecha = capa.cfecha;
                 capalocal.IdProducto = int.Parse(capa.cidprodu.ToString());
                 existenciacapae = decimal.Parse(capa.unidadesentrada.ToString()); //- capas.unidadessalida;
                 existenciacapas = 0; //- capas.unidadessalida;

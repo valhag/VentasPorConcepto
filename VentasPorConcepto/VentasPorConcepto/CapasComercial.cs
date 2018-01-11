@@ -24,8 +24,27 @@ namespace VentasPorConcepto
             InitializeComponent();
         }
 
+
+        private void OnComboChange(object sender, EventArgs e)
+        {
+            StringBuilder lquery = new StringBuilder();
+            lquery.Clear();
+            lquery.AppendLine("select CIDVALORCLASIFICACION, CCODIGOVALORCLASIFICACION, CVALORCLASIFICACION from admClasificacionesValores where CIDCLASIFICACION = 25");
+            listBox1.DataSource = null;
+            x.mTraerInformacionClasificacionesComercial(lquery, empresasComercial1.aliasbdd);
+            listBox1.DataSource = x._RegClasificaciones;
+            //listBox1.DataSource = listavalores;
+            listBox1.DisplayMember = "Nombre";
+            listBox1.ValueMember = "id";
+        }
+
         private void CapasComercial_Load(object sender, EventArgs e)
         {
+
+
+            empresasComercial1.SelectedItem += new EventHandler(OnComboChange);
+
+
             this.Text = " Reporte Capas Comercial " + " " + this.ProductVersion;
             lrn.mSeteaDirectorio(Directory.GetCurrentDirectory());
 
@@ -298,6 +317,11 @@ namespace VentasPorConcepto
 
 
             x.mReporteInventarioCapas(empresasComercial1.aliasbdd, lfechai, lfechaf);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
