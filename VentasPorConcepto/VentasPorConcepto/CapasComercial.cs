@@ -221,7 +221,7 @@ namespace VentasPorConcepto
 " join admClasificacionesValores m20d on m20d.cidvalorclasificacion = m5.cidvalorclasificacion4 " +
 " join admClasificacionesValores m20e on m20e.cidvalorclasificacion = m5.cidvalorclasificacion5 " +
 " join admClasificacionesValores m20f on m20f.cidvalorclasificacion = m5.cidvalorclasificacion6 " +
-" where ltrim(str(year(m10.cfecha))) + REPLACE( ltrim(str(month(m10.cfecha),2)), SPACE(1), '0')  + REPLACE( ltrim(str(day(m10.cfecha),2)), SPACE(1), '0') < '" + sfecha1 + "' and m10.cafectadoinventario =1 and m10.cafectaexistencia =1 " +
+" where ltrim(str(year(m10.cfecha))) + FORMAT(month(m10.cfecha),'00')  + FORMAT(day(m10.cfecha),'00') < '" + sfecha1 + "' and m10.cafectadoinventario =1 and m10.cafectaexistencia =1 " +
 " group by m5.cidproducto, m5.ccodigoproducto, m5.cnombreproducto,m5.cmetodocosteo, m20a.cvalorclasificacion, m20b.cvalorclasificacion,m20c.cvalorclasificacion,m20d.cvalorclasificacion,m20e.cvalorclasificacion,m20f.cvalorclasificacion ";
 
 
@@ -229,7 +229,7 @@ namespace VentasPorConcepto
             " from admMovimientos m10 join admProductos m5 " +
 " on m10.cidproducto = m5.cidproducto " + lfiltroproducto +
 " join admAlmacenes m3 on m3.cidalmacen = m10.cidalmacen " + lfiltroalmacen +
-" where ltrim(str(year(m10.cfecha))) + REPLACE( ltrim(str(month(m10.cfecha),2)), SPACE(1), '0')  + REPLACE( ltrim(str(day(m10.cfecha),2)), SPACE(1), '0')  < '" + sfecha1 + "' and m10.cafectadoinventario =1 and m10.cafectaexistencia =1 " +
+" where ltrim(str(year(m10.cfecha))) + FORMAT(month(m10.cfecha),'00')  + FORMAT(day(m10.cfecha),'00')  < '" + sfecha1 + "' and m10.cafectadoinventario =1 and m10.cafectaexistencia =1 " +
 " group by m5.cidproducto";
 
             // inventario inicial entradas
@@ -238,7 +238,7 @@ namespace VentasPorConcepto
             string lquery2 = "select m5.cidproducto as idprodus, m5.ccodigoproducto, m5.cnombreproducto as nombree, m5.cmetodocosteo, sum(m10.cunidades) as unis from admMovimientos m10 join admProductos m5 " +
 " on m10.cidproducto = m5.cidproducto " + lfiltroproducto +
 " join admAlmacenes m3 on m3.cidalmacen = m10.cidalmacen " + lfiltroalmacen +
-" where ltrim(str(year(m10.cfecha))) + REPLACE( ltrim(str(month(m10.cfecha),2)), SPACE(1), '0')  + REPLACE( ltrim(str(day(m10.cfecha),2)), SPACE(1), '0')  < '" + sfecha1 + "' and m10.cafectadoinventario =1 and m10.cafectaexistencia =2" +
+" where ltrim(str(year(m10.cfecha))) + FORMAT(month(m10.cfecha),'00')  + FORMAT(day(m10.cfecha),'00')  < '" + sfecha1 + "' and m10.cafectadoinventario =1 and m10.cafectaexistencia =2" +
 " group by m5.cidproducto, m5.ccodigoproducto, m5.cnombreproducto,m5.cmetodocosteo ";
 
             // inventario inicial salidas
@@ -249,12 +249,12 @@ namespace VentasPorConcepto
 
             //lfiltroproducto = "";
 
-            string lquery3 = "select m10.cidproducto, m28.cidcapa, ltrim(str(year(m28.cfecha))) + REPLACE( ltrim(str(month(m28.cfecha),2)), SPACE(1), '0')  + REPLACE( ltrim(str(day(m28.cfecha),2)), SPACE(1), '0') as cfecha, m28.cunidades, m25.ccosto, m3.cnombrealmacen from admMovimientos m10" +
+            string lquery3 = "select m10.cidproducto, m28.cidcapa, ltrim(str(year(m28.cfecha))) + FORMAT(month(m28.cfecha),'00')  + FORMAT(day(m28.cfecha),'00') as cfecha, m28.cunidades, m25.ccosto, m3.cnombrealmacen from admMovimientos m10" +
 " join admProductos m5 on m5.cidproducto = m10.cidproducto" +
 " join admMovimientosCapas m28 on m10.cidmovimiento = m28.cidmovimiento" +
 " join admCapasProducto m25 on m25.cidcapa = m28.cidcapa" +
 " join admAlmacenes m3 on m3.cidalmacen = m25.cidalmacen" + lfiltroalmacen +
-" where m10.cafectadoinventario = 1 and m10.cafectaexistencia =1 and ltrim(str(year(m10.cfecha))) + REPLACE( ltrim(str(month(m10.cfecha),2)), SPACE(1), '0')  + REPLACE( ltrim(str(day(m10.cfecha),2)), SPACE(1), '0')  < '" + sfecha1 + "'" + lfiltroproducto +
+" where m10.cafectadoinventario = 1 and m10.cafectaexistencia =1 and ltrim(str(year(m10.cfecha))) + FORMAT(month(m10.cfecha),'00')  + FORMAT(day(m10.cfecha),'00')  < '" + sfecha1 + "'" + lfiltroproducto +
 " order by m10.cidproducto ";
 
             lista.Add(lquery3);
@@ -265,7 +265,7 @@ namespace VentasPorConcepto
             " join admalmacenes m3 on m3.cidalmacen = m10.cidalmacen " + lfiltroalmacen +
             " join admmovimientoscapas m28 on m10.cidmovimiento = m28.cidmovimiento " +
             " join admcapasproducto m25 on m25.cidcapa = m28.cidcapa " +
-            " where m10.cafectadoinventario = 1 and m10.cafectaexistencia =2 and ltrim(str(year(m10.cfecha))) + REPLACE( ltrim(str(month(m10.cfecha),2)), SPACE(1), '0')  + REPLACE( ltrim(str(day(m10.cfecha),2)), SPACE(1), '0')  < '" + sfecha1 + "'" + lfiltroproducto +
+            " where m10.cafectadoinventario = 1 and m10.cafectaexistencia =2 and ltrim(str(year(m10.cfecha))) + FORMAT(month(m10.cfecha),'00')  + FORMAT(day(m10.cfecha),'00')  < '" + sfecha1 + "'" + lfiltroproducto +
             " group by m10.cidproducto, m28.cidcapa ";
             lista.Add(lquery4);
 
@@ -273,7 +273,7 @@ namespace VentasPorConcepto
             string lquery5 = "select m5.cidproducto as idprodue, sum(m10.cunidades) as unie from admmovimientos m10 join admproductos m5 " +
             " on m10.cidproducto = m5.cidproducto  " +
             " join admalmacenes m3 on m3.cidalmacen = m10.cidalmacen " + lfiltroalmacen +
-            " where ltrim(str(year(m10.cfecha))) + REPLACE( ltrim(str(month(m10.cfecha),2)), SPACE(1), '0')  + REPLACE( ltrim(str(day(m10.cfecha),2)), SPACE(1), '0')  >= '" + sfecha1 + "' and ltrim(str(year(m10.cfecha))) + REPLACE( ltrim(str(month(m10.cfecha),2)), SPACE(1), '0')  + REPLACE( ltrim(str(day(m10.cfecha),2)), SPACE(1), '0') <= '" + sfecha2 + "' and m10.cafectadoinventario =1 and m10.cafectaexistencia =1 " + lfiltroproducto + // and m5.ccodigop01 = 'CAJ001'" + 
+            " where ltrim(str(year(m10.cfecha))) + FORMAT(month(m10.cfecha),'00')  + FORMAT(day(m10.cfecha),'00')  >= '" + sfecha1 + "' and ltrim(str(year(m10.cfecha))) + FORMAT(month(m10.cfecha),'00')  + FORMAT(day(m10.cfecha),'00') <= '" + sfecha2 + "' and m10.cafectadoinventario =1 and m10.cafectaexistencia =1 " + lfiltroproducto + // and m5.ccodigop01 = 'CAJ001'" + 
             " group by m5.cidproducto ";
             lista.Add(lquery5);
 
@@ -282,7 +282,7 @@ namespace VentasPorConcepto
             string lquery6 = "select m5.cidproducto as idprodus, sum(m10.cunidades) as unie from admMovimientos m10 join admProductos m5 " +
             " on m10.cidproducto = m5.cidproducto  " +
             " join admAlmacenes m3 on m3.cidalmacen = m10.cidalmacen " + lfiltroalmacen +
-            " where ltrim(str(year(m10.cfecha))) + REPLACE( ltrim(str(month(m10.cfecha),2)), SPACE(1), '0')  + REPLACE( ltrim(str(day(m10.cfecha),2)), SPACE(1), '0')  >= '" + sfecha1 + "' and ltrim(str(year(m10.cfecha))) + REPLACE( ltrim(str(month(m10.cfecha),2)), SPACE(1), '0')  + REPLACE( ltrim(str(day(m10.cfecha),2)), SPACE(1), '0')  <= '" + sfecha2 + "' and m10.cafectadoinventario =1 and m10.cafectaexistencia =2 " + lfiltroproducto + // and m5.ccodigop01 = 'CAJ001'" + 
+            " where ltrim(str(year(m10.cfecha))) + FORMAT(month(m10.cfecha),'00')  + FORMAT(day(m10.cfecha),'00')  >= '" + sfecha1 + "' and ltrim(str(year(m10.cfecha))) + FORMAT(month(m10.cfecha),'00')  + FORMAT(day(m10.cfecha),'00')  <= '" + sfecha2 + "' and m10.cafectadoinventario =1 and m10.cafectaexistencia =2 " + lfiltroproducto + // and m5.ccodigop01 = 'CAJ001'" + 
             " group by m5.cidproducto ";
             lista.Add(lquery6);
 
@@ -293,8 +293,8 @@ namespace VentasPorConcepto
             " join admMovimientosCapas m28 on m10.cidmovimiento = m28.cidmovimiento" +
             " join admcapasproducto m25 on m25.cidcapa = m28.cidcapa" +
             " join admAlmacenes m3 on m3.cidalmacen = m25.cidalmacen" + lfiltroalmacen +
-            " where m10.cafectadoinventario = 1 and m10.cafectaexistencia =2 " +
-            " and ltrim(str(year(m10.cfecha))) + REPLACE( ltrim(str(month(m10.cfecha),2)), SPACE(1), '0')  + REPLACE( ltrim(str(day(m10.cfecha),2)), SPACE(1), '0') >= '" + sfecha1 + "' and ltrim(str(year(m10.cfecha))) + REPLACE( ltrim(str(month(m10.cfecha),2)), SPACE(1), '0')  + REPLACE( ltrim(str(day(m10.cfecha),2)), SPACE(1), '0') <= '" + sfecha2 + "'" + lfiltroproducto + // and m5.ccodigop01 = 'CAJ001'" + 
+            " where m10.cafectadoinventario = 1 and m10.cafectaexistencia =1 " +
+            " and ltrim(str(year(m10.cfecha))) + FORMAT(month(m10.cfecha),'00')  + FORMAT(day(m10.cfecha),'00') >= '" + sfecha1 + "' and ltrim(str(year(m10.cfecha))) + FORMAT(month(m10.cfecha),'00')  + FORMAT(day(m10.cfecha),'00') <= '" + sfecha2 + "'" + lfiltroproducto + // and m5.ccodigop01 = 'CAJ001'" + 
             " order by m10.cidproducto ";
             lista.Add(lquery7);
 
@@ -304,7 +304,7 @@ namespace VentasPorConcepto
             " join admAlmacenes m3 on m3.cidalmacen = m10.cidalmacen " + lfiltroalmacen +
             " join admMovimientosCapas m28 on m10.cidmovimiento = m28.cidmovimiento " +
             " join admcapasproducto m25 on m25.cidcapa = m28.cidcapa " +
-            " where m10.cafectadoinventario = 1 and m10.cafectaexistencia = 2 and REPLACE( ltrim(str(month(m10.cfecha),2)), SPACE(1), '0')  + REPLACE( ltrim(str(day(m10.cfecha),2)), SPACE(1), '0') >= '" + sfecha1 + "' and REPLACE( ltrim(str(month(m10.cfecha),2)), SPACE(1), '0')  + REPLACE( ltrim(str(day(m10.cfecha),2)), SPACE(1), '0') <= '" + sfecha2 + "'" + lfiltroproducto + // and m5.ccodigop01 = 'CAJ001'" + 
+            " where m10.cafectadoinventario = 1 and m10.cafectaexistencia = 2 and ltrim(str(year(m10.cfecha))) + FORMAT(month(m10.cfecha),'00')  + FORMAT(day(m10.cfecha),'00') >= '" + sfecha1 + "' and ltrim(str(year(m10.cfecha))) + FORMAT(month(m10.cfecha),'00')  + FORMAT(day(m10.cfecha),'00') <= '" + sfecha2 + "'" + lfiltroproducto + // and m5.ccodigop01 = 'CAJ001'" + 
             " group by m10.cidproducto, m28.cidcapa ";
             lista.Add(lquery8);
 

@@ -15,7 +15,8 @@ namespace VentasPorConcepto
     public partial class Form4 : Form
     {
         // Form1 y = new Form1();
-        FacturaPedidoComercial y = new FacturaPedidoComercial();
+        //FacturaPedidoComercial y = new FacturaPedidoComercial();
+        CapasComercial y = new CapasComercial();
 
         //Form1 y = new Form1();
         //Gomar z = new Gomar();
@@ -82,6 +83,8 @@ namespace VentasPorConcepto
         {
             txtServer.Text = Properties.Settings.Default.server  ;
             txtBD.Text = Properties.Settings.Default.database;
+            txtBD.Text = "CompacwAdmin";
+            txtBD.Enabled = false;
             txtUser.Text = Properties.Settings.Default.user ;
             txtPass.Text = Properties.Settings.Default.password ;
         }

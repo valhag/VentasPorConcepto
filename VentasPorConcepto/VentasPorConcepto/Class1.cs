@@ -967,9 +967,9 @@ Cheque"	Devoluciones
                                     from e1 in tempp.DefaultIfEmpty(xxx)
                                     join s in InventarioInicialsalidas.AsEnumerable() on (string)e1[0].ToString() equals (string)s["idprodus"].ToString() into temp
                                     from s1 in temp.DefaultIfEmpty(xxx)
-                                    join me in Movimientosentradas.AsEnumerable() on (string)s1[0].ToString() equals (string)me["idprodue"].ToString() into temp1
+                                    join me in Movimientosentradas.AsEnumerable() on (string)p["idprodue"].ToString() equals (string)me["idprodue"].ToString() into temp1
                                     from move in temp1.DefaultIfEmpty(xxx)
-                                    join ms in Movimientossalidas.AsEnumerable() on (string)s1[0].ToString() equals (string)ms["idprodus"].ToString() into temp2
+                                    join ms in Movimientossalidas.AsEnumerable() on (string)p["idprodue"].ToString() equals (string)ms["idprodus"].ToString() into temp2
                                     from movs in temp2.DefaultIfEmpty(xxx)
                                     select new
                                     {
@@ -1694,7 +1694,8 @@ Cheque"	Devoluciones
               Clasif4 = lprods.Clasif4,
               Clasif5 = lprods.Clasif5,
               Clasif6 = lprods.Clasif6,
-              almacen = b.almacen
+              almacen = b.almacen,
+              idcapa = b.idcapas
           };
 
             string lnombre = "";
@@ -1798,6 +1799,8 @@ Cheque"	Devoluciones
                     sheet.Cells[lrenglon, 18].value = todo.Clasif4;
                     sheet.Cells[lrenglon, 19].value = todo.Clasif5;
                     sheet.Cells[lrenglon, 20].value = todo.Clasif6;
+
+                    //sheet.Cells[lrenglon, 21].value = todo.idcapa;
 
 
                     sheet.get_Range("A" + lrenglon.ToString(), "M" + lrenglon.ToString()).Interior.Color = Color.LightYellow;

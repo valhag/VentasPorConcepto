@@ -191,7 +191,7 @@
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(85, 20);
             this.dateTimePicker2.TabIndex = 48;
-            this.dateTimePicker2.Value = new System.DateTime(2016, 3, 31, 0, 0, 0, 0);
+            this.dateTimePicker2.Value = new System.DateTime(2017, 12, 31, 0, 0, 0, 0);
             // 
             // dateTimePicker1
             // 
@@ -201,7 +201,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(85, 20);
             this.dateTimePicker1.TabIndex = 47;
-            this.dateTimePicker1.Value = new System.DateTime(2016, 3, 1, 0, 0, 0, 0);
+            this.dateTimePicker1.Value = new System.DateTime(2017, 12, 1, 0, 0, 0, 0);
             // 
             // button1
             // 
@@ -249,6 +249,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CapasComercial";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CapasComercial";
             this.Load += new System.EventHandler(this.CapasComercial_Load);
             this.ResumeLayout(false);
