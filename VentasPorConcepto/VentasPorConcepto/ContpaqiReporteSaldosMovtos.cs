@@ -44,6 +44,7 @@ namespace VentasPorConcepto
         {
             if (mValida())
             {
+                
             Properties.Settings.Default.server = txtServer.Text;
             Properties.Settings.Default.database = txtBD.Text;
             Properties.Settings.Default.user = txtUser.Text;

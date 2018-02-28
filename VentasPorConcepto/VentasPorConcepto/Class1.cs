@@ -641,9 +641,13 @@ namespace VentasPorConcepto
             mySqlDataAdapter.Fill(ds);
 
             DatosReporte = ds.Tables[0];
+            if (ds.Tables.Count > 1)
+                DatosDetalle = ds.Tables[1];
             _conexion1.Close();
 
         }
+
+        
 
         private void TotalizarReporteFacturaAbono(MyExcel.Worksheet sheet, int lrenglon)
         {
@@ -1383,6 +1387,61 @@ Cheque"	Devoluciones
         }
 
 
+        public void mReporteRemisionesComercial(string mEmpresa, DateTime lfechai, DateTime lfechaf)
+        {
+            MyExcel.Workbook newWorkbook = mIniciarExcel();
+            int lrenglon = 1;
+            int lrengloninicial = 1;
+            int lrengloniniciaconcepto = 1;
+            int lrenglontempo = 1;
+            MyExcel.Worksheet sheet = newWorkbook.Sheets[1];
+
+            configuracionencabezadoRemisionesComercial(sheet, mEmpresa, "Facturas y Pedidos", lrenglon, lfechai, lfechaf);
+
+            //mResetearrTotales();
+
+            string lconcepto = "";
+
+
+            string lcliente = "";
+            //sheet.get_Range("B" + lrengloninicial, "V" + lrengloninicial).Borders[MyExcel.XlBordersIndex.xlEdgeBottom].LineStyle = 1;
+            int lmismoconcepto = 0;
+            lrenglon += 1;
+            lrengloniniciaconcepto = lrenglon;
+            decimal dos, tres;
+            int lcolumna;
+            foreach (DataRow row in DatosDetalle.Rows)
+            {
+                //Fecha	# pedidos	cliente	importe	pendiente de facturar	# de factura	cliente	importe	Impuesto	Retención	Total
+                // Prog.	Fecha	Folio	Proveedor	Producto	"Cantidad Solicitada"	"Cantidad Pendiente"
+
+                lcolumna = 1;
+                //sheet.Cells[lrenglon, lcolumna++].value = lrenglon; //Folio Cargo
+                //DateTime dfecha = DateTime.Parse(row["cfecha"].ToString().Trim());
+
+                //DateTime dfechav = DateTime.Parse(row["CFECHAVENCIMIENTO"].ToString().Trim());
+                //string fecha2 = dfecha.Day.ToString().PadLeft(2, '0') + "/" + dfecha.Month.ToString().PadLeft(2, '0') + "/" + dfecha.Year.ToString().PadLeft(4, '0');
+                //string fechav = dfechav.Day.ToString().PadLeft(2, '0') + "/" + dfechav.Month.ToString().PadLeft(2, '0') + "/" + dfechav.Year.ToString().PadLeft(4, '0');
+
+
+                //sheet.Cells[lrenglon, lcolumna++].value = row["CCODIGOPRODUCTO"].ToString().Trim();
+                sheet.Cells[lrenglon, lcolumna++].value = row["CCODIGOPRODUCTO"].ToString().Trim();
+                sheet.Cells[lrenglon, lcolumna++].value = row["CNOMBREPRODUCTO"].ToString().Trim(); //Serie Cargo
+
+                sheet.Cells[lrenglon, lcolumna++].value = row["CUNIDADES"].ToString().Trim();
+                sheet.Cells[lrenglon, lcolumna++].value = row["CNETO"].ToString().Trim(); //Serie Cargo
+                sheet.Cells[lrenglon, lcolumna++].value = row["CTOTAL"].ToString().Trim(); //Fecha Cargo
+                //sheet.Cells[lrenglon, lcolumna++].value = "'" + fecha2; //C
+                sheet.get_Range("Q" + lrenglon.ToString(), "X" + lrenglon.ToString()).Style = "Currency";
+
+                lrenglon++;
+
+
+            }
+            sheet.Cells.EntireColumn.AutoFit();
+            return;
+        }
+
         public void mReportePedidoFacturaComercial(string mEmpresa, DateTime lfechai, DateTime lfechaf)
         {
             MyExcel.Workbook newWorkbook = mIniciarExcel();
@@ -1645,6 +1704,42 @@ Cheque"	Devoluciones
             sheet.get_Range("A" + lrenglon, "X" + lrenglon).Borders[MyExcel.XlBordersIndex.xlInsideVertical].LineStyle = 1;
             sheet.get_Range("A" + lrenglon, "X" + lrenglon).Borders[MyExcel.XlBordersIndex.xlEdgeBottom].LineStyle = 1;
             sheet.get_Range("A" + lrenglon, "X" + lrenglon).Borders[MyExcel.XlBordersIndex.xlEdgeTop].LineStyle = 1;
+        }
+
+        private void configuracionencabezadoRemisionesComercial(MyExcel.Worksheet sheet, string Empresa, string texto, int lrenglon, DateTime lfecha1, DateTime lfecha2)
+        {
+            int lcolumna = 1;
+/*            EncabezadoEmpresa(sheet, Empresa, texto);
+            int lcolumna = 1;
+
+            sheet.Cells[1, 6].value = "Fecha Inicial";
+            sheet.Cells[2, 6].value = "Fecha Final";
+
+
+
+            string fecha2 = lfecha1.Day.ToString().PadLeft(2, '0') + "/" + lfecha1.Month.ToString().PadLeft(2, '0') + "/" + lfecha1.Year.ToString().PadLeft(4, '0');
+            string fecha3 = lfecha2.Day.ToString().PadLeft(2, '0') + "/" + lfecha2.Month.ToString().PadLeft(2, '0') + "/" + lfecha2.Year.ToString().PadLeft(4, '0');
+
+            sheet.Cells[1, 7].value = "'" + fecha2;
+            sheet.Cells[2, 7].value = "'" + fecha3;
+
+            */
+
+            //            Codigo cliente	Descr Cliente	Codigo agente	Desc agente	pedido	Fecha factura	Nombre factura	codigo articolo (principal)	desc articolo	
+            //Classificacions	moneda ($ orPesos)	precio unitario	quantidad	precio total	TOTAL	fecha vencimiento
+
+
+
+            sheet.Cells[lrenglon, lcolumna++].value = "Producto";
+            sheet.Cells[lrenglon, lcolumna++].value = "Nombre";
+            sheet.Cells[lrenglon, lcolumna++].value = "Unidades";
+            sheet.Cells[lrenglon, lcolumna++].value = "Neto";
+            sheet.Cells[lrenglon, lcolumna++].value = "Total";
+
+            sheet.get_Range("A" + lrenglon, "E" + lrenglon).Borders[MyExcel.XlBordersIndex.xlInsideHorizontal].LineStyle = 1;
+            sheet.get_Range("A" + lrenglon, "E" + lrenglon).Borders[MyExcel.XlBordersIndex.xlInsideVertical].LineStyle = 1;
+            sheet.get_Range("A" + lrenglon, "E" + lrenglon).Borders[MyExcel.XlBordersIndex.xlEdgeBottom].LineStyle = 1;
+            sheet.get_Range("A" + lrenglon, "E" + lrenglon).Borders[MyExcel.XlBordersIndex.xlEdgeTop].LineStyle = 1;
         }
 
         public void mReporteInventarioCapas(string mEmpresa, string lfechai, string lfechaf)

@@ -15,7 +15,7 @@ namespace VentasPorConcepto
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CapasComercial());
+            //Application.Run(new CapasComercial());
 
             //Application.Run(new ContpaqiReporteSaldosMovtos());
             //Application.Run(new Form1());
@@ -23,6 +23,7 @@ namespace VentasPorConcepto
             //Application.Run(new FacturaPedidoComercial());
             //Application.Run(new ReporteFotos());
             //Application.Run(new Usuarios());
+            Application.Run(new Remisiones());
         }
     }
 }
