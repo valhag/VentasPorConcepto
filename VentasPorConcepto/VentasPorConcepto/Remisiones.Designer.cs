@@ -92,7 +92,7 @@
             // 
             this.button1.Location = new System.Drawing.Point(12, 134);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(565, 23);
+            this.button1.Size = new System.Drawing.Size(749, 23);
             this.button1.TabIndex = 37;
             this.button1.Text = "Consultar Informacion";
             this.button1.UseVisualStyleBackColor = true;
@@ -109,14 +109,14 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 172);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(681, 313);
+            this.dataGridView1.Size = new System.Drawing.Size(749, 313);
             this.dataGridView1.TabIndex = 38;
             // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(12, 492);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(565, 23);
+            this.button2.Size = new System.Drawing.Size(749, 23);
             this.button2.TabIndex = 39;
             this.button2.Text = "Borrar Seleccionados";
             this.button2.UseVisualStyleBackColor = true;
@@ -125,6 +125,8 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.Location = new System.Drawing.Point(502, 86);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(93, 17);
@@ -136,7 +138,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 527);
+            this.ClientSize = new System.Drawing.Size(773, 527);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
@@ -146,7 +148,11 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Remisiones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Remisiones";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Remisiones_FormClosed);
             this.Load += new System.EventHandler(this.Remisiones_Load);

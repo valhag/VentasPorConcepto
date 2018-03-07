@@ -1424,15 +1424,18 @@ Cheque"	Devoluciones
                 //string fechav = dfechav.Day.ToString().PadLeft(2, '0') + "/" + dfechav.Month.ToString().PadLeft(2, '0') + "/" + dfechav.Year.ToString().PadLeft(4, '0');
 
 
-                //sheet.Cells[lrenglon, lcolumna++].value = row["CCODIGOPRODUCTO"].ToString().Trim();
-                sheet.Cells[lrenglon, lcolumna++].value = row["CCODIGOPRODUCTO"].ToString().Trim();
+                //sheet.Cells[lrenglon, lcolumna++].value = row["CFOLIO"].ToString().Trim();
+                sheet.Cells[lrenglon, lcolumna++].value = "'" + row["CCODIGOPRODUCTO"].ToString().Trim();
                 sheet.Cells[lrenglon, lcolumna++].value = row["CNOMBREPRODUCTO"].ToString().Trim(); //Serie Cargo
 
                 sheet.Cells[lrenglon, lcolumna++].value = row["CUNIDADES"].ToString().Trim();
+                //sheet.Cells[lrenglon, lcolumna].numberformat = "0.00";
                 sheet.Cells[lrenglon, lcolumna++].value = row["CNETO"].ToString().Trim(); //Serie Cargo
                 sheet.Cells[lrenglon, lcolumna++].value = row["CTOTAL"].ToString().Trim(); //Fecha Cargo
                 //sheet.Cells[lrenglon, lcolumna++].value = "'" + fecha2; //C
-                sheet.get_Range("Q" + lrenglon.ToString(), "X" + lrenglon.ToString()).Style = "Currency";
+                
+                sheet.get_Range("C" + lrenglon.ToString(), "C" + lrenglon.ToString()).Style = "Comma";
+                sheet.get_Range("D" + lrenglon.ToString(), "E" + lrenglon.ToString()).Style = "Currency";
 
                 lrenglon++;
 
@@ -1729,6 +1732,11 @@ Cheque"	Devoluciones
             //Classificacions	moneda ($ orPesos)	precio unitario	quantidad	precio total	TOTAL	fecha vencimiento
 
 
+            sheet.get_Range("A" + lrenglon.ToString(), "E" +
+            lrenglon.ToString()).Interior.Color = Color.Blue;
+
+            sheet.get_Range("A" + lrenglon.ToString(), "E" +
+            lrenglon.ToString()).Font.Color = Color.White;
 
             sheet.Cells[lrenglon, lcolumna++].value = "Producto";
             sheet.Cells[lrenglon, lcolumna++].value = "Nombre";

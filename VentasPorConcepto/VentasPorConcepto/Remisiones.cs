@@ -27,7 +27,7 @@ namespace VentasPorConcepto
         private void Remisiones_Load(object sender, EventArgs e)
         {
 
-            this.Text = " Reporte Pedido Factura " + " " + this.ProductVersion;
+            this.Text = " Reporte/Borrado Remisiones " + " " + this.ProductVersion;
             lrn.mSeteaDirectorio(Directory.GetCurrentDirectory());
 
 
@@ -64,7 +64,7 @@ namespace VentasPorConcepto
 
             StringBuilder lquery = new StringBuilder();
 
-            lquery.Append("SELECT format(d.CFECHA,'dd/MM/yyyy') as FECHA, d.cfolio as FOLIO, c.CRAZONSOCIAL AS [RAZON SOCIAL],d.CTOTALUNIDADES AS [TOTAL UNIDADES], d.cneto AS NETO, d.CTOTAL AS TOTAL,co.ccodigoconcepto, d.cseriedocumento ");
+            lquery.Append("SELECT format(d.CFECHA,'dd/MM/yyyy') as FECHA, d.cfolio as FOLIO, c.CRAZONSOCIAL AS [RAZON SOCIAL],d.CTOTALUNIDADES AS [TOTAL UNIDADES], d.cneto AS NETO, d.CTOTAL AS TOTAL,co.ccodigoconcepto, d.cseriedocumento as SERIE ");
             lquery.Append("FROM admDocumentos d ");
             lquery.Append("JOIN admClientes c on c.CIDCLIENTEPROVEEDOR = d.CIDCLIENTEPROVEEDOR ");
             lquery.Append("JOIN admConceptos co on co.CIDCONCEPTODOCUMENTO = d.CIDCONCEPTODOCUMENTO ");
@@ -72,12 +72,15 @@ namespace VentasPorConcepto
             lquery.Append("and d.CFECHA between '" + sfecha1 + "' and '" + sfecha2 + "' ");
             lquery.Append("order by Fecha ");
 
-            lquery.Append("SELECT d.cfolio, p.CCODIGOPRODUCTO, p.CNOMBREPRODUCTO, m.CUNIDADES, m.CNETO, m.ctotal ");
+            lquery.Append("SELECT  p.CCODIGOPRODUCTO, p.CNOMBREPRODUCTO, SUM(m.CUNIDADES) AS CUNIDADES, SUM(m.CNETO) AS CNETO, SUM(m.ctotal) AS CTOTAL ");
             lquery.Append("FROM admDocumentos d ");
             lquery.Append("JOIN admMovimientos m on d.CIDDOCUMENTO = m.CIDDOCUMENTO ");
             lquery.Append("join admProductos p on p.CIDPRODUCTO = m.CIDPRODUCTO ");
             lquery.Append("where d.CCANCELADO = 0 and d.CIDDOCUMENTODE = 3 ");
-            lquery.Append("and d.CFECHA between '" + sfecha1 + "' and '" + sfecha2 + "'; ");
+            lquery.Append("and d.CFECHA between '" + sfecha1 + "' and '" + sfecha2 + "' ");
+            lquery.Append(" group by p.CCODIGOPRODUCTO, p.CNOMBREPRODUCTO ");
+            lquery.Append("order by  p.CCODIGOPRODUCTO, p.CNOMBREPRODUCTO ;");
+            
             
 
             x.mTraerInformacionComercial(lquery, empresasComercial1.aliasbdd);
@@ -92,7 +95,7 @@ namespace VentasPorConcepto
             CBColumn.TrueValue = "1";
             dataGridView1.Columns.Insert(0, CBColumn);*/
 
-            //dataGridView1.Columns
+            dataGridView1.Columns[6].Visible = false;
 
             
             if (checkBox1.Checked == true)
@@ -116,7 +119,7 @@ namespace VentasPorConcepto
             foreach (DataGridViewRow x in dataGridView1.Rows)
             {
                 
-                lrn.mBorrarDocto(x.Cells["ccodigoconcepto"].Value.ToString(), x.Cells["cseriedocumento"].Value.ToString(), x.Cells["FOLIO"].Value.ToString());
+                lrn.mBorrarDocto(x.Cells["ccodigoconcepto"].Value.ToString(), x.Cells["SERIE"].Value.ToString(), x.Cells["FOLIO"].Value.ToString());
             }
             MessageBox.Show("Proceso Terminado");
         }
