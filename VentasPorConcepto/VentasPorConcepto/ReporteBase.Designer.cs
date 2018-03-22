@@ -45,7 +45,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(651, 261);
             this.Controls.Add(this.empresasComercial1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ReporteBase";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReporteBase";
             this.Load += new System.EventHandler(this.ReporteBase_Load);
             this.ResumeLayout(false);

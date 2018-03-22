@@ -41,7 +41,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(600, 23);
             this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
+            this.button1.Text = "Reporte Excel";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -92,6 +92,7 @@
             this.Name = "AmecaInventarios";
             this.Text = "AmecaInventarios";
             this.Load += new System.EventHandler(this.AmecaInventarios_Load);
+            this.Controls.SetChildIndex(this.empresasComercial1, 0);
             this.Controls.SetChildIndex(this.button1, 0);
             this.Controls.SetChildIndex(this.dateTimePicker1, 0);
             this.Controls.SetChildIndex(this.label1, 0);
