@@ -16,7 +16,9 @@ namespace VentasPorConcepto
     {
         // Form1 y = new Form1();
         //FacturaPedidoComercial y = new FacturaPedidoComercial();
-        CapasComercial y = new CapasComercial();
+        //CapasComercial y = new CapasComercial();
+
+        //AmecaConceptos z = new AmecaConceptos();
 
         //Form1 y = new Form1();
         //Gomar z = new Gomar();
@@ -31,11 +33,19 @@ namespace VentasPorConcepto
         //    y = new TLS();
         //    y = ay;
         //}
+        //ReporteBase miForm = new ReporteBase();
         
         public Form4()
         {
+            this.Visible = false;
             InitializeComponent();
         }
+
+        /*public Form4(Form x)
+        {
+            miForm = (ReporteBase)x;
+            InitializeComponent();
+        }*/
 
         private bool mValida()
         {
@@ -65,13 +75,15 @@ namespace VentasPorConcepto
                 Properties.Settings.Default.password = txtPass.Text;
 
                 Properties.Settings.Default.Save();
-
+                this.DialogResult = DialogResult.OK;
                 this.Close();
-                y.Cadenaconexion = "data source =" + Properties.Settings.Default.server +
+                
+                
+                /*miForm.Cadenaconexion = "data source =" + Properties.Settings.Default.server +
                 ";initial catalog =" + Properties.Settings.Default.database + " ;user id = " + Properties.Settings.Default.user +
-                "; password = " + Properties.Settings.Default.password + ";";
+                "; password = " + Properties.Settings.Default.password + ";";*/
                 //y.mllenarcomboempresas();
-                y.Visible = true;
+                //this.Parent.Visible = true;
             }
             else
                 MessageBox.Show("Valores de conexion incorrectos");
