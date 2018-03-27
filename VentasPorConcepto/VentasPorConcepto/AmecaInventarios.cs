@@ -19,7 +19,7 @@ namespace VentasPorConcepto
 
         private void AmecaInventarios_Load(object sender, EventArgs e)
         {
-            this.Text = " Reporte Ameca Inventarios ";
+            this.Text = " Reporte Ameca Inventarios " + this.ProductVersion;
 
         }
 
@@ -49,7 +49,7 @@ namespace VentasPorConcepto
   lquery.Append(" join admDocumentos d on d.CIDDOCUMENTO = m.CIDDOCUMENTO " );
   lquery.Append(" join admconceptos c on c.CIDCONCEPTODOCUMENTO = d.CIDCONCEPTODOCUMENTO " );
   lquery.Append(" where dm.CAFECTAEXISTENCIA in (1,2) " );
-  lquery.Append(" and a.CCODIGOALMACEN  in ('1','2','3','4','9', '99') " );
+  lquery.Append(" and a.CCODIGOALMACEN  in ('1','2','3','4','9', '99','999') " );
   lquery.Append(" and m.CAFECTADOINVENTARIO = 1 " );
   lquery.Append(" and m.CIDDOCUMENTO <> 0 " );
   lquery.Append(" and d.cfecha between '" + sfecha1 + "' and '" + sfecha2 + "' ");
