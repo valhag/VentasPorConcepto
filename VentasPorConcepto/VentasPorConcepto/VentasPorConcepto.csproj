@@ -61,6 +61,18 @@
     <Compile Include="Ajuste.Designer.cs">
       <DependentUpon>Ajuste.cs</DependentUpon>
     </Compile>
+    <Compile Include="AmecaInventarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AmecaInventarios.Designer.cs">
+      <DependentUpon>AmecaInventarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Antiguedad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Antiguedad.Designer.cs">
+      <DependentUpon>Antiguedad.cs</DependentUpon>
+    </Compile>
     <Compile Include="CapasComercial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +87,12 @@
     </Compile>
     <Compile Include="Class1.cs" />
     <Compile Include="Class1Regcs.cs" />
+    <Compile Include="Comisiones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comisiones.Designer.cs">
+      <DependentUpon>Comisiones.cs</DependentUpon>
+    </Compile>
     <Compile Include="ContpaqiSaldosMovtos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +104,12 @@
     </Compile>
     <Compile Include="ContpaqiReporteSaldosMovtos.Designer.cs">
       <DependentUpon>ContpaqiReporteSaldosMovtos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FacturaPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacturaPedido.Designer.cs">
+      <DependentUpon>FacturaPedido.cs</DependentUpon>
     </Compile>
     <Compile Include="FacturaPedidoComercial.cs">
       <SubType>Form</SubType>
@@ -117,6 +141,30 @@
     <Compile Include="Form4.designer.cs">
       <DependentUpon>Form4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5.Designer.cs">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteVentasLotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteVentasLotes.Designer.cs">
+      <DependentUpon>ReporteVentasLotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentasSegmentoNegocio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentasSegmentoNegocio.Designer.cs">
+      <DependentUpon>VentasSegmentoNegocio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZonaExistenciasCostos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZonaExistenciasCostos.Designer.cs">
+      <DependentUpon>ZonaExistenciasCostos.cs</DependentUpon>
+    </Compile>
     <Compile Include="GridCatalogo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +183,12 @@
     <Compile Include="InventarioCapas.Designer.cs">
       <DependentUpon>InventarioCapas.cs</DependentUpon>
     </Compile>
+    <Compile Include="NosSerieAmco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NosSerieAmco.Designer.cs">
+      <DependentUpon>NosSerieAmco.cs</DependentUpon>
+    </Compile>
     <Compile Include="OC.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +202,12 @@
     </Compile>
     <Compile Include="Remisiones.Designer.cs">
       <DependentUpon>Remisiones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteBase.Designer.cs">
+      <DependentUpon>ReporteBase.cs</DependentUpon>
     </Compile>
     <Compile Include="ReporteFotos.cs">
       <SubType>Form</SubType>
@@ -169,6 +229,13 @@
     </Compile>
     <EmbeddedResource Include="Ajuste.resx">
       <DependentUpon>Ajuste.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AmecaInventarios.resx">
+      <DependentUpon>AmecaInventarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Antiguedad.resx">
+      <DependentUpon>Antiguedad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CapasComercial.resx">
       <DependentUpon>CapasComercial.cs</DependentUpon>
@@ -176,11 +243,17 @@
     <EmbeddedResource Include="Catalogo.resx">
       <DependentUpon>Catalogo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Comisiones.resx">
+      <DependentUpon>Comisiones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ContpaqiSaldosMovtos.resx">
       <DependentUpon>ContpaqiSaldosMovtos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ContpaqiReporteSaldosMovtos.resx">
       <DependentUpon>ContpaqiReporteSaldosMovtos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacturaPedido.resx">
+      <DependentUpon>FacturaPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FacturaPedidoComercial.resx">
       <DependentUpon>FacturaPedidoComercial.cs</DependentUpon>
@@ -197,6 +270,18 @@
     <EmbeddedResource Include="Form4.resx">
       <DependentUpon>Form4.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form5.resx">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteVentasLotes.resx">
+      <DependentUpon>ReporteVentasLotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentasSegmentoNegocio.resx">
+      <DependentUpon>VentasSegmentoNegocio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZonaExistenciasCostos.resx">
+      <DependentUpon>ZonaExistenciasCostos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GridCatalogo.resx">
       <DependentUpon>GridCatalogo.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,6 +290,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InventarioCapas.resx">
       <DependentUpon>InventarioCapas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NosSerieAmco.resx">
+      <DependentUpon>NosSerieAmco.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OC.resx">
       <DependentUpon>OC.cs</DependentUpon>
@@ -221,6 +309,9 @@
     </Compile>
     <EmbeddedResource Include="Remisiones.resx">
       <DependentUpon>Remisiones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteBase.resx">
+      <DependentUpon>ReporteBase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteFotos.resx">
       <DependentUpon>ReporteFotos.cs</DependentUpon>
@@ -272,15 +363,15 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\dllnew\dllnew\dllsnew\controles\Controles.csproj">
+    <ProjectReference Include="..\..\..\dllnew\dllsnew\controles\Controles.csproj">
       <Project>{6cf8cdf6-bcea-4a14-9c1f-b48ab0d5ad76}</Project>
       <Name>Controles</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\dllnew\dllnew\dllsnew\Interfaces\Interfaces.csproj">
+    <ProjectReference Include="..\..\..\dllnew\dllsnew\Interfaces\Interfaces.csproj">
       <Project>{704e6595-e778-4b7d-907c-e850a3c85563}</Project>
       <Name>Interfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\dllnew\dllnew\dllsnew\LibreriaDoctos\LibreriaDoctos.csproj">
+    <ProjectReference Include="..\..\..\dllnew\dllsnew\LibreriaDoctos\LibreriaDoctos.csproj">
       <Project>{48e88799-92db-4d7b-ab76-5452c4fedd67}</Project>
       <Name>LibreriaDoctos</Name>
     </ProjectReference>

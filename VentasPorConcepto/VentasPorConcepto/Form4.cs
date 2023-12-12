@@ -16,7 +16,12 @@ namespace VentasPorConcepto
     {
         // Form1 y = new Form1();
         //FacturaPedidoComercial y = new FacturaPedidoComercial();
-        CapasComercial y = new CapasComercial();
+        //CapasComercial y = new CapasComercial();
+        //Remisiones y = new Remisiones();
+
+        //NosSerieAmco y = new NosSerieAmco();
+
+        Antiguedad y = new Antiguedad();
 
         //Form1 y = new Form1();
         //Gomar z = new Gomar();
@@ -31,7 +36,7 @@ namespace VentasPorConcepto
         //    y = new TLS();
         //    y = ay;
         //}
-        
+
         public Form4()
         {
             InitializeComponent();
@@ -67,10 +72,12 @@ namespace VentasPorConcepto
                 Properties.Settings.Default.Save();
 
                 this.Close();
+                this.DialogResult = DialogResult.OK;
                 y.Cadenaconexion = "data source =" + Properties.Settings.Default.server +
                 ";initial catalog =" + Properties.Settings.Default.database + " ;user id = " + Properties.Settings.Default.user +
                 "; password = " + Properties.Settings.Default.password + ";";
                 //y.mllenarcomboempresas();
+                
                 y.Visible = true;
             }
             else

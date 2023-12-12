@@ -23,7 +23,16 @@ namespace VentasPorConcepto
             //Application.Run(new FacturaPedidoComercial());
             //Application.Run(new ReporteFotos());
             //Application.Run(new Usuarios());
-            Application.Run(new Remisiones());
+            // Application.Run(new Remisiones());
+            //Application.Run(new NosSerieAmco());
+            //Application.Run(new AmecaInventarios());
+            //Application.Run(new Antiguedad());
+            //Application.Run(new Comisiones());
+            //Application.Run(new FacturaPedido());
+            //Application.Run(new ZonaExistenciasCostos());
+            //Application.Run(new ReporteVentasLotes());
+            Application.Run(new VentasSegmentoNegocio());
+
         }
     }
 }

@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VentasPorConcepto", "VentasPorConcepto\VentasPorConcepto.csproj", "{6AF26362-CF6C-49CF-8551-436BD5B75D67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controles", "..\..\..\dllnew\dllnew\dllsnew\controles\Controles.csproj", "{6CF8CDF6-BCEA-4A14-9C1F-B48AB0D5AD76}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controles", "..\..\dllnew\dllsnew\controles\Controles.csproj", "{6CF8CDF6-BCEA-4A14-9C1F-B48AB0D5AD76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "..\..\..\dllnew\dllnew\dllsnew\Interfaces\Interfaces.csproj", "{704E6595-E778-4B7D-907C-E850A3C85563}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "..\..\dllnew\dllsnew\Interfaces\Interfaces.csproj", "{704E6595-E778-4B7D-907C-E850A3C85563}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibreriaDoctos", "..\..\..\dllnew\dllnew\dllsnew\LibreriaDoctos\LibreriaDoctos.csproj", "{48E88799-92DB-4D7B-AB76-5452C4FEDD67}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibreriaDoctos", "..\..\dllnew\dllsnew\LibreriaDoctos\LibreriaDoctos.csproj", "{48E88799-92DB-4D7B-AB76-5452C4FEDD67}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
