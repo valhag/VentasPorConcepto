@@ -1,0 +1,1295 @@
+Cuenta padre,Cuenta,Name,Es de mayor,Main account type (Contpaq)
+,1000000000,ACTIVO,,
+1000000000,1100000000,CIRCULANTE,,Total
+1100000000,1101000000,FONDO FIJO,,Total
+1101000000,1101010000,Fondo Fijo,,Activo Deudora 
+1101000000,1101020000,Caja Facsimil,,Activo Deudora 
+1101000000,1101030000,Caja Operativa,,Activo Deudora 
+1101030000,1101030001,Caja Operativa Sucursal,,Activo Deudora 
+1101030000,1101030002,Sobrante en Caja,,Activo Deudora 
+1101030000,1101030003,Traspaso de Efectivo,,Activo Deudora 
+1100000000,1102000000,BANCOS MONEDA NACIONAL,,Total
+1102000000,1102010000,BBVA Bancomer / Pagatodo / Facsimil,,Activo Deudora 
+1102000000,1102020000,Ixe,,Activo Deudora 
+1102000000,1102030000,Banorte,,Activo Deudora 
+1102000000,1102040000,Banamex,,Activo Deudora 
+1102000000,1102050000,Bital,,Activo Deudora 
+1102000000,1102060000,Banco Monex,,Activo Deudora 
+1102000000,1102070000,Santander,,Activo Deudora 
+1102000000,1102080000,HSBC,,Activo Deudora 
+1102000000,1102090000,Invex,,Activo Deudora 
+1102000000,1102100000,Banorte Recolectora 429229826,,Activo Deudora 
+1102000000,1102110000,Banorte Dotaciones 429229808,,Activo Deudora 
+1102000000,1102310000,Industrial (GTE),,Activo Deudora 
+1102000000,1102320000,Banco Internacional (GTE),,Activo Deudora 
+1102000000,1102330000,America Central (GTE),,Activo Deudora 
+1102000000,1102340000,Industrial - Sucursales (GTE),,Activo Deudora 
+1102000000,1102510000,Scotiabank  (SLV),,Activo Deudora 
+1102000000,1102520000,Promerica  (SLV),,Activo Deudora 
+1102000000,1102530000,Continental (SLV),,Activo Deudora 
+1102000000,1102610000,Banpais (HN),,Activo Deudora 
+1100000000,1103000000,BANCOS MONEDA EXTRANJERA,,Total
+1103000000,1103010000,Bancomer,,Activo Deudora 
+1103000000,1103020000,Ixe,,Activo Deudora 
+1103000000,1103060000,Monex,,Activo Deudora 
+1103000000,1103080000,Invex,,Activo Deudora 
+1103000000,1103090000,Derivados,,Activo Deudora 
+1103000000,1103310000,Industrial,,Activo Deudora 
+1103000000,1103320000,Banco Internacional (GTE),,Activo Deudora 
+1103000000,1103610000,Banpais,,Activo Deudora 
+1100000000,1104000000,INVERSIONES,,Total
+1104000000,1104010000,VALORES,,Total
+1104010000,1104010001,Monex,,Activo Deudora 
+1104010000,1104010002,Ixe Bolsa 00499566,,Activo Deudora 
+1104010000,1104010003,No ocupar,,Activo Deudora 
+1104010000,1104010004,Banamex 191968776,,Activo Deudora 
+1104010000,1104010005,Bancomer 2034413440,,Activo Deudora 
+1104000000,1104020000,EN ACCIONES(Subsidiarias),,Total
+1104020000,1104020001,Maxi Prenda Guatemala,,Activo Deudora 
+1104020000,1104020002,Maxi Prenda El Salvador,,Activo Deudora 
+1104020000,1104020003,Maxi Prenda Honduras,,Activo Deudora 
+1104020000,1104020004,Maxi Realice,,Activo Deudora 
+1104020000,1104020005,Maxi Realice Guatemala SA,,Activo Deudora 
+1104020000,1104020006,Comercializadora Maxi Guatemala SA,,Activo Deudora 
+1104020000,1104020007,Soluciones Prima Administrativas de Guatemala SA,,Activo Deudora 
+1104020000,1104020008,Fideicomiso,,Activo Deudora 
+1104020000,1104020009,Soluciones Prima,,Activo Deudora 
+1104020000,1104020010,Soluciones Prima Guatemala,,Activo Deudora 
+1104020000,1104020011,Soluciones Prima Honduras,,Activo Deudora 
+1104020000,1104020012,Acciones Priviligiadas,,Activo Deudora 
+1104020000,1104020013,Acciones Latin Idea,,Activo Deudora 
+1100000000,1105000000,CARTERA DE CREDITO VIGENTE,,Total
+1105000000,1105010000,Depositaria,,Total
+1105010000,1105010001,Alhajas,,Activo Deudora 
+1105010000,1105010002,Plata,,Activo Deudora 
+1105010000,1105010003,Electronicos,,Activo Deudora 
+1105010000,1105010004,Autos,,Activo Deudora 
+1105010000,1105010005,Articulos Varios,,Activo Deudora 
+1105000000,1105020000,Cartera vigente,,Activo Deudora 
+1100000000,1106000000,CARTERA DE CREDITO VENCIDA,,Total
+1106000000,1106010000,Almoneda,,Activo Deudora 
+1106010000,1106010001,Alhajas,,Activo Deudora 
+1106010000,1106010002,Plata,,Activo Deudora 
+1106010000,1106010003,Electronicos,,Activo Deudora 
+1106010000,1106010004,Autos,,Activo Deudora 
+1106010000,1106010005,Articulos Varios,,Activo Deudora 
+1106010000,1106010099,Almoneda antigua,,Activo Deudora 
+1106000000,1106020000,Apartado,,Total
+1106020000,1106020001,Apartado Alhajas,,Activo Deudora 
+1106020000,1106020002,Plata,,Activo Deudora 
+1106020000,1106020003,Electronicos,,Activo Deudora 
+1106020000,1106020004,Autos,,Activo Deudora 
+1106020000,1106020005,Articulos Varios,,Activo Deudora 
+1106000000,1106030000,Vitrina,,Total
+1106030000,1106030001,Vitrina Alhajas,,Activo Deudora 
+1106030000,1106030002,Plata,,Activo Deudora 
+1106030000,1106030003,Electronicos,,Activo Deudora 
+1106030000,1106030004,Autos,,Activo Deudora 
+1106030000,1106030005,Articulos Varios,,Activo Deudora 
+1106000000,1106040000,Envios de Prendas,,Activo Deudora 
+1106040000,1106040001,Alhajas,,Activo Deudora 
+1106040000,1106040002,Plata,,Activo Deudora 
+1106040000,1106040003,Electronicos,,Activo Deudora 
+1106000000,1106050000,Interes Devengado No cobrado,,Total
+1106050000,1106050001,Alhajas,,Activo Deudora 
+1106050000,1106050002,Plata,,Activo Deudora 
+1106050000,1106050003,Electronicos,,Activo Deudora 
+1106050000,1106050004,Autos,,Activo Deudora 
+1106050000,1106050005,Articulos Varios,,Activo Deudora 
+1106000000,1106060000,Cartera Vencida,,Total
+1106060000,1106060001,Cartera Vencida 1-30,,Activo Deudora 
+1106060000,1106060002,Cartera Vencida 30 Menos de 90,,Activo Deudora 
+1106060000,1106060003,Cartera Vencida > 90,,Activo Deudora 
+1100000000,1107000000,ESTIMACION DE CUENTAS INCOBRABLES,,Total
+1107000000,1107010000,Provision de Estimacion,,Total
+1107010000,1107010001,Alhajas,,Activo Deudora 
+1107010000,1107010002,Plata,,Activo Deudora 
+1107010000,1107010003,Electronicos,,Activo Deudora 
+1107010000,1107010004,Autos,,Activo Deudora 
+1107010000,1107010005,Articulos Varios,,Activo Deudora 
+1107010000,1107010006,Estimacion Cuentas Incobrables,,Activo Deudora 
+1107010000,1107010007,Pawn reserve (Reservas Cartera Vigente),,Activo Deudora 
+1107000000,1107020000,Fraudes y Siniestros,,Activo Deudora 
+1107000000,1107030000,Indemnizaciones,,Activo Acreedora
+1107000000,1107040000,Baja de Prendas,,Activo Acreedora
+1100000000,1108000000,INVENTARIOS (REFURBISHED),,Total
+1108000000,1108010000,Electronica,,Activo Deudora 
+1108000000,1108020000,Articulos Varios,,Activo Deudora 
+1108000000,1108030000,Alhajas y Oro,,Activo Deudora 
+1108000000,1108040000,Alhajas Centralizadora,,Activo Deudora 
+1100000000,1109000000,CLIENTES,,Total
+1109000000,1109010000,Mayoristas (Partes Relacionadas Comercializacion de Oro),,Total
+1109010000,1109010001,Maxi Prenda,,Activo Deudora 
+1109010000,1109010002,Maxi Realice,,Activo Deudora 
+1109010000,1109010003,Maxi Realice Guatemala,,Activo Deudora 
+1109010000,1109010004,Comercializadora Maxi Guatemala,,Activo Deudora 
+1109010000,1109010005,Maxi Prenda Honduras,,Activo Deudora 
+1109010000,1109010006,Maxi Prenda El Salvador,,Activo Deudora 
+1109010000,1109010007,"Soluciones Prima Guatemala, S.A.",,Activo Deudora 
+1109010000,1109010008,"Soluciones Administrativas de Guatemala, S.A.",,Activo Deudora 
+1109000000,1109020000,Clientes  (Partes no Relacionadas),,Total
+1109020000,1109020001,Metallix Refinnig company,,Activo Deudora 
+1109020000,1109020002,Grupo Buen Oro,,Activo Deudora 
+1109020000,1109020003,Silvergold,,Activo Deudora 
+1109020000,1109020004,Mexioro,,Activo Deudora 
+1109020000,1109020005,Goldium Refinery S.A. de C.V.,,Activo Deudora 
+1109020000,1109020006,Factoring Corporativo,,Activo Deudora 
+1109020000,1109020007,Sixstar,,Activo Deudora 
+1109020000,1109020008,Jhonson Matthey,,Activo Deudora 
+1109020000,1109020009,"AIFCO, S.A DE C.V.",,Activo Deudora 
+1109020000,1109020010,Cardif Mexico Seguros De Vida SA De CV,,Activo Deudora 
+1100000000,1110000000,OTRAS CUENTAS POR COBRAR,,Total
+1110000000,1110030000,Seguros por Recuperar,,Total
+1110030000,1110030001,Demandas a Ex Empleados,,Activo Deudora 
+1110030000,1110030002,Prendas Litigio,,Activo Deudora 
+1110030000,1110030003,Seguros pendientes de recuperar,,Activo Deudora 
+1110000000,1110040000,Deudores Diversos,,Total
+1110040000,1110040001,Soluciones Prima (Cargos a Empleados),,Activo Deudora 
+1110040000,1110040002,Prestamos a Empleados,,Activo Deudora 
+1110040000,1110040003,Ventas a Empleados,,Activo Deudora 
+1110040000,1110040004,Descuento por Viaticos,,Activo Deudora 
+1110040000,1110040005,Otros,,Activo Deudora 
+1110000000,1110050000,Transferencias,,Activo Deudora 
+1100000000,1111000000,CUENTAS POR COBRAR PARTE RELACIONADA,,Total
+1111000000,1111010000,Facturacion de Servicios de Outsourcing,,Total
+1111010000,1111010001,Maxi Prenda,,Activo Deudora 
+1111010000,1111010002,Maxi Realice,,Activo Deudora 
+1111010000,1111010003,Maxi Prenda Guatemala,,Activo Deudora 
+1111000000,1111020000,Deposito por Excedentes,,Total
+1111020000,1111020001,Fideicomiso,,Activo Deudora 
+1111020000,1111020002,Maxi Prenda,,Activo Deudora 
+1111000000,1111030000,Prestamos realizados,,Total
+1111030000,1111030001,Maxi Prenda,,Activo Deudora 
+1111030000,1111030002,Guatemala,,Activo Deudora 
+1111030000,1111030003,El Salvador,,Activo Deudora 
+1111030000,1111030004,Honduras,,Activo Deudora 
+1111030000,1111030005,Maxi Realice,,Activo Deudora 
+1111030000,1111030006,"Maxi Realice Guatemala, S.A.",,Activo Deudora 
+1111030000,1111030007,"Comercializadora Maxi, S.A.",,Activo Deudora 
+1111030000,1111030008,"Soluciones Prima Guatemala, S.A.",,Activo Deudora 
+1111030000,1111030009,"Soluciones Administrativas de Guatemala, S.A.",,Activo Deudora 
+1111030000,1111030010,SMDP SA de CV,,Activo Deudora 
+1111030000,1111030011,"Soluciones Prima, SA de CV",,Activo Deudora 
+1111030000,1111030012,Accionistas,,Activo Deudora 
+1111030000,1111030013,Maxi Realice Wester,,Activo Deudora 
+1111030000,1111030014,ALES (Descuentos por Viaticos),,Activo Deudora 
+1111000000,1111040000,Traspasos,,Total
+1111040000,1111040001,Cartera Fideicomiso,,Activo Deudora 
+1111040000,1111040002,CXC Devengado,,Activo Deudora 
+1111040000,1111040003,Ingresos,,Activo Deudora 
+1111040000,1111040004,CXC Mayoristas,,Activo Deudora 
+1111040000,1111040005,CXC Estimacion Ctas Inc,,Activo Deudora 
+1111040000,1111040006,Traspaso ISR Ret Bancos,,Activo Deudora 
+1100000000,1112000000,IMPUESTOS POR RECUPERAR (SALDOS A FAVOR),,Total
+1112000000,1112010000,ISR Personas Morales,,Activo Deudora 
+1112000000,1112020000,IETU,,Activo Deudora 
+1112000000,1112030000,IDE sobre Depositos,,Activo Deudora 
+1112000000,1112040000,IVA Acreditable Saldo a Favor,,Total
+1112040000,1112040001,IVA Acreditable saldo a favor del mes (Credito fiscal),,Activo Deudora 
+1112040000,1112040002,IVA Acreditable saldo a favor de periodos ant. (Credito Fis),,Activo Deudora 
+1112040000,1112040003,IVA Acreditable de Retenciones  Pago de lo Indebido,,Activo Deudora 
+1112000000,1112050000,Pagos de lo Indebido (Impuestos),,Total
+1112050000,1112050001,Ret ISR Honorarios,,Activo Deudora 
+1112050000,1112050002,Ret ISR Arrendamiento,,Activo Deudora 
+1112050000,1112050003,IETU Pago de lo indebido,,Activo Deudora 
+1112050000,1112050004,IETU Pago Anual,,Activo Deudora 
+1112050000,1112050005,IVA,,Activo Deudora 
+1112050000,1112050006,ISR Personas Morales,,Activo Deudora 
+1112050000,1112050007,ISR Retencion Sueldos y Salarios,,Activo Deudora 
+1100000000,1113000000,PAGOS PROVISIONALES EFECTUADOS,,Total
+1113000000,1113010000,Impuestos sobre la Renta,,Activo Deudora 
+1113000000,1113020000,Impuestos Empresarial Tasa Unica,,Activo Deudora 
+1113000000,1113030000,Impuestos Solidaridad,,Activo Deudora 
+1100000000,1114000000,IMPUESTOS RETENIDOS A CUENTA DE LA ANUAL,,Total
+1114000000,1114010000,ISR Retenciones Bancos,,Activo Deudora 
+1114000000,1114020000,ISR Retenciones en el extranjero,,Activo Deudora 
+1114020000,1114020001,Guatemala,,Activo Deudora 
+1114020000,1114020002,El Salvador,,Activo Deudora 
+1114020000,1114020003,Honduras,,Activo Deudora 
+1114000000,1114030000,1% IVA Retenido (Compras SLV),,Activo Deudora 
+1114000000,1114040000,1% IVA Percibido (Ventas SLV),,Activo Deudora 
+1100000000,1115000000,IMPUESTOS A LOS DEPOSITOS EN EFECTIVO POR RECUPERAR,,Activo Deudora 
+1115000000,1115010000,IDE sobre Depositos,,Activo Deudora 
+1115000000,1115020001,----,,Total
+,1115020003,-----,,Total
+,1115020005,----,,Total
+1115000000,1115030003,-------,,Total
+,1115030005,----,,Total
+1115000000,1115050001,------------,,Total
+,1115050002,------,,Total
+,1115050003,------------,,Total
+1115000000,1115060003,------------,,Activo Deudora 
+,1115060004,-------------,,Total
+,1115060005,-------------,,Total
+1115000000,1115070000,Impuesto al Control de la Liquidez (SLV),,Activo Deudora 
+1100000000,1116000000,IMPUESTOS ACREDITABLES,,Total
+1116000000,1116010000,Subsidio al Empleo,,Activo Deudora 
+1116000000,1116020000,IVA Acreditable 11%,,Activo Deudora 
+1116020000,1116020001,IVA Acreditable arrendamientos 11%,,Activo Deudora 
+1116020000,1116020002,IVA Acreditable honorarios 11%,,Activo Deudora 
+1116020000,1116020003,IVA Acreditable gastos 11%,,Activo Deudora 
+1116020000,1116020004,IVA Acreditable inversiones de activo fijo 11%,,Activo Deudora 
+1116020000,1116020005,IVA Acreditable de importaciones 11%,,Activo Deudora 
+1116000000,1116030000,IVA Acreditable 16%,,Activo Deudora 
+1116030000,1116030001,IVA Acreditable arrendamientos 16%,,Activo Deudora 
+1116030000,1116030002,IVA Acreditable honorarios 16%,,Activo Deudora 
+1116030000,1116030003,IVA Acreditable gastos 16%,,Activo Deudora 
+1116030000,1116030004,IVA Acreditable inversiones de activo fijo 16%,,Activo Deudora 
+1116030000,1116030005,IVA Acreditable de importaciones 16%,,Activo Deudora 
+1116000000,1116040000,IVA Acreditable Centroamerica,,Total
+1116040000,1116040001,IVA Credito Fiscal 12% (GTE),,Activo Deudora 
+1116040000,1116040002,IVA Retenciones Bancos (GTE),,Activo Deudora 
+1116040000,1116040003,IVA Por Crédito Fiscal 13% (SLV),,Activo Deudora 
+1116040000,1116040004,Remanente de IVA (SLV),,Activo Deudora 
+1116040000,1116040005,IVA Por Aplicar 12%  (HN),,Activo Deudora 
+1116040000,1116040006,IVA Acreditable por Adjudicaciones (GTE),,Activo Deudora 
+1116000000,1116050000,IVA Pendiente por Acreditar 11%,,Total
+1116050000,1116050001,IVA Pendiente por Acreditar arrendamientos 11%,,Activo Deudora 
+1116050000,1116050002,IVA Pendiente por Acreditar honorarios 11%,,Activo Deudora 
+1116050000,1116050003,IVA Pendiente por Acreditar gastos 11%,,Activo Deudora 
+1116050000,1116050004,IVA Pendiente por Acreditar inversiones de activo fijo 11%,,Activo Deudora 
+1116050000,1116050005,IVA Pendiente por Acreditar de importaciones 11%,,Activo Deudora 
+1116000000,1116060000,IVA Pendiente por Acreditar 16%,,Activo Deudora 
+1116060000,1116060001,IVA Pendiente por Acreditar arrendamientos 16%,,Activo Deudora 
+1116060000,1116060002,IVA Pendiente por Acreditar honorarios 16%,,Activo Deudora 
+1116060000,1116060003,IVA Pendiente por Acreditar gastos 16%,,Activo Deudora 
+1116060000,1116060004,IVA Pendiente por Acreditar inversiones de activo fijo 16%,,Activo Deudora 
+1116060000,1116060005,IVA Pendiente por Acreditar de importaciones 16%,,Activo Deudora 
+1116000000,1116070000,IVA  Pendiente por Acreditar  Centroamerica,,Total
+1116070000,1116070001,IVA por Aplicar 12% (GTE),,Activo Deudora 
+1116070000,1116070002,IVA por Aplicar 13% (SLV),,Activo Deudora 
+1000000000,1200000000,FIJO,,Total
+1200000000,1201000000,MOBILIARIO Y EQUIPO,,Activo Deudora 
+1201000000,1201010000,Mobiliario y equipo,,Activo Deudora 
+1201000000,1201020000,Equipo de Computo,,Activo Deudora 
+1201000000,1201030000,Equipo de Almacen,,Activo Deudora 
+1201000000,1201040000,Equipo de Valuacion,,Activo Deudora 
+1201000000,1201050000,Equipo de Seguridad,,Activo Deudora 
+1201000000,1201060000,Equipo de Transporte,,Activo Deudora 
+1201000000,1201080000,Adaptaciones y Mejoras,,Activo Deudora 
+1201000000,1201090000,Sistema de Computo,,Activo Deudora 
+1200000000,1202000000,DEP. ACTIVO FIJO,,Total
+1202000000,1202010000,Dep. Mobiliario y equipo,,Activo Deudora 
+1202000000,1202020000,Dep. Equipo de Computo,,Activo Deudora 
+1202000000,1202030000,Dep. Equipo de Almacen,,Activo Deudora 
+1202000000,1202040000,Dep. Equipo de Valuacion,,Activo Deudora 
+1202000000,1202050000,Dep. Equipo de Seguridad,,Activo Deudora 
+1202000000,1202060000,Dep. Equipo de Transporte,,Activo Deudora 
+1202000000,1202080000,Amortizacion de Adaptaciones y Mejoras,,Activo Deudora 
+1202000000,1202090000,Amortizacion Sistema de Computo,,Activo Deudora 
+1200000000,1203000000,ACTUALIZACION DE ACTIVO FIJO Y DEP. Y AMORT AF,,Total
+1203000000,1203010000,Act. Mobiliario y equipo,,Activo Deudora 
+1203000000,1203020000,Act. Equipo de Computo,,Activo Deudora 
+1203000000,1203030000,Act. Equipo de Almacen,,Activo Deudora 
+1203000000,1203040000,Act. Equipo de Valuacion,,Activo Deudora 
+1203000000,1203050000,Act. Equipo de Seguridad,,Activo Deudora 
+1203000000,1203060000,Act. Equipo de Transporte,,Activo Deudora 
+1203000000,1203070000,Act. Dep. Mobiliario y equipo,,Activo Deudora 
+1203000000,1203080000,Act. Dep. Equipo de Computo,,Activo Deudora 
+1203000000,1203090000,Act. Dep. Equipo de Almacen,,Activo Deudora 
+1203000000,1203100000,Act. Dep. Equipo de Valuacion,,Activo Deudora 
+1203000000,1203110000,Act. Dep. Equipo de Seguridad,,Activo Deudora 
+1203000000,1203120000,Act. Dep. Equipo de Transporte,,Activo Deudora 
+1200000000,1205000000,ACTIVO ADQUIRIDOS EN ARRENDAMIENTO,,Total
+1205000000,1205010000,Mobiliario y equipo,,Activo Deudora 
+1205000000,1205020000,Equipo de Computo,,Activo Deudora 
+1205000000,1205050000,Equipo de Seguridad,,Activo Deudora 
+1205000000,1205060000,Equipo de Transporte,,Activo Deudora 
+1200000000,1206000000,ACTIVO ADJUDICADO,,Total
+1206000000,1206010000,Mobiliario y equipo,,Activo Deudora 
+1206000000,1206020000,Equipo de Computo,,Activo Deudora 
+1206000000,1206030000,Equipo de Transporte,,Activo Deudora 
+1200000000,1207000000,PROYECTOS,,Activo Deudora 
+1207000000,1207010000,Mobiliario y equipo,,Activo Deudora 
+1207000000,1207020000,Equipo de Computo,,Activo Deudora 
+1207000000,1207030000,Equipo de Transporte,,Activo Deudora 
+1207000000,1207050000,Equipo de Seguridad,,Activo Deudora 
+1000000000,1300000000,DIFERIDO,,Total
+1300000000,1301000000,PREOPERATIVOS Y ADAPTACIONES EN PROCESO,,Total
+1301000000,1301010000,Gastos de Instalacion,,Activo Deudora 
+1301000000,1301020000,Adaptaciones y Mejoras,,Activo Deudora 
+1301000000,1301030000,Sistema de Computo,,Activo Deudora 
+1300000000,1302000000,AMORTIZACION PREOPERATIVOS Y ADAPTACIONES,,Total
+1302000000,1302010000,Amortizacion de Gastos de Instalacion,,Activo Deudora 
+1302000000,1302020000,Amortizacion de Adaptaciones y Mejoras,,Activo Deudora 
+1302000000,1302030000,Amortizacion de Sistema de Computo,,Activo Deudora 
+1300000000,1303000000,ACTUALIZACION DE AMORTIZACION PREOP Y ADAPT,,Total
+1303000000,1303010000,Gastos de Instalacion,,Activo Deudora 
+1303000000,1303020000,Adaptaciones y Mejoras,,Activo Deudora 
+1303000000,1303030000,Sistema de Computo,,Activo Deudora 
+1303000000,1303040000,Amortizacion de Gastos de Instalacion,,Activo Deudora 
+1303000000,1303050000,Amortizacion de Adaptaciones y Mejoras,,Activo Deudora 
+1303000000,1303060000,Amortizacion de Sistema de Computo,,Activo Deudora 
+1300000000,1304000000,PAGOS ANTICIPADOS,,Total
+1304000000,1304010000,Depositos en Garantia,,Activo Deudora 
+1304010000,1304010001,Arrendamiento Inmuebles,,Activo Deudora 
+1304010000,1304010002,Arrendamiento Autos,,Activo Deudora 
+1304010000,1304010003,Arrendamiento de Mobiliario y Equipo,,Activo Deudora 
+1304010000,1304010004,Deposito en Gtia por Servicios,,Activo Deudora 
+1304000000,1304020000,Rentas Pagadas por Anticipado,,Activo Deudora 
+1304000000,1304030000,Servicios Pagados por Anticipado,,Activo Deudora 
+1304030000,1304030001,Auditorias,,Activo Deudora 
+1304030000,1304030002,Autos ( Guia Autometrica),,Activo Deudora 
+1304030000,1304030003,Capacitacion,,Activo Deudora 
+1304030000,1304030004,Consultoria,,Activo Deudora 
+1304030000,1304030005,Mantto Inmuebles,,Activo Deudora 
+1304030000,1304030006,Mantto Mobiliario,,Activo Deudora 
+1304030000,1304030007,Mantto de Equipo Comp,,Activo Deudora 
+1304030000,1304030008,Cuotas Sindicales,,Activo Deudora 
+1304030000,1304030009,Otros Gastos Extraordinarios,,Activo Deudora 
+1304030000,1304030010,Otros Servicios Pag Por Ant,,Activo Deudora 
+1304000000,1304040000,Seguros Pagados por Anticipado,,Activo Deudora 
+1304040000,1304040001,Gastos Médicos Mayores,,Activo Deudora 
+1304040000,1304040002,Seguros de Vida,,Activo Deudora 
+1304040000,1304040003,Autos,,Activo Deudora 
+1304040000,1304040004,Seguro de Sucursales,,Activo Deudora 
+1304040000,1304040005,Fianzas  de Sucursal,,Activo Deudora 
+1304000000,1304050000,Anticipo Proveedores,,Activo Deudora 
+1304050000,1304050001,Comision Nacional Bancaria y de Valores,,Activo Deudora 
+1304050000,1304050002,Operadora Central de Estacionamientos,,Activo Deudora 
+1304000000,1304060000,Intereses pagados por Anticipado,,Activo Deudora 
+1304000000,1304070000,Cust Relationships,,Activo Deudora 
+1300000000,1305000000,IMPUESTOS DIFERIDOS,,Total
+1305000000,1305010000,ISR Diferido,,Activo Deudora 
+1305000000,1305020000,PTU Diferida,,Activo Deudora 
+1305000000,1305030000,IETU  Diferido,,Activo Deudora 
+1300000000,1306000000,Crédito Mercantíl,,Activo Deudora 
+1306000000,1306010000,México,,Activo Deudora 
+1306000000,1306020000,Guatemala,,Activo Deudora 
+1306000000,1306030000,El Salvador,,Activo Deudora 
+,2000000000,PASIVO,,Total
+2000000000,2100000000,A CORTO PLAZO,,Total
+2100000000,2101000000,ACREEDORES FINANCIEROS,,Total
+2101000000,2101010000,Documentos por pagar C/P,,Pasivo Acreedora 
+2101010000,2101010001,Ixe,,Pasivo Acreedora 
+2101010000,2101010002,Indeval,,Pasivo Acreedora 
+2101010000,2101010003,Banco Internacional,,Pasivo Acreedora 
+2101000000,2101020000,Documentos por pagar L/P,,Pasivo Acreedora 
+2101020000,2101020001,No utilizar,,Pasivo Acreedora 
+2101020000,2101020002,No utilizar,,Pasivo Acreedora 
+2101020000,2101020003,No utilizar,,Pasivo Acreedora (No incluir)
+2101020000,2101020004,No utilizar,,Pasivo Acreedora 
+2101020000,2101020006,No utilizar,,Pasivo Acreedora 
+2101020000,2101020007,No utilizar,,Pasivo Acreedora 
+2101020000,2101020008,No utilizar,,Pasivo Acreedora 
+2101020000,2101020009,No utilizar,,Pasivo Acreedora 
+2101020000,2101020010,No utilizar,,Pasivo Acreedora 
+2101020000,2101020011,No utilizar,,Pasivo Acreedora 
+2101000000,2101030000,Intereses por Pagar,,Pasivo Acreedora 
+2101000000,2101040000,Gastos por Fideicomiso,,Pasivo Acreedora 
+2101000000,2101050000,Gastos por Originacion,,Pasivo Acreedora 
+2101000000,2101060000,Comisiones Pagadas Por Ant,,Pasivo Acreedora 
+2101000000,2101999998,Adquisiciones de activo fijo,,Pasivo Acreedora 
+2101000000,2101999999,Recepciones por Facturar,,Pasivo Acreedora 
+2100000000,2102000000,CUENTAS POR PAGAR,,Total
+2102000000,2102010000,Acreedores Diversos,,Total
+2102010000,2102010001,Anticipo a Clientes,,Pasivo Acreedora 
+2102010000,2102010002,Acreedores,,Pasivo Deudora
+2102010000,2102010003,Cajas Chicas,,Pasivo Deudora
+2102010000,2102010004,Tarjeta Prepago,,Pasivo Acreedora 
+2102010000,2102010005,Fondo Fijo,,Pasivo Acreedora 
+2102010000,2102010006,Seguros Cardif,,Pasivo Acreedora 
+2102010000,2102010007,Accionistas,,Pasivo Acreedora 
+2102000000,2102020000,Proveedores  (Agrupacion),,Pasivo Acreedora 
+2102020000,2102020001,Arrendamientos (PF),,Pasivo Deudora
+2102020000,2102020002,Arrendamientos (PM),,Pasivo Acreedora 
+2102020000,2102020003,Publicidad,,Pasivo Deudora
+2102020000,2102020004,Comunicación,,Pasivo Deudora
+2102020000,2102020005,Refurbish,,Pasivo Deudora
+2102020000,2102020006,Equipo de Seguridad,,Pasivo Acreedora 
+2102020000,2102020007,Mobiliario y equipo,,Pasivo Acreedora 
+2102020000,2102020008,Equipo de Computo y Software,,Pasivo Deudora
+2102020000,2102020009,Mantenimiento Automoviles,,Pasivo Acreedora 
+2102020000,2102020010,Mantenimiento Inmuebles,,Pasivo Deudora
+2102020000,2102020011,Mantenimiento Equipo de Seguridad,,Pasivo Acreedora 
+2102020000,2102020012,Vigilancia y Seguridad,,Pasivo Deudora
+2102020000,2102020013,Reclutamiento y Selección,,Pasivo Acreedora 
+2102020000,2102020014,Capacitacion,,Pasivo Acreedora 
+2102020000,2102020015,Licencias en Sistemas,,Pasivo Deudora
+2102020000,2102020016,Adaptaciones y Mejoras,,Pasivo Acreedora 
+2102020000,2102020017,"Servicios, Honorarios y Asesorias",,Pasivo Deudora
+2102020000,2102020018,Viaticos,,Pasivo Acreedora 
+2102020000,2102020019,Consumibles y Papeleria,,Pasivo Deudora
+2102020000,2102020020,Mensajeria y Paqueteria,,Pasivo Acreedora 
+2102020000,2102020021,Fletes y Mudanzas,,Pasivo Deudora
+2102020000,2102020022,Seguros y Fianzas,,Pasivo Deudora
+2102020000,2102020023,Eventos,,Pasivo Acreedora 
+2102020000,2102020024,"Uniformes, Materiales y Productos para el Empeño",,Pasivo Acreedora 
+2102020000,2102020025,Costo de Ventas,,Pasivo Deudora
+2102020000,2102020026,Diversos,,Pasivo Deudora
+2102000000,2102030000,Provisiones,,Pasivo Acreedora 
+2102030000,2102030001,Electricidad,,Pasivo Deudora
+2102030000,2102030002,Rentas,,Pasivo Deudora
+2102030000,2102030003,Publicidad,,Pasivo Deudora
+2102030000,2102030004,Mantenimiento,,Pasivo Acreedora 
+2102030000,2102030005,Consultorias,,Pasivo Acreedora 
+2102030000,2102030006,Otras Provisiones,,Pasivo Deudora
+2102030000,2102030007,Bono,,Pasivo Acreedora 
+2102030000,2102030008,Aguinaldo,,Pasivo Acreedora 
+2102030000,2102030009,Telefonia,,Pasivo Deudora
+2102030000,2102030010,Seguridad y Vigilancia,,Pasivo Acreedora 
+2102030000,2102030011,Maniobras,,Pasivo Deudora
+2102030000,2102030012,Fletes,,Pasivo Acreedora 
+2102030000,2102030013,Provisión de Vacaciones,,Pasivo Acreedora 
+2102030000,2102030014,Provisión de Prima Vacacional,,Pasivo Acreedora 
+2102030000,2102030015,Plenaria,,Pasivo Acreedora 
+2102030000,2102030016,Warranty,,Pasivo Acreedora 
+2102000000,2102040000,Otras Provisiones,,Total
+2102040000,2102040001,D-3 Provision Reservas Laborales,,Pasivo Acreedora 
+2102040000,2102040002,Prima de Antigüedad Por Termino,,Pasivo Acreedora 
+2102040000,2102040003,Prima de Antigüedad Al Retiro,,Pasivo Acreedora 
+2102040000,2102040004,Indemnizaciones Por Termino,,Pasivo Acreedora 
+2102040000,2102040005,Indemnizaciones Al Retiro,,Pasivo Acreedora 
+2102000000,2102050000,Acreedores por Apartado,,Pasivo Deudora
+2102000000,2102060000,Demasias por Pagar,,Pasivo Acreedora 
+2102060000,2102060001,Alhajas,,Pasivo Deudora
+2102060000,2102060002,Plata,,Pasivo Deudora
+2102060000,2102060003,Electronicos,,Pasivo Deudora
+2102060000,2102060004,Autos,,Pasivo Deudora
+2102060000,2102060005,Articulos Varios,,Pasivo Deudora
+2102000000,2102070000,Garantia Extendida,,Pasivo Acreedora 
+2102000000,2102080000,Tarjeta de Descuento,,Pasivo Deudora
+2100000000,2103000000,CUENTAS POR PAGAR NOMINA,,Total
+2103000000,2103010000,Sueldos por Pagar (Planillas por liquidar),,Pasivo Acreedora 
+2103000000,2103020000,Cuota Sindical Ordinaria,,Pasivo Acreedora 
+2103000000,2103030000,Amortizaciones INFONAVIT,,Pasivo Acreedora 
+2103000000,2103040000,Pension Alimenticia,,Pasivo Acreedora 
+2103000000,2103050000,Vales Pendientes por pagar,,Pasivo Acreedora 
+2103000000,2103060000,Finiquitos Por Pagar,,Pasivo Acreedora 
+2103000000,2103070000,Anticipo de Nomina,,Pasivo Acreedora 
+2103000000,2103080000,Descuento Financieras,,Pasivo Acreedora 
+2100000000,2104000000,INTERCOMPAÑIAS,,Total
+2104000000,2104010000,Soluciones Prima Mexico,,Pasivo Acreedora 
+2104000000,2104020000,Soluciones Prima Guatemala,,Pasivo Acreedora 
+2104000000,2104030000,Soluciones Prima Honduras,,Pasivo Acreedora 
+2104000000,2104040000,Maxi Prenda,,Pasivo Acreedora 
+2104000000,2104050000,Maxi Prenda Guatemala,,Pasivo Deudora
+2104000000,2104060000,Empeños Mexicanos S.A. de C.V.,,Pasivo Acreedora 
+2104000000,2104070000,Fideicomiso,,Pasivo Acreedora 
+2104000000,2104080000,Maxi Realice,,Pasivo Deudora
+2104000000,2104090000,Maxiprenda El Salvador,,Pasivo Deudora
+2104000000,2104100000,Maxi Prenda Honduras,,Pasivo Acreedora 
+2104000000,2104110000,Soluciones Administrativas Guatemala,,Pasivo Acreedora 
+2104000000,2104120000,CxP Devengado,,Pasivo Acreedora 
+2104000000,2104130000,CXP Ingresos MPM,,Pasivo Acreedora 
+2104000000,2104140000,CxP Mayoristas,,Pasivo Acreedora 
+2104000000,2104150000,CXP Est Ctas Inc,,Pasivo Acreedora 
+2104000000,2104160000,Maxi Prenda Venta a Empleados,,Pasivo Acreedora 
+2104000000,2104170000,CXP Ingresos MRM,,Pasivo Acreedora 
+2104000000,2104180000,Traspaso ISR Ret Bancos,,Pasivo Acreedora 
+2104000000,2104190000,First Cash México,,Pasivo Deudora
+2104000000,2104200000,American Loan Employee Services SA de CV,,Pasivo Deudora
+2104000000,2104990000,Participacion en Subsidiarias,,Pasivo Acreedora 
+2100000000,2105000000,CONTRIBUCIONES SEGURIDAD SOCIAL,,Total
+2105000000,2105010000,Cuotas obreras IMSS,,Pasivo Acreedora 
+2105000000,2105020000,Cuotas patronales IMSS,,Pasivo Acreedora 
+2105000000,2105030000,Cesantia y vejez,,Pasivo Acreedora 
+2105000000,2105040000,SAR,,Pasivo Acreedora 
+2105000000,2105050000,INFONAVIT,,Pasivo Acreedora 
+2105050000,2105050001,Retencion Infonavit,,Pasivo Acreedora 
+2105050000,2105050002,Seguro de Vivienda Infonavit,,Pasivo Acreedora 
+2105050000,2105050003,Ajuste Retencion Infonavit,,Pasivo Acreedora 
+2105050000,2105050004,Ajuste Bimestral Infonavit,,Pasivo Acreedora 
+2105050000,2105050005,Impuestos por Finiquitos Pendientes de Pago,,Pasivo Acreedora 
+2105000000,2105060000,2% Sobre Nomina,,Pasivo Acreedora 
+2105000000,2105070000,Contribuciones locales,,Pasivo Acreedora 
+2105000000,2105080000,Cuota Laboral IGSS (GTE),,Pasivo Acreedora 
+2105000000,2105090000,Cuota Patronal IGSS (GTE),,Pasivo Acreedora 
+2105000000,2105100000,Prestaciones por pagar (GTE),,Pasivo Acreedora 
+2105000000,2105110000,I.S.S.S. (SLV),,Pasivo Acreedora 
+2105000000,2105120000,A.F.P.S. (SLV),,Pasivo Acreedora 
+2105000000,2105130000,IHSS por Pagar,,Pasivo Acreedora 
+2105000000,2105140000,RAP por Pagar,,Pasivo Acreedora 
+2105000000,2105150000,INFOP por Pagar,,Pasivo Acreedora 
+2105000000,2105160000,Retencion INFONACOT,,Pasivo Acreedora 
+2100000000,2106000000,RETENCIONES POR PAGAR,,Pasivo Acreedora 
+2106000000,2106010000,Retenciones de ISR,,Pasivo Acreedora 
+2106010000,2106010001,Ret ISR por salarios,,Pasivo Acreedora 
+2106010000,2106010002,Ret ISR Honorarios 10%,,Pasivo Deudora
+2106010000,2106010003,Ret ISR Arrendamiento 10%,,Pasivo Deudora
+2106010000,2106010004,Ret ISR asimilables a salarios,,Pasivo Acreedora 
+2106010000,2106010005,Ret ISR por dividendos,,Pasivo Acreedora 
+2106010000,2106010006,Ret ISR por operaciones al extranjero,,Pasivo Acreedora 
+2106010000,2106010007,Timbres (GTE / HN),,Pasivo Acreedora 
+2106010000,2106010008,ISR Facturas Especiales 5% (GTE),,Pasivo Acreedora 
+2106010000,2106010009,Retenciones ISR 5% (GTE),,Pasivo Acreedora 
+2106010000,2106010010,Retenciones ISR  Intereses 10% (GTE),,Pasivo Acreedora 
+2106010000,2106010011,Retenciones ISR Asesoria 31% (GTE),,Pasivo Acreedora 
+2106010000,2106010012,Retenciones ISR 10% (SLV),,Pasivo Acreedora 
+2106010000,2106010013,Retenciones ISR 12.5% (HN),,Pasivo Acreedora 
+2106010000,2106010014,ISR Facturas Especiales 6% (GTE),,Pasivo Acreedora 
+2106010000,2106010015,Retenciones ISR 5% (SLV),,Pasivo Acreedora 
+2106010000,2106010016,Retenciones ISR 6% (GTE),,Pasivo Acreedora 
+2106000000,2106020000,Retenciones de IVA,,Total
+2106020000,2106020001,Ret IVA Honorarios 10.67%,,Pasivo Deudora
+2106020000,2106020002,Ret IVA Arrendamiento 10.67%,,Pasivo Deudora
+2106020000,2106020003,Ret IVA Honorarios 7.33%,,Pasivo Acreedora 
+2106020000,2106020004,Ret IVA Arrendamiento 7.33%,,Pasivo Acreedora 
+2106020000,2106020005,Ret IVA 4%,,Pasivo Deudora
+2100000000,2107000000,IVA TRASLADADO,,Total
+2107000000,2107010000,IVA cobrado al 11%,,Pasivo Acreedora 
+2107000000,2107020000,IVA cobrado al 16%,,Pasivo Deudora
+2107000000,2107030000,Iva por pagar 12% (GTE),,Pasivo Acreedora 
+2107000000,2107040000,Iva por pagar Adjudicaciones (GTE),,Pasivo Acreedora 
+2107000000,2107050000,Iva por Pagar Mensual (SLV),,Pasivo Acreedora 
+2107000000,2107060000,ISV Por pagar,,Pasivo Acreedora 
+2107000000,2107070000,Iva Facturas Especiales,,Pasivo Acreedora 
+2107000000,2107080000,Iva Debito Consumidor Final (SLV),,Pasivo Acreedora 
+2100000000,2108000000,IVA POR PAGAR,,Total
+2108000000,2108010000,IVA por pagar del periodo,,Pasivo Acreedora 
+2108000000,2108020000,IVA por pagar periodos anteriores,,Pasivo Acreedora 
+2100000000,2109000000,IVA PENDIENTE DE COBRO,,Total
+2109000000,2109010000,IVA pendiente de cobro al 11%,,Pasivo Acreedora 
+2109000000,2109020000,IVA pendiente de cobro al 16%,,Pasivo Acreedora 
+2109000000,2109030000,Iva por pagar por aplicar 12% (GTE),,Pasivo Acreedora 
+2100000000,2110000000,IMPUESTOS FEDERALES POR PAGAR,,Total
+2110000000,2110010000,ISR por Pagar,,Pasivo Acreedora 
+2110000000,2110020000,IETU por pagar,,Pasivo Acreedora 
+2110000000,2110030000,Impuesto Solidaridad,,Pasivo Acreedora 
+2110000000,2110040000,PTU por pagar,,Pasivo Acreedora 
+2110000000,2110050000,Impuestos Municipales,,Pasivo Acreedora 
+2110000000,2110060000,Impuestos Por Pagar,,Pasivo Acreedora 
+2100000000,2120000000,ACREEDORES POR INVERSIONES,,Total
+2120000000,2120010000,Soluciones Prima Guatemala,,Pasivo Acreedora 
+2120000000,2120020000,Soluciones Prima Honduras,,Pasivo Acreedora 
+2120000000,2120030000,Soluciones Prima El Salvador,,Pasivo Acreedora 
+2000000000,2200000000,A LARGO PLAZO,,Total
+2200000000,2201000000,DOCUMENTOS POR PAGAR,,Total
+2200000000,2201010000,Fideicomiso,,Pasivo Acreedora 
+2000000000,2300000000,DIFERIDO,,Total
+2300000000,2301000000,COMISIONES,,Total
+2301000000,2301010000,Comisiones Pagadas por Anticipado,,Pasivo Acreedora 
+2300000000,2302000000,IMPUESTOS,,Total
+2302000000,2302010000,ISR Diferido,,Pasivo Deudora
+2302000000,2302020000,IETU Diferido,,Pasivo Acreedora 
+2300000000,2303000000,Gastos por Fideicomiso a L/P,,Pasivo Acreedora 
+,3000000000,CAPITAL,,Total
+3000000000,3100000000,CONTABLE,,Capital Acreedora 
+3100000000,3101000000,ACCIONISTAS,,Total
+3101000000,3101010000,PERSONAS MORALES,,Total
+3101010000,3101010001,Empeños Mexicanos S.A. de C.V.,,Capital Acreedora 
+3101010000,3101010002,"Promotora DAC, S.A. de C.V.",,Capital Acreedora 
+3101010000,3101010003,Grupo Capital,,Capital Acreedora 
+3101010000,3101010004,"SMDP, S.A. de C.V.",,Capital Acreedora 
+3101010000,3101010005,Capital Latinoamericano S.A. de C.V.,,Capital Acreedora 
+3101010000,3101010006,MaxP Holdings LP,,Capital Acreedora 
+3101010000,3101010007,Maxi Prenda S.A. de C.V.,,Capital Acreedora 
+3101010000,3101010008,Maxi Realice Servicios Profesionales S.A. de C.V.,,Capital Acreedora 
+3101010000,3101010009,Soluciones Prima S.A. de C.V.,,Capital Acreedora 
+3101010000,3101010010,Soluciones Prima Guatemala S.A. de C.V.,,Capital Acreedora 
+3101010000,3101010011,Soluciones Prima El Salvador S.A. de C.V.,,Capital Acreedora 
+3101010000,3101010012,Soluciones Prima Honduras S.A. de C.V.,,Capital Acreedora 
+3101010000,3101010013,Maxi Prenda Guatemala S.A.,,Capital Acreedora 
+3101010000,3101010014,Maxi Prenda El Salvador S.A. de C.V.,,Capital Acreedora 
+3101010000,3101010015,Maxi Prenda Honduras S.A. de C.V.,,Capital Acreedora 
+3101000000,3101020000,PERSONAS FISICAS,,Total
+3101020000,3101020001,Serrano Espinoza Julio,,Capital Acreedora 
+3101020000,3101020002,Plutarco Antonio Parra Sosa,,Capital Acreedora 
+3101020000,3101020003,Paul Davis Cartens,,Capital Acreedora 
+3101020000,3101020004,Maria del Olmo,,Capital Acreedora 
+3101020000,3101020005,Carlos Gabriel Orozco,,Capital Acreedora 
+3101020000,3101020006,Carlos Peyrelonge,,Capital Acreedora 
+3101020000,3101020007,Eugenio Garcia,,Capital Acreedora 
+3101000000,3101030000,SOCIAL FIJO,,Total
+3101030000,3101030001,Maxi Prenda,,Capital Acreedora 
+3101030000,3101030002,Soluciones Prima,,Capital Acreedora 
+3101030000,3101030003,Capital Latinoamericano S.A. de C.V.,,Capital Acreedora 
+3101030000,3101030004,Comercializadora EAYEA S.A. de C.V.,,Capital Acreedora 
+3101030000,3101030005,Carlos Gabriel Orozco Alatorre,,Capital Acreedora 
+3101030000,3101030006,"Smdp, SA de CV",,Capital Acreedora 
+3101030000,3101030007,"Banco Monex, Institución de banca multiple, Monex Grupo Fina",,Capital Acreedora 
+3101030000,3101030008,Serrano Espinoza Julio,,Capital Acreedora 
+3101030000,3101030009,Empeños Mexicanos S.A. de C.V.,,Capital Acreedora 
+3101030000,3101030010,"Promotora DAC, S.A. de C.V.",,Capital Acreedora 
+3101030000,3101030011,Plutarco Antonio Parra Sosa,,Capital Acreedora 
+3101030000,3101030012,Paul Davis Cartens,,Capital Acreedora 
+3101030000,3101030013,Maria del Olmo,,Capital Acreedora 
+3101030000,3101030014,Carlos Peyrelonge,,Capital Acreedora 
+3101030000,3101030015,Eugenio Garcia,,Capital Acreedora 
+3000000000,3200000000,VARIABLE,,Total
+3200000000,3201000000,SOCIAL VARIABLE,,Capital Acreedora 
+3201000000,3201010000,PERSONAS MORALES,,Total
+3201010000,3201010001,"Promotora DAC, S.A. de C.V.",,Capital Acreedora 
+3201010000,3201010002,Empeños Mexicanos S.A. de C.V.,,Capital Acreedora 
+3201010000,3201010003,Grupo Capital,,Capital Acreedora 
+3201010000,3201010004,"Smdp, S.A. de C.V.",,Capital Acreedora 
+3201010000,3201010005,Capital Latinoamericano S.A. de C.V.,,Capital Acreedora 
+3201010000,3201010006,Comercializadora EAYEA S.A. de C.V.,,Capital Acreedora 
+3201010000,3201010007,MaxP Holdings LP,,Capital Acreedora 
+3201010000,3201010008,"Banco Monex, Institución de banca multiple, Monex Grupo Fina",,Capital Acreedora 
+3201010000,3201010009,"Maxi Prenda, SA de CV",,Capital Acreedora 
+3201000000,3201020000,PERSONAS FISICAS,,Total
+3201020000,3201020001,Julio Serrano Espinoza,,Capital Acreedora 
+3201020000,3201020002,Plutarco Antonio Parra Sosa,,Capital Acreedora 
+3201020000,3201020003,Paul Davis Cartens,,Capital Acreedora 
+3201020000,3201020004,Maria del Olmo,,Capital Acreedora 
+3201020000,3201020005,Carlos Gabriel Orozco,,Capital Acreedora 
+3201020000,3201020006,Carlos Peyrelonge,,Capital Acreedora 
+3201020000,3201020007,Eugenio Garcia,,Capital Acreedora 
+3200000000,3202000000,SUSCRITO NO EXHIBIDO,,Capital Acreedora 
+3200000000,3203000000,ACTUALIZACION DEL CAPITAL,,Capital Acreedora
+3200000000,3204000000,EXCESO O INSUFICIENCIA EN EL CAPITAL,,Capital Deudora
+3200000000,3205000000,ACTUALIZACION EXCESO O INSUFICIENCIA EN EL CAPITAL,,Capital Deudora
+3200000000,3206000000,Aportaciones Para Futuros Aumentos a Capital,,Total
+3206000000,3206000001,"First Cash, SA de CV",,Capital Acreedora 
+3000000000,3300000000,RESERVAS DE CAPITAL,,Total
+3300000000,3301000000,RESERVA LEGAL,,Capital Acreedora 
+3300000000,3302000000,RESERVAS ESPECIALES,,Capital Acreedora 
+3000000000,3400000000,RESULTADOS DE EJERCICIO,,Total
+3400000000,3401000000,EJERCICIOS ANTERIORES ACUMULADOS,,Total
+3401000000,3401010000,Resultado 1999,,Capital Acreedora 
+3401000000,3401020000,Resultado 2000,,Capital Acreedora 
+3401000000,3401030000,Resultado 2001,,Capital Acreedora 
+3401000000,3401040000,Resultado 2002,,Capital Acreedora 
+3401000000,3401050000,Resultado 2003,,Capital Acreedora 
+3401000000,3401060000,Resultado 2004,,Capital Acreedora 
+3401000000,3401070000,Resultado 2005,,Capital Acreedora 
+3401000000,3401080000,Resultado 2006,,Capital Acreedora 
+3401000000,3401090000,Resultado 2007,,Capital Deudora
+3401000000,3401100000,Resultado 2008,,Capital Deudora
+3401000000,3401110000,Resultado 2009,,Capital Acreedora 
+3401000000,3401120000,Resultado 2010,,Capital Acreedora 
+3401000000,3401130000,Resultado 2011,,Capital Acreedora 
+3401000000,3401140000,Resultado 2012,,Capital Acreedora 
+3401000000,3401150000,Resultado 2013,,Capital Acreedora 
+3401000000,3401160000,Resultado 2014,,Capital Deudora
+3401000000,3401170000,Resultado 2015,,Capital Deudora
+3401000000,3401180000,Resultado 2016,,Capital Acreedora 
+3400000000,3402000000,RESULTADO DEL EJERCICIO EN CURSO,,Capital Acreedora 
+3400000000,3403000000,ACTUALIZACION RESULTADO DEL EJERCICIO,,Capital Deudora
+3400000000,3404000000,EFECTO ACUMULADO DE ISR DIFERIDO,,Capital Deudora
+3000000000,3500000000,EFECTO DE CONVERSION C/OPERACIONES EXT,,Capital Deudora
+3500000000,3501000000,GUATEMALA,,Capital Acreedora 
+3500000000,3502000000,EL SALVADOR,,Capital Acreedora 
+3500000000,3503000000,HONDURAS,,Capital Acreedora 
+3500000000,3504000000,MAXI REALICE MEXICO,,Capital Deudora
+3500000000,3505000000,COMERCIALIZADORA MAXI GTE,,Capital Deudora
+3500000000,3506000000,SOLUCIONES ADMINISTRATIVAS GTM,,Capital Deudora
+3500000000,3507000000,MAXI REALICE GUATEMALA,,Capital Acreedora 
+3500000000,3508000000,SOLUCIONES PRIMA GUATEMALA,,Capital Acreedora 
+3000000000,3600000000,PARTICIPACIÓN EN CONT DE SUBSIDIARIAS,,Total
+3600000000,3601000000,GUATEMALA,,Capital Acreedora 
+3600000000,3602000000,EL SALVADOR,,Capital Acreedora 
+3600000000,3603000000,HONDURAS,,Capital Acreedora 
+3600000000,3604000000,SOLUCIONES PRIMA,,Capital Acreedora 
+3000000000,3700000000,AJUSTE EN CAPITAL CONT POR BENEF A EMPLEADOS,,Capital Acreedora 
+,4000000000,INGRESOS,,Total
+4000000000,4100000000,COMERCIALIZACION,,Total
+4100000000,4101000000,INTERESES,,Total
+4101000000,4101010000,Alhajas y Oro,,Total
+4101010000,4101010001,0.16,,Resultados Deudora 
+4101010000,4101010002,0.11,,Resultados Acreedora 
+4101000000,4101020000,Plata,,Total
+4101020000,4101020001,0.16,,Resultados Acreedora 
+4101020000,4101020002,0.11,,Resultados Acreedora 
+4101000000,4101030000,Electronicos,,Total
+4101030000,4101030001,0.16,,Resultados Acreedora 
+4101030000,4101030002,0.11,,Resultados Acreedora 
+4101000000,4101040000,Autos,,Total
+4101040000,4101040001,0.16,,Resultados Acreedora 
+4101040000,4101040002,0.11,,Resultados Acreedora 
+4101000000,4101050000,Articulos Varios,,Total
+4101050000,4101050001,0.16,,Resultados Acreedora 
+4101050000,4101050002,0.11,,Resultados Acreedora 
+4100000000,4102000000,COMISIONES,,Total
+4102000000,4102010000,Alhajas y Oro,,Total
+4102010000,4102010001,0.16,,Resultados Deudora 
+4102010000,4102010002,0.11,,Resultados Acreedora 
+4102000000,4102020000,Plata,,Total
+4102020000,4102020001,0.16,,Resultados Acreedora 
+4102020000,4102020002,0.11,,Resultados Acreedora 
+4102000000,4102030000,Electronicos,,Total
+4102030000,4102030001,0.16,,Resultados Acreedora 
+4102030000,4102030002,0.11,,Resultados Acreedora 
+4102000000,4102040000,Autos,,Total
+4102040000,4102040001,0.16,,Resultados Acreedora 
+4102040000,4102040002,0.11,,Resultados Acreedora 
+4102000000,4102050000,Articulos Varios,,Total
+4102050000,4102050001,0.16,,Resultados Acreedora 
+4102050000,4102050002,0.11,,Resultados Acreedora 
+4100000000,4103000000,REMATES ESPECIALES,,Total
+4103000000,4103010000,Alhajas,,Total
+4103010000,4103010001,0.16,,Resultados Acreedora 
+4103010000,4103010002,0.11,,Resultados Acreedora 
+4103000000,4103020000,Plata,,Total
+4103020000,4103020001,0.16,,Resultados Acreedora 
+4103020000,4103020002,0.11,,Resultados Acreedora 
+4103000000,4103030000,Electronicos,,Total
+4103030000,4103030001,0.16,,Resultados Acreedora 
+4103030000,4103030002,0.11,,Resultados Acreedora 
+4103000000,4103040000,Autos,,Total
+4103040000,4103040001,0.16,,Resultados Acreedora 
+4103040000,4103040002,0.11,,Resultados Acreedora 
+4103000000,4103050000,Articulos Varios,,Total
+4103050000,4103050001,0.16,,Resultados Acreedora 
+4103050000,4103050002,0.11,,Resultados Acreedora 
+4100000000,4104000000,VENTA TARJETA DE CREDITO,,Total
+4104000000,4104010000,Alhajas,,Total
+4104010000,4104010001,0.16,,Resultados Acreedora 
+4104010000,4104010002,0.11,,Resultados Acreedora 
+4104000000,4104020000,Plata,,Total
+4104020000,4104020001,0.16,,Resultados Acreedora 
+4104020000,4104020002,0.11,,Resultados Acreedora 
+4104000000,4104030000,Electronicos,,Total
+4104030000,4104030001,0.16,,Resultados Acreedora 
+4104030000,4104030002,0.11,,Resultados Acreedora 
+4104000000,4104040000,Autos,,Total
+4104040000,4104040001,0.16,,Resultados Acreedora 
+4104040000,4104040002,0.11,,Resultados Acreedora 
+4104000000,4104050000,Articulos Varios,,Total
+4104050000,4104050001,0.16,,Resultados Acreedora 
+4104050000,4104050002,0.11,,Resultados Acreedora 
+4100000000,4105000000,OTROS INGRESOS POR COMERCIALIZACION,,Total
+4105000000,4105010000,Demasias,,Total
+4105010000,4105010001,0.16,,Resultados Deudora 
+4105010000,4105010002,0.11,,Resultados Acreedora 
+4105000000,4105020000,Apartado,,Total
+4105020000,4105020001,0.16,,Resultados Deudora 
+4105020000,4105020002,0.11,,Resultados Acreedora 
+4105000000,4105030000,Ventas de Garantia,,Total
+4105030000,4105030001,0.16,,Resultados Acreedora 
+4105030000,4105030002,0.11,,Resultados Acreedora 
+4105000000,4105040000,Otros ingresos varios,,Resultados Deudora 
+4100000000,4106000000,POR VENTA DE ORO,,Total
+4106000000,4106010000,Mayoristas,,Resultados Acreedora 
+4106000000,4106020000,abierta,,Total
+4106000000,4106030000,abierta,,Total
+4106000000,4106040000,abierta,,Total
+4000000000,4200000000,PRENDARIOS,,Total
+4200000000,4201000000,INTERESES,,Total
+4201000000,4201010000,Alhajas,,Total
+4201010000,4201010001,0.16,,Resultados Deudora 
+4201010000,4201010002,0.11,,Resultados Acreedora 
+4201000000,4201020000,Plata,,Total
+4201020000,4201020001,0.16,,Resultados Acreedora 
+4201020000,4201020002,0.11,,Resultados Acreedora 
+4201000000,4201030000,Electronicos,,Total
+4201030000,4201030001,0.16,,Resultados Acreedora 
+4201030000,4201030002,0.11,,Resultados Acreedora 
+4201000000,4201040000,Autos,,Total
+4201040000,4201040001,0.16,,Resultados Acreedora 
+4201040000,4201040002,0.11,,Resultados Acreedora 
+4201000000,4201050000,Articulos Varios,,Total
+4201050000,4201050001,0.16,,Resultados Acreedora 
+4201050000,4201050002,0.11,,Resultados Acreedora 
+4200000000,4202000000,COMISIONES,,Total
+4202000000,4202010000,Alhajas,,Total
+4202010000,4202010001,0.16,,Resultados Deudora 
+4202010000,4202010002,0.11,,Resultados Acreedora 
+4202000000,4202020000,Plata,,Total
+4202020000,4202020001,0.16,,Resultados Acreedora 
+4202020000,4202020002,0.11,,Resultados Acreedora 
+4202000000,4202030000,Electronicos,,Total
+4202030000,4202030001,0.16,,Resultados Acreedora 
+4202030000,4202030002,0.11,,Resultados Acreedora 
+4202000000,4202040000,Autos,,Total
+4202040000,4202040001,0.16,,Resultados Acreedora 
+4202040000,4202040002,0.11,,Resultados Acreedora 
+4202000000,4202050000,Articulos Varios,,Total
+4202050000,4202050001,0.16,,Resultados Acreedora 
+4202050000,4202050002,0.11,,Resultados Acreedora 
+4200000000,4203000000,INTERESES DEVENGADOS,,Total
+4203000000,4203010000,Alhajas y Oro,,Total
+4203010000,4203010001,0.16,,Resultados Deudora 
+4203010000,4203010002,0.11,,Resultados Acreedora 
+4203000000,4203020000,Plata,,Total
+4203020000,4203020001,0.16,,Resultados Acreedora 
+4203020000,4203020002,0.11,,Resultados Acreedora 
+4203000000,4203030000,Electronicos,,Total
+4203030000,4203030001,0.16,,Resultados Acreedora 
+4203030000,4203030002,0.11,,Resultados Acreedora 
+4203000000,4203040000,Autos,,Total
+4203040000,4203040001,0.16,,Resultados Acreedora 
+4203040000,4203040002,0.11,,Resultados Acreedora 
+4203000000,4203050000,Articulos Varios,,Total
+4203050000,4203050001,0.16,,Resultados Acreedora 
+4203050000,4203050002,0.11,,Resultados Acreedora 
+4200000000,4204000000,ALMACENAJE,,Total
+4204000000,4204010000,Alhajas,,Resultados Acreedora 
+4204000000,4204020000,Plata,,Resultados Acreedora 
+4204000000,4204030000,Electronicos,,Resultados Acreedora 
+4204000000,4204040000,Autos,,Resultados Acreedora 
+4204000000,4204050000,Artículos Varios,,Resultados Acreedora 
+4200000000,4205000000,OTROS INGRESOS PRENDARIOS,,Total
+4205000000,4205010000,Reimpresión de Boletas,,Resultados Acreedora 
+4000000000,4300000000,INGRESOS POR OTROS SERVICIOS O PRODUCTOS,,Total
+4300000000,4301000000,VENTA RETAIL,,Total
+4301000000,4301010000,Alhajas y Oro,,Resultados Acreedora 
+4301000000,4301020000,Plata,,Resultados Deudora 
+4301000000,4301030000,Electronicos,,Resultados Acreedora 
+4301000000,4301040000,Autos,,Resultados Acreedora 
+4301000000,4301050000,Articulos Varios,,Resultados Deudora 
+4300000000,4302000000,VENTA DE TIEMPO AIRE,,Total
+4302000000,4302010000,Telcel,,Resultados Acreedora 
+4302000000,4302020000,Movistar,,Resultados Acreedora 
+4302000000,4302030000,Iusacell,,Resultados Acreedora 
+4302000000,4302040000,Nextel,,Resultados Acreedora 
+4302000000,4302050000,Unefon,,Resultados Acreedora 
+4300000000,4303000000,COBRO DE SERVICIOS,,Total
+4303000000,4303010000,Diestel (TELMEX),,Resultados Acreedora 
+4300000000,4304000000,VENTA DE ACTIVOS FIJOS,,Total
+4304000000,4304010000,Autos,,Resultados Acreedora 
+4304000000,4304020000,Otros Activo,,Resultados Acreedora 
+4300000000,4305000000,AUTOS SIN POSESIÓN,,Total
+4305000000,4305010000,Equipo GPS,,Resultados Acreedora 
+4305000000,4305020000,Instalación,,Resultados Acreedora 
+4305000000,4305030000,Monitoreo GPS,,Resultados Acreedora 
+4305000000,4305040000,Seguro Sin Posesión,,Resultados Acreedora 
+4300000000,4306000000,Ingreso Venta de  Inventario,,Total
+4306000000,4306010000,Alhajas y Oro,,Resultados Acreedora 
+4306000000,4306020000,Plata,,Resultados Acreedora 
+4306000000,4306030000,Electronicos,,Resultados Acreedora 
+4306000000,4306040000,Autos,,Resultados Acreedora 
+4306000000,4306050000,Articulos Varios,,Resultados Acreedora 
+4300000000,4307000000,Comisión por Venta de Seguros Cardif,,Resultados Acreedora 
+4300000000,4308000000,Seguro de Prenda Protegida,,Resultados Acreedora 
+4300000000,4309000000,Botadero,,Resultados Deudora 
+4000000000,4400000000,PARTES RELACIONDAS (Subsidiarias),,Total
+4400000000,4401000000,SERVICIOS A SUBSIDIARIAS,,Total
+4401000000,4401010000,Maxi Prenda,,Resultados Acreedora 
+4401000000,4401020000,Maxi Realice,,Resultados Acreedora 
+4401000000,4401030000,Honduras,,Resultados Acreedora 
+4401000000,4401040000,El Salvador,,Resultados Acreedora 
+4401000000,4401050000,Guatemala,,Resultados Acreedora 
+4401000000,4401060000,Guatemala Rentas,,Resultados Acreedora 
+4000000000,4500000000,DESCUENTOS EN INGRESOS,,Total
+4500000000,4501000000,"DESCUENTOS, REBAJAS Y/O CONDONACIONES",,Total
+4501000000,4501010000,Descuentos sobre Ventas Refurbished,,Resultados Deudora 
+4501000000,4501020000,Condonaciones de Ingreso,,Resultados Deudora 
+4501000000,4501030000,Descuentos por promociones,,Resultados Deudora 
+4501000000,4501040000,Vales Realice,,Resultados Acreedora 
+4501000000,4501050000,Redención de Puntos,,Resultados Acreedora 
+,5000000000,COSTOS Y GASTO,,Total
+5000000000,5100000000,COSTO Y GASTO PRENDARIO,,Total
+,5101000000,GASTOS DE EMPEÑO,,Total
+,5101010000,Intereses,,Resultados Deudora 
+,5101020000,Boletas,,Resultados Deudora 
+,5101030000,Bolsas de Plastico,,Resultados Deudora 
+,5101040000,Pensiones (Autos),,Resultados Deudora 
+,5101050000,Gastos en Empeño,,Resultados Deudora 
+,5101060000,Extracciones  Competencia,,Resultados Deudora 
+,5101070000,Seguros Autos,,Resultados Deudora 
+,5101080000,Equipo de Valuacion,,Resultados Deudora 
+,5101090000,Maniobras en Ventas,,Resultados Deudora 
+,5101100000,Analisis de Metal,,Resultados Deudora 
+,5101110000,Comisión por Venta de Oro,,Resultados Deudora 
+,5102000000,COSTO DE COMERCIALIZACION,,Total
+,5102010000,Alhajas,,Resultados Deudora 
+,5102020000,Plata,,Resultados Deudora 
+,5102030000,Electrónicos,,Resultados Deudora 
+,5102040000,Autos,,Resultados Deudora 
+,5102050000,Artículos Varios,,Resultados Deudora 
+,5102060000,Mutuo en Venta Mayorista,,Resultados Deudora 
+,5102070000,Seguros de Mercancia,,Resultados Deudora 
+,5103000000,COSTO DE REFURBISH,,Total
+,5103010000,Electronica,,Resultados Deudora 
+,5103020000,Articulos Varios,,Resultados Deudora 
+,5103030000,Flestes (Refurbish),,Resultados Deudora 
+,5103040000,Alhajas,,Resultados Deudora 
+,5104000000,COSTO VENTA TIEMPO AIRE,,Resultados Deudora 
+,5104010000,Telcel,,Resultados Deudora 
+,5104020000,Movistar,,Resultados Deudora 
+,5104030000,Iusacell,,Resultados Deudora 
+,5104040000,Nextel,,Resultados Deudora 
+,5105000000,DESCUENTOS Y/O REBAJAS,,Total
+,5105010000,Rebaja en Compras Refurbish,,Resultados Deudora 
+,5105020000,Descuentos sobre Compras Refurbish,,Resultados Deudora 
+,5105030000,Descuentos Sobre Compras,,Resultados Deudora 
+,5106000000,AUTOS SIN POSESIÓN,,Total
+,5106010000,Equipo GPS,,Resultados Deudora 
+,5106020000,Instalación,,Resultados Deudora 
+,5106030000,Monitoreo GPS,,Resultados Deudora 
+,5106040000,Seguro Sin Posesión,,Resultados Deudora 
+,5107000000,COSTO DE VENTAS INVENTARIO,,Total
+,5107010000,Alhajas y Oro,,Resultados Deudora 
+,5107020000,Plata,,Resultados Deudora 
+,5107030000,Electrónicos,,Resultados Deudora 
+,5107040000,Autos,,Resultados Deudora 
+,5107050000,Artículos Varios,,Resultados Deudora 
+,5108000000,OTROS COSTO DE COMERCIALIZACION,,Total
+,5108010000,Coberturas,,Resultados Deudora 
+5000000000,5200000000,GASTOS DE OPERACIÓN Y ADMINISTRACION,,Total
+,5201000000,NOMINA DEL PERSONAL,,Total
+,5201010000,Nomina del Personal,,Total
+,5201010001,Sueldos y Salarios,,Resultados Deudora 
+,5201010002,Dias Pendientes de Pago,,Resultados Deudora 
+,5201010003,Reserva Laboral D-3,,Resultados Deudora 
+,5201010004,Vacaciones,,Resultados Deudora 
+,5201010005,Gratificaciones al Personal,,Resultados Deudora 
+,5201010006,Días Festivos,,Resultados Deudora 
+,5201010007,Dias Descanso,,Resultados Deudora 
+,5201010008,Prima Dominical,,Resultados Deudora 
+,5201010009,Bonificacion Afecto,,Resultados Deudora 
+,5201010010,Bonificacion Incentivo,,Resultados Deudora 
+,5201010011,Horas Extras,,Resultados Deudora 
+,5201020000,Prestaciones,,Resultados Deudora 
+,5201020001,Prima Vacacional,,Resultados Deudora 
+,5201020002,Prima de Antiguedad,,Resultados Deudora 
+,5201020003,Uniformes,,Resultados Deudora 
+,5201020004,Vales de Despensa,,Resultados Deudora 
+,5201020005,Bono por Antiguedad,,Resultados Deudora 
+,5201020006,Gastos Medicos,,Resultados Deudora 
+,5201020007,Seguro de Vida,,Resultados Deudora 
+,5201020008,Casa Habitacion,,Resultados Deudora 
+,5201020009,Colegiaturas,,Resultados Deudora 
+,5201020010,Otras Prestaciones,,Resultados Deudora 
+,5201030000,Bonos,,Total
+,5201030001,Bonos Trimestrales,,Resultados Deudora 
+,5201030002,Bonos Bimestrales,,Resultados Deudora 
+,5201030003,Bono por Extracción,,Resultados Deudora 
+,5201030004,Bono 14 Decreto 42-92 (GTE),,Resultados Deudora 
+,5201040000,Comisiones,,Resultados Deudora 
+,5201040001,Comisiones por Ventas (Refurbished),,Resultados Deudora 
+,5201040002,Comisiones Concurso de Autos,,Resultados Deudora 
+,5201040003,Comisiones Valuadores de Autos,,Resultados Deudora 
+,5201040004,Comisiones Concurso de Plata,,Resultados Deudora 
+,5201040005,Comisiones Concurso de Electronica,,Resultados Deudora 
+,5201040006,Comisiones Concurso por Ventas,,Resultados Deudora 
+,5201040007,Comisiones Autos,,Resultados Deudora 
+,5201050000,Aguinaldo,,Resultados Deudora 
+,5201060000,Impuestos Laborales,,Total
+,5201060001,IMSS Patronal,,Resultados Deudora 
+,5201060002,Cesantia y Vejez,,Resultados Deudora 
+,5201060003,Sar,,Resultados Deudora 
+,5201060004,Infonavit,,Resultados Deudora 
+,5201060005,2% s/nomina,,Resultados Deudora 
+,5201060006,"Cuota Patronal IGSS, IRTRA E INTECAP (GTE)",,Resultados Deudora 
+,5201060007,Cuota Patronal ISSS,,Resultados Deudora 
+,5201060008,Cuota Patronal AFPS,,Resultados Deudora 
+,5201060009,Cuota Patronal INSAFORP,,Resultados Deudora 
+,5201060010,IHSS Patronal,,Resultados Deudora 
+,5201060011,RAP Patronal,,Resultados Deudora 
+,5201060012,INFOP Patronal,,Resultados Deudora 
+,5201070000,Finiquitos e Indemnizaciones,,Total
+,5201070001,Sueldo,,Resultados Deudora 
+,5201070002,Vacaciones,,Resultados Deudora 
+,5201070003,Prima Vacacional,,Resultados Deudora 
+,5201070004,Aguinaldo,,Resultados Deudora 
+,5201070005,Gratificaciones,,Resultados Deudora 
+,5201070006,Indemnizacion,,Resultados Deudora 
+,5201070007,Indemnizacion 20 dias por Año,,Resultados Deudora 
+,5201070008,Prima de Antigüedad,,Resultados Deudora 
+,5201070009,Festivo Laborado,,Resultados Deudora 
+,5201070010,Prima Dominical,,Resultados Deudora 
+,5201070011,Bono por Antiguedad,,Resultados Deudora 
+,5201070012,Comisiones Sobre Venta,,Resultados Deudora 
+,5201070013,Bonos,,Resultados Deudora 
+,5202000000,ARRENDAMIENTO,,Total
+,5202010000,Personas Fisicas,,Resultados Deudora 
+,5202010001,Prima Vacacional N/A,,Resultados Deudora 
+,5202010002,Prima de Antigüedad N/A,,Resultados Deudora 
+,5202010003,Uniformes N/A,,Resultados Deudora 
+,5202010004,Vales de Despensa N/A,,Resultados Deudora 
+,5202010005,Bono de Antigüedad N/A,,Resultados Deudora 
+,5202010006,Gastos Medicos N/A,,Resultados Deudora 
+,5202010007,Seguro de Vida N/A,,Resultados Deudora 
+,5202020000,Personas Morales,,Resultados Deudora 
+,5202030000,Arrendamiento Puro de Equipo,,Total
+,5202030001,Mobiliario y Equipo,,Resultados Deudora 
+,5202030002,Equipo de Computo,,Resultados Deudora 
+,5202030003,Autos,,Resultados Deudora 
+,5202030004,Software,,Resultados Deudora 
+,5203000000,COMUNICACIÓN,,Total
+,5203010000,Local Fijo,,Resultados Deudora 
+,5203020000,Celular,,Resultados Deudora 
+,5204000000,ELECTRICIDAD,,Resultados Deudora 
+,5205000000,PAPELERIA Y ARTICULOS DE OFICINA,,Resultados Deudora 
+,5206000000,CORREO Y PAQUETERIA,,Total
+,5206010000,Mensajeria,,Resultados Deudora 
+,5207000000,ARTICULOS DE LIMPIEZA,,Resultados Deudora 
+,5208000000,VIATICOS,,Total
+,5208010000,Hospedaje,,Resultados Deudora 
+,5208020000,Alimentacion,,Resultados Deudora 
+,5208030000,Transporte,,Resultados Deudora 
+,5208040000,Gasolina,,Resultados Deudora 
+,5208050000,Casetas,,Resultados Deudora 
+,5208060000,Estacionamiento,,Resultados Deudora 
+,5208070000,Diversos,,Resultados Deudora 
+,5208080000,No Deducible,,Resultados Deudora 
+,5208090000,Boletos de Avion,,Resultados Deudora 
+,5208100000,Kilometraje,,Resultados Deudora 
+,5209000000,MANTENIMIENTO,,Total
+,5209010000,Inmueble Arrendado,,Resultados Deudora 
+,5209020000,Mobiliario y Equipo,,Resultados Deudora 
+,5209030000,Equipo de Computo,,Resultados Deudora 
+,5209040000,Equipo de Seguridad,,Resultados Deudora 
+,5209050000,Autos,,Resultados Deudora 
+,5210000000,PUBLICIDAD,,Total
+,5210010000,Volanteo y Perifoneo,,Resultados Deudora 
+,5210020000,Espacios Publicitarios,,Resultados Deudora 
+,5210030000,Artículos Promocionales,,Resultados Deudora 
+,5210040000,Otros Gastos de Publicitarios,,Resultados Deudora 
+,5211000000,SEGURIDAD Y VIGILANCIA,,Total
+,5211010000,Monitoreo,,Resultados Deudora 
+,5211020000,Seguridad  y Vigilancia Sucursal,,Resultados Deudora 
+,5212000000,DESARROLLO EN SISTEMAS,,Total
+,5212010000,Desarrrollo de ERP,,Resultados Deudora 
+,5212020000,Licencias y Software,,Resultados Deudora 
+,5213000000,CONTROL Y RIESGO,,Total
+,5213010000,Viaticos,,Resultados Deudora 
+,5213020000,Auditorias,,Resultados Deudora 
+,5214000000,"PERMISOS, IMPUESTOS Y LICENCIAS",,Total
+,5214010000,Licencias y Permisos,,Resultados Deudora 
+,5214020000,Impuestos y Derechos,,Resultados Deudora 
+,5214030000,Honorarios por Gestorias,,Resultados Deudora 
+,5214040000,Gestorías por Servicios,,Resultados Deudora 
+,5214050000,Multas y Recargos,,Resultados Deudora 
+,5214060000,Actualización,,Resultados Deudora 
+,5215000000,RECLUTAMIENTO Y SELECCIÓN,,Total
+,5215010000,Reclutamiento,,Resultados Deudora 
+,5215020000,Viaticos por Reclutamiento,,Resultados Deudora 
+,5215030000,Estudios Socioeconómicos,,Resultados Deudora 
+,5215040000,Poligrafos,,Resultados Deudora 
+,5215050000,Otros,,Resultados Deudora 
+,5216000000,CAPACITACION,,Total
+,5216010000,Capacitacion,,Resultados Deudora 
+,5216020000,Viaticos por Capacitacion,,Resultados Deudora 
+,5217000000,SEGUROS Y FIANZAS,,Total
+,5217010000,Autos,,Resultados Deudora 
+,5217020000,Seguros de Sucursal,,Resultados Deudora 
+,5217030000,Fianzas de Sucursal,,Resultados Deudora 
+,5218000000,ASESORIAS Y SERVICIOS EXTERNOS,,Total
+,5218010000,Abogados,,Resultados Deudora 
+,5218020000,Consultorias,,Resultados Deudora 
+,5218030000,Auditorias,,Resultados Deudora 
+,5218040000,Outsourcing Personal (Subsidiaria),,Resultados Deudora 
+,5218050000,Servicios Externos,,Resultados Deudora 
+,5218060000,Servicios Profesionales,,Resultados Deudora 
+,5218070000,Outsourcing Personal (Ales),,Resultados Deudora 
+,5218080000,Servicios (First Cash),,Resultados Deudora 
+,5219000000,DIVERSOS,,Total
+,5219010000,Despensa y Agua,,Resultados Deudora 
+,5219020000,Comidas de Representacion,,Resultados Deudora 
+,5219030000,Cuotas y  Suscripciones,,Resultados Deudora 
+,5219040000,Combustibles y Lubricantes,,Resultados Deudora 
+,5219050000,Eventos,,Resultados Deudora 
+,5219060000,Gastos Extraordinarios,,Resultados Deudora 
+,5219070000,Cuotas Sindicales,,Resultados Deudora 
+,5219080000,Otros Gastos,,Resultados Deudora 
+,5219090000,Sobrante y Faltante,,Resultados Deudora 
+,5220000000,NO DEDUCIBLES,,Resultados Deudora 
+,5221000000,FLETES Y ACARREOS,,Resultados Deudora 
+,5221010000,Dep. Mobiliario y equipo N/U,,Resultados Deudora 
+,5221020000,Dep. Equipo de Computo N/U,,Resultados Deudora 
+,5221030000,Dep. Equipo de Almacen N/U,,Resultados Deudora 
+,5221040000,Dep. Equipo de Valuacion N/U,,Resultados Deudora 
+,5221050000,Dep. Equipo de Seguridad N/U,,Resultados Deudora 
+,5221060000,Dep. Equipo de Transporte N/U,,Resultados Deudora 
+,5221080000,Amortizacion de Adaptaciones y Mejoras N/U,,Resultados Deudora 
+,5221090000,Amortizacion Sistema de Computo N/U,,Resultados Deudora 
+,5222000000,ESTIMACION DE CUENTAS INCOBRABLES,,Total
+,5222010000,Cartera Incobrable,,Total
+,5222010001,Alhajas,,Resultados Deudora 
+,5222010002,Plata,,Resultados Deudora 
+,5222010003, Electronicos,,Resultados Deudora 
+,5222010004, Autos,,Resultados Deudora 
+,5222010005,Articulos Varios,,Resultados Deudora 
+,5222020000,Fraudes,,Resultados Deudora 
+,5222030000,Siniestros,,Resultados Deudora 
+,5222040000,ARTICULOS NO COMERCIALIZABLES,,Total
+,5222040001,Articulos Descompuestos,,Resultados Deudora 
+,5223000000,DEPRECIACIONES,,Total
+,5223010000,Dep. Mobiliario y equipo,,Resultados Deudora 
+,5223020000,Dep. Equipo de Computo,,Resultados Deudora 
+,5223030000,Dep. Equipo de Almacen,,Resultados Deudora 
+,5223040000,Dep. Equipo de Valuacion,,Resultados Deudora 
+,5223050000,Dep. Equipo de Seguridad,,Resultados Deudora 
+,5223060000,Dep. Equipo de Transporte,,Resultados Deudora 
+,5224000000,AMORTIZACIONES,,Total
+,5224010000,Amortizacion de Gtos de Instalacion,,Resultados Deudora 
+,5224020000,Amortizacion de Adaptaciones y Mejoras,,Resultados Deudora 
+,5224030000,Amortizacion Sistema de Computo,,Resultados Deudora 
+,5224040000,Amortizacion de Equipos Arrendados,,Total
+,5224040001,Mobiliario y Equipo,,Resultados Deudora 
+,5224040002,Equipo de Computo,,Resultados Deudora 
+,5224040003,Autos,,Resultados Deudora 
+,5225000000,PARTICIPACION EN RESULTADOS DE SUBSIDIARIAS,,Total
+,5225010000,Guatemala,,Resultados Deudora 
+,5225020000,El Salvador,,Resultados Deudora 
+,5225030000,Honduras,,Resultados Deudora 
+,5225040000,Soluciones Prima,,Resultados Deudora 
+,5225050000,Fideicomiso,,Resultados Deudora 
+,5225060000,Maxi Realice,,Resultados Deudora 
+,5225070000,Maxi Realice Guatemala SA,,Resultados Deudora 
+,5225080000,Comercializadora Maxi Guatemala SA,,Resultados Deudora 
+,5225090000,Soluciones Prima Administrativas de Guatemala SA,,Resultados Deudora 
+,5225100000,Soluciones Prima Guatemala,,Resultados Deudora 
+,5225110000,Soluciones Prima Honduras,,Resultados Deudora 
+5000000000,5300000000,OTROS (GASTOS) PRODUCTOS NETO,,Total
+,5301000000,OTROS GASTOS,,Total
+,5301010000,Perdida en Venta de Activo,,Resultados Deudora 
+,5301020000,Perdida en Venta de Activo Adjudicado,,Resultados Deudora 
+,5301030000,Irrecuperabilidad o difícil cobro asociado a deudores div,,Resultados Deudora 
+,5301040000,Ajustes por Redondeo de Cartera,,Resultados Deudora 
+,5301050000,Otros,,Resultados Deudora 
+,5302000000,OTROS PRODUCTOS,,Resultados Deudora 
+,5302010000,Utilidad en Venta de Activo,,Resultados Deudora 
+,5302020000,Utilidad en Venta de Activo Adjudicado,,Resultados Acreedora 
+,5302030000,Recuperacion de Impuestos,,Resultados Acreedora 
+,5302040000,Otros,,Resultados Deudora 
+,6000000000,RESULTADO INTEGRAL DE FINANCIAMIENTO,,Total
+6000000000,6100000000,GASTOS FINANCIEROS,,Total
+,6101000000,PERDIDA MONETARIA EN CAMBIOS,,Total
+,6101010000,Perdida Cambiaria Realizada,,Resultados Deudora 
+,6101010001,Guatemala N/A,,Total
+,6101010002,El Salvador N/A,,Total
+,6101010003,Honduras N/A,,Total
+,6101020000,Perdida Cambiaria no Realizada,,Resultados Deudora 
+,6101030000,Perdida Cambiaria Intercom,,Resultados Deudora 
+,6102000000,COMISIONES BANCARIAS,,Resultados Deudora 
+,6102010000,Bancos,,Resultados Deudora 
+,6102020000,Fideicomiso,,Resultados Deudora 
+,6103000000,INTERESES PAGADOS,,Resultados Deudora 
+,6103010000,Partes Relacionadas (Subsidiarias),,Total
+,6103010001,Guatemala,,Resultados Deudora 
+,6103010002,El Salvador,,Resultados Deudora 
+,6103010003,Honduras,,Resultados Deudora 
+,6103010004,México,,Resultados Deudora 
+,6103020000,Mexico,,Resultados Deudora 
+,6103030000,Fideicomiso,,Resultados Deudora 
+,6104000000,GASTOS FINANCIEROS,,Total
+,6104010000,Partes Relacionadas (Subsidiarias),,Total
+,6104010001,Guatemala,,Resultados Deudora 
+,6104010002,Gastos Fideicomiso,,Resultados Deudora 
+,6104010003,Gastos Financieros,,Resultados Deudora 
+6000000000,6200000000,PRODUCTOS  FINANCIEROS,,Resultados Acreedora 
+,6201000000,GANANCIA MONETARIA EN CAMBIOS,,Total
+,6201010000,Utilidad Cambiaria  realizada,,Resultados Deudora 
+,6201010001,Guatemala N/A,,Total
+,6201010002,El Salvador N/A,,Total
+,6201010003,Honduras N/A,,Total
+,6201010004,Utilidad Cambiaria Intercompañia,,Resultados Acreedora 
+,6201020000,Utilidad Cambiaria No realizada,,Resultados Acreedora 
+,6202000000,INTERESES GANADOS,,Resultados Acreedora 
+,6202010000,Partes Relacionadas (Subsidiarias),,Total
+,6202010001,Guatemala,,Resultados Acreedora 
+,6202010002,El Salvador,,Resultados Acreedora 
+,6202010003,Honduras,,Resultados Acreedora 
+,6202010004,Maxi Realice,,Resultados Acreedora 
+,6202020000,Mexico,,Resultados Acreedora 
+,6202030000,Fideicomiso,,Resultados Acreedora 
+,7000000000,IMPUESTOS,,Total
+7000000000,7100000000,PROVISION,,Total
+,7101000000,IMPUESTOS,,Total
+,7101010000,Provision Impuesto ISR,,Resultados Deudora 
+,7101020000,ISR Diferido,,Resultados Deudora 
+,7101030000,IETU,,Resultados Deudora 
+,7101040000,Solidaridad,,Resultados Deudora 
+,7101050000,PTU,,Resultados Deudora 
+,7101060000,PTU Diferida,,Resultados Deudora 
+,8000000000,OPERACIONES DISCONTINUADAS,,Total
+8000000000,8100000000,Utilidad por Venta de Acciones,,Resultados Acreedora 
+,9000000000,CUENTAS DE ORDEN,,Resultados (No incluir)
+9000000000,9100000000,PARTES RELACIONADAS,,Resultados (No incluir)
+,9101000000,SUBSIDIARIAS MEXICO,,Resultados (No incluir)
+,9101010000,Maxi Prenda Mexico Deudora,,Resultados (No incluir)
+,9101020000,Maxi Prenda Mexico Acreedora,,Resultados (No incluir)
+,9101030000,Soluciones Prima Deudora,,Resultados (No incluir)
+,9101040000,Soluciones Prima Acreedora,,Resultados (No incluir)
+,9101050000,Maxi Realice Deudora,,Resultados (No incluir)
+,9101060000,Maxi Realice Acreedora,,Resultados (No incluir)
+,9101070000,Fideicomiso Deudora,,Resultados (No incluir)
+,9101080000,Fideicomiso Acreedora,,Resultados (No incluir)
+,9102000000,SUBSIDIARIAS CENTROAMERICA,,Resultados (No incluir)
+,9102010000,Maxi Prenda Guatemala Deudora,,Resultados (No incluir)
+,9102020000,Maxi Prenda Guatemala Acreedora,,Resultados (No incluir)
+,9102030000,Maxi Realice Guatemala Deudora,,Resultados (No incluir)
+,9102040000,Maxi Realice Guatemala Acreedora,,Resultados (No incluir)
+,9102050000,Soluciones Prima Guatemala Deudora,,Resultados (No incluir)
+,9102060000,Soluciones Prima Guatemala Acreedora,,Resultados (No incluir)
+,9102070000,Comercializadora Maxi Guatemala Deudora,,Resultados (No incluir)
+,9102080000,Comercializadora Maxi Guatemala Acreedora,,Resultados (No incluir)
+,9102090000,Soluciones Administrativas Guatemala Deudora,,Resultados (No incluir)
+,9102100000,Soluciones Administrativas Guatemala Acreedora,,Resultados (No incluir)
+,9102110000,Maxi Prenda El Salvador Deudora,,Resultados (No incluir)
+,9102120000,Maxi Prenda El Salvador Acreedora,,Resultados (No incluir)
+,9102130000,Maxi Prenda Honduras Deudora,,Resultados (No incluir)
+,9102140000,Maxi Prenda Honduras Acreedora,,Resultados (No incluir)
+,9103000000,IFR´S,,Resultados (No incluir)
+,9103010000,Adaptaciones y mejoras Deudora,,Resultados (No incluir)
+,9103020000,Adaptaciones y mejoras Acreedora,,Resultados (No incluir)
+,9103030000,Gastos de Instalación Deudora,,Resultados (No incluir)
+,9103040000,Gastos de Instalación Acreedora,,Resultados (No incluir)
+,9103050000,Sistemas de computo Deudora,,Resultados (No incluir)
+,9103060000,Sistemas de computo Acreedora,,Resultados (No incluir)
+,9103070000,Equipo de transporte (Reserva valor residual) Deudora,,Resultados (No incluir)
+,9103080000,Equipo de transporte (Reserva valor residual) Acreedora,,Resultados (No incluir)
+,9103090000,Amort. Acum. Adaptaciones y mejoras Deudora,,Resultados (No incluir)
+,9103100000,Amort. Acum. Adaptaciones y mejoras Acreedora,,Resultados (No incluir)
+,9103110000,Amort. Acum. Gastos de Instalación Deudora,,Resultados (No incluir)
+,9103120000,Amort. Acum. Gastos de Instalación Acreedora,,Resultados (No incluir)
+,9103130000,Dep. Acum. Sistemas de computo Deudora,,Resultados (No incluir)
+,9103140000,Dep. Acum. Sistemas de computo Acreedora,,Resultados (No incluir)
+,9103150000,Actualización de Mobiliario y Equipo Deudora,,Resultados (No incluir)
+,9103160000,Actualización de Mobiliario y Equipo Acreedora,,Resultados (No incluir)
+,9103170000,Actualización de Equipo de computo Deudora,,Resultados (No incluir)
+,9103180000,Actualización de Equipo de computo Acreedora,,Resultados (No incluir)
+,9103190000,Actualización de Equipo de almacen Deudora,,Resultados (No incluir)
+,9103200000,Actualización de Equipo de almacen Acreedora,,Resultados (No incluir)
+,9103210000,Actualización de Equipo de valuación Deudora,,Resultados (No incluir)
+,9103220000,Actualización de Equipo de valuación Acreedora,,Resultados (No incluir)
+,9103230000,Actualización de Equipo de seguridad Deudora,,Resultados (No incluir)
+,9103240000,Actualización de Equipo de seguridad Acreedora,,Resultados (No incluir)
+,9103250000,Actualización de Equipo de transporte Deudora,,Resultados (No incluir)
+,9103260000,Actualización de Equipo de transporte Acreedora,,Resultados (No incluir)
+,9103270000,Actualización de Gastos de instalación Deudora,,Resultados (No incluir)
+,9103280000,Actualización de Gastos de Instalación Acreedora,,Resultados (No incluir)
+,9103290000,Actualización de Adaptaciones y mejoras Deudora,,Resultados (No incluir)
+,9103300000,Actualización de Adaptaciones y mejoras Acreedora,,Resultados (No incluir)
+,9103310000,Actualización Dep. Mobiliario y Equipo Deudora,,Resultados (No incluir)
+,9103320000,Actualización Dep. Mobiliario y Equipo Acreedora,,Resultados (No incluir)
+,9103330000,Actualización Dep. Equipo de computo Deudora,,Resultados (No incluir)
+,9103340000,Actualización Dep. Equipo de computo Acreedora,,Resultados (No incluir)
+,9103350000,Actualización Dep. Equipo de almacen Deudora,,Resultados (No incluir)
+,9103360000,Actualización Dep. Equipo de almacen Acreedora,,Resultados (No incluir)
+,9103370000,Actualización Dep. Equipo de valuación Deudora,,Resultados (No incluir)
+,9103380000,Actualización Dep. Equipo de valuación Acreedora,,Resultados (No incluir)
+,9103390000,Actualización Dep. Equipo de seguridad Deudora,,Resultados (No incluir)
+,9103400000,Actualización Dep. Equipo de seguridad Acreedora,,Resultados (No incluir)
+,9103410000,Actualización Dep. Equipo de transporte Deudora,,Resultados (No incluir)
+,9103420000,Actualización Dep. Equipo de transporte Acreedora,,Resultados (No incluir)
+,9103430000,Actualización Amort. Gastos de instalación Deudora,,Resultados (No incluir)
+,9103440000,Actualización Amort. Gastos de Instalación Acreedora,,Resultados (No incluir)
+,9103450000,Actualización Amort. Adaptaciones y mejoras Deudora,,Resultados (No incluir)
+,9103460000,Actualización Amort. Adaptaciones y mejoras Acreedora,,Resultados (No incluir)
+,9103470000,Depositos en garantia Deudora,,Resultados (No incluir)
+,9103480000,Depositos en garantia Acreedora,,Resultados (No incluir)
+,9103490000,Rentas pagadas por anticipado Deudora,,Resultados (No incluir)
+,9103500000,Rentas pagadas por anticipado Acreedora,,Resultados (No incluir)
+,9103510000,"Provisión de fraudes, robos y siniestros Deudora",,Resultados (No incluir)
+,9103520000,"Provisión de fraudes, robos y siniestros Acreedora",,Resultados (No incluir)
+,9103530000,Demandas a ex empleados Deudora,,Resultados (No incluir)
+,9103540000,Demandas a ex empleados Acreedora,,Resultados (No incluir)
+,9103550000,Prendas en litigio Deudora,,Resultados (No incluir)
+,9103560000,Prendas en litigio Acreedora,,Resultados (No incluir)
+,9103570000,Gastos por Fideicomiso Deudora,,Resultados (No incluir)
+,9103580000,Gastos por Fideicomiso Acreedora,,Resultados (No incluir)
+,9103590000,Gastos de originación Deudora,,Resultados (No incluir)
+,9103600000,Gastos de originación Acreedora,,Resultados (No incluir)
+,9103610000,ISR Diferido Deudora,,Resultados (No incluir)
+,9103620000,ISR Diferido Acreedora,,Resultados (No incluir)
+,9103630000,IETU Diferido Deudora,,Resultados (No incluir)
+,9103640000,IETU Diferido Acreedora,,Resultados (No incluir)
+,9103650000,Interes devengado no cobrado Deudora,,Resultados (No incluir)
+,9103660000,Interes devengado no cobrado Acreedora,,Resultados (No incluir)
+,9103670000,Actualización del capital Deudora,,Resultados (No incluir)
+,9103680000,Actualización del capital Acreedora,,Resultados (No incluir)
+,9103690000,Actualización Exeso e insuficiencia en el capital Deudora,,Resultados (No incluir)
+,9103700000,Actualización Exeso e insuficiencia en el capital Acreedora,,Resultados (No incluir)
+,9103710000,Actualización del Resultado del ejercicio Deudora,,Resultados (No incluir)
+,9103720000,Actualización del Resultado del ejercicio Acreedora,,Resultados (No incluir)
+,9103730000,Efecto por conversión IFRS Deudora,,Resultados (No incluir)
+,9103740000,Efecto por conversión IFRS Acreedora,,Resultados (No incluir)
+,9104000000,CARTERA A PLAZOS,,Resultados (No incluir)
+,9104000001,Vigente,,Resultados (No incluir)
+,9104000002,Vencida 1 - 60,,Resultados (No incluir)
+,9104000003,Vencida 61 - 90,,Resultados (No incluir)
+,9104000004,Vencida > 90,,Resultados (No incluir)
+,9104000005,CREDITOS PRENDARIOS,,Resultados (No incluir)
+,9105000000,Cuenta Puente General,,Resultados (No incluir)
+9000000000,9800000001,Diferencias de Consolidacion,,Resultados (No incluir)
+9000000000,9800000002,Perdida o Ganancia de Cosolidacion,,Resultados (No incluir)
+9000000000,9999999991,Cargo de Intercompañia,,Resultados (No incluir)
+9000000000,9999999992,Abono de intercompañía,,Resultados (No incluir)
+9000000000,9999999993,Puente Dlls,,Resultados (No incluir)
+9000000000,9999999999,Saldos Iniciales,,Resultados (No incluir)
