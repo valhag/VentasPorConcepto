@@ -13,7 +13,7 @@ namespace VentasPorConcepto
     public partial class Form5 : Form
     {
 
-        Antiguedad y = new Antiguedad();
+        VentasSegmentoNegocio y = new VentasSegmentoNegocio();
         Antiguedad z = new Antiguedad();
 
 
