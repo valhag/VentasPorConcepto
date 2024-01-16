@@ -214,6 +214,7 @@
             // 
             // label3
             // 
+<<<<<<< HEAD
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(12, 45);
@@ -222,9 +223,19 @@
             this.label3.TabIndex = 57;
             this.label3.Text = "Fecha Final";
             this.label3.Click += new System.EventHandler(this.label3_Click);
+=======
+            this.button1.Location = new System.Drawing.Point(12, 134);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(749, 23);
+            this.button1.TabIndex = 37;
+            this.button1.Text = "Consultar Informacion";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+>>>>>>> 9a41ea45bd8e9002eb6a577c27983ff67c519b3f
             // 
             // dateTimePicker4
             // 
+<<<<<<< HEAD
             this.dateTimePicker4.CustomFormat = "dd/MM/yyyy";
             this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker4.Location = new System.Drawing.Point(118, 46);
@@ -232,9 +243,23 @@
             this.dateTimePicker4.Size = new System.Drawing.Size(85, 20);
             this.dateTimePicker4.TabIndex = 56;
             this.dateTimePicker4.Value = new System.DateTime(2018, 1, 20, 8, 9, 0, 0);
+=======
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 172);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(749, 313);
+            this.dataGridView1.TabIndex = 38;
+>>>>>>> 9a41ea45bd8e9002eb6a577c27983ff67c519b3f
             // 
             // label1
             // 
+<<<<<<< HEAD
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 16);
@@ -243,9 +268,19 @@
             this.label1.TabIndex = 55;
             this.label1.Text = "Fecha Inicial";
             this.label1.Click += new System.EventHandler(this.label1_Click);
+=======
+            this.button2.Location = new System.Drawing.Point(12, 492);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(749, 23);
+            this.button2.TabIndex = 39;
+            this.button2.Text = "Borrar Seleccionados";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+>>>>>>> 9a41ea45bd8e9002eb6a577c27983ff67c519b3f
             // 
             // dateTimePicker3
             // 
+<<<<<<< HEAD
             this.dateTimePicker3.CustomFormat = "dd/MM/yyyy";
             this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker3.Location = new System.Drawing.Point(118, 17);
@@ -497,11 +532,23 @@
             this.empresasComercial1.Name = "empresasComercial1";
             this.empresasComercial1.Size = new System.Drawing.Size(650, 54);
             this.empresasComercial1.TabIndex = 36;
+=======
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Location = new System.Drawing.Point(502, 86);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(93, 17);
+            this.checkBox1.TabIndex = 40;
+            this.checkBox1.Text = "Reporte Excel";
+            this.checkBox1.UseVisualStyleBackColor = true;
+>>>>>>> 9a41ea45bd8e9002eb6a577c27983ff67c519b3f
             // 
             // Remisiones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(767, 527);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.empresasComercial1);
@@ -509,6 +556,22 @@
             this.MinimizeBox = false;
             this.Name = "Remisiones";
             this.ShowIcon = false;
+=======
+            this.ClientSize = new System.Drawing.Size(773, 527);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.empresasComercial1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateTimePicker1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "Remisiones";
+>>>>>>> 9a41ea45bd8e9002eb6a577c27983ff67c519b3f
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Remisiones";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Remisiones_FormClosed);

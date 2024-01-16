@@ -67,12 +67,15 @@
     <Compile Include="AmecaInventarios.Designer.cs">
       <DependentUpon>AmecaInventarios.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Antiguedad.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Antiguedad.Designer.cs">
       <DependentUpon>Antiguedad.cs</DependentUpon>
     </Compile>
+=======
+>>>>>>> 9a41ea45bd8e9002eb6a577c27983ff67c519b3f
     <Compile Include="CapasComercial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Antiguedad.resx">
       <DependentUpon>Antiguedad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AmecaInventarios.resx">
+      <DependentUpon>AmecaInventarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CapasComercial.resx">
       <DependentUpon>CapasComercial.cs</DependentUpon>

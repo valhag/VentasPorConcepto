@@ -17,11 +17,16 @@ namespace VentasPorConcepto
         // Form1 y = new Form1();
         //FacturaPedidoComercial y = new FacturaPedidoComercial();
         //CapasComercial y = new CapasComercial();
+<<<<<<< HEAD
         //Remisiones y = new Remisiones();
 
         //NosSerieAmco y = new NosSerieAmco();
 
         Antiguedad y = new Antiguedad();
+=======
+
+        //AmecaConceptos z = new AmecaConceptos();
+>>>>>>> 9a41ea45bd8e9002eb6a577c27983ff67c519b3f
 
         //Form1 y = new Form1();
         //Gomar z = new Gomar();
@@ -36,11 +41,23 @@ namespace VentasPorConcepto
         //    y = new TLS();
         //    y = ay;
         //}
+<<<<<<< HEAD
 
+=======
+        //ReporteBase miForm = new ReporteBase();
+        
+>>>>>>> 9a41ea45bd8e9002eb6a577c27983ff67c519b3f
         public Form4()
         {
+            this.Visible = false;
             InitializeComponent();
         }
+
+        /*public Form4(Form x)
+        {
+            miForm = (ReporteBase)x;
+            InitializeComponent();
+        }*/
 
         private bool mValida()
         {
@@ -70,15 +87,25 @@ namespace VentasPorConcepto
                 Properties.Settings.Default.password = txtPass.Text;
 
                 Properties.Settings.Default.Save();
-
+                this.DialogResult = DialogResult.OK;
                 this.Close();
+<<<<<<< HEAD
                 this.DialogResult = DialogResult.OK;
                 y.Cadenaconexion = "data source =" + Properties.Settings.Default.server +
+=======
+                
+                
+                /*miForm.Cadenaconexion = "data source =" + Properties.Settings.Default.server +
+>>>>>>> 9a41ea45bd8e9002eb6a577c27983ff67c519b3f
                 ";initial catalog =" + Properties.Settings.Default.database + " ;user id = " + Properties.Settings.Default.user +
-                "; password = " + Properties.Settings.Default.password + ";";
+                "; password = " + Properties.Settings.Default.password + ";";*/
                 //y.mllenarcomboempresas();
+<<<<<<< HEAD
                 
                 y.Visible = true;
+=======
+                //this.Parent.Visible = true;
+>>>>>>> 9a41ea45bd8e9002eb6a577c27983ff67c519b3f
             }
             else
                 MessageBox.Show("Valores de conexion incorrectos");

@@ -1520,6 +1520,7 @@ Cheque"	Devoluciones
                 //else
                 //  ltotal1 += decimal.Parse(row["CPENDIENTE"].ToString().Trim());
 
+<<<<<<< HEAD
                 if (lultimofolio != long.Parse(row["CFOLIO"].ToString().Trim()))
                 {
 
@@ -1656,6 +1657,20 @@ Cheque"	Devoluciones
 
 
                 ltotal2 += decimal.Parse(row["ctotalmov"].ToString().Trim());*/
+=======
+                //sheet.Cells[lrenglon, lcolumna++].value = row["CFOLIO"].ToString().Trim();
+                sheet.Cells[lrenglon, lcolumna++].value = "'" + row["CCODIGOPRODUCTO"].ToString().Trim();
+                sheet.Cells[lrenglon, lcolumna++].value = row["CNOMBREPRODUCTO"].ToString().Trim(); //Serie Cargo
+
+                sheet.Cells[lrenglon, lcolumna++].value = row["CUNIDADES"].ToString().Trim();
+                //sheet.Cells[lrenglon, lcolumna].numberformat = "0.00";
+                sheet.Cells[lrenglon, lcolumna++].value = row["CNETO"].ToString().Trim(); //Serie Cargo
+                sheet.Cells[lrenglon, lcolumna++].value = row["CTOTAL"].ToString().Trim(); //Fecha Cargo
+                //sheet.Cells[lrenglon, lcolumna++].value = "'" + fecha2; //C
+                
+                sheet.get_Range("C" + lrenglon.ToString(), "C" + lrenglon.ToString()).Style = "Comma";
+                sheet.get_Range("D" + lrenglon.ToString(), "E" + lrenglon.ToString()).Style = "Currency";
+>>>>>>> 9a41ea45bd8e9002eb6a577c27983ff67c519b3f
 
                 lrenglon++;
 
@@ -1670,7 +1685,115 @@ Cheque"	Devoluciones
 
 
 
+<<<<<<< HEAD
         public void mReporteComisiones()
+=======
+        public void mReporteForrajeraComercial(string mEmpresa, DateTime lfechai, DateTime lfechaf)
+        {
+            MyExcel.Workbook newWorkbook = mIniciarExcel();
+            int lrenglon = 1;
+            int lrengloninicial = 1;
+            int lrengloniniciaconcepto = 1;
+            int lrenglontempo = 1;
+            MyExcel.Worksheet sheet = newWorkbook.Sheets[1];
+
+            configuracionencabezadoForrajeraComercial(sheet, mEmpresa, "REPORTE DE MOVIMIENTOS POR CONCEPTO POR PRODUCTO", lrenglon, lfechai, lfechaf);
+
+            //mResetearrTotales();
+
+            string lconcepto = "";
+
+
+            string lcliente = "";
+            //sheet.get_Range("B" + lrengloninicial, "V" + lrengloninicial).Borders[MyExcel.XlBordersIndex.xlEdgeBottom].LineStyle = 1;
+            int lmismoconcepto = 0;
+            lrenglon = 6;
+            lrengloniniciaconcepto = lrenglon;
+            decimal dos, tres;
+            int lcolumna;
+            string conceptoprevio="" ;
+            decimal lcantidad = 0;
+            decimal lcosto = 0;
+            decimal ltotal = 0;
+            foreach (DataRow row in DatosReporte.Rows)
+            {
+                //Fecha	# pedidos	cliente	importe	pendiente de facturar	# de factura	cliente	importe	Impuesto	Retención	Total
+                // Prog.	Fecha	Folio	Proveedor	Producto	"Cantidad Solicitada"	"Cantidad Pendiente"
+
+                lcolumna = 1;
+                string concepto = row["CNOMBRECONCEPTO"].ToString().Trim();
+                if (concepto != conceptoprevio)
+                {
+                    if (conceptoprevio != "")
+                    { 
+                        // totales
+
+                        sheet.Cells[lrenglon, 1].value = "Total del Concepto";
+                        sheet.Cells[lrenglon, 3].value = lcantidad;
+                        //sheet.Cells[lrenglon, lcolumna].numberformat = "0.00";
+                        sheet.Cells[lrenglon, 4].value = lcosto; //Serie Cargo
+                        sheet.Cells[lrenglon, 5].value = ltotal; //Fecha Cargo
+                        sheet.get_Range("C" + lrenglon.ToString(), "C" + lrenglon.ToString()).Style = "Comma";
+                        sheet.get_Range("D" + lrenglon.ToString(), "E" + lrenglon.ToString()).Style = "Currency";
+                        sheet.get_Range("A" + lrenglon.ToString(), "E" + lrenglon.ToString()).Font.Bold = true;
+                        lrenglon += 2;
+
+                    }
+                    // imprimir titulo de concepto
+                    sheet.Cells[++lrenglon, 1].value = "Concepto: " + concepto;
+
+                    sheet.get_Range("A" + lrenglon.ToString(), "A" + lrenglon.ToString()).Font.Bold = true;
+
+
+                    
+                    lrenglon +=2;
+                    conceptoprevio = concepto;
+                    lcantidad = 0;
+                    lcosto = 0;
+                    ltotal = 0;
+                }
+                //sheet.Cells[lrenglon, lcolumna++].value = lrenglon; //Folio Cargo
+                //DateTime dfecha = DateTime.Parse(row["cfecha"].ToString().Trim());
+
+                //DateTime dfechav = DateTime.Parse(row["CFECHAVENCIMIENTO"].ToString().Trim());
+                //string fecha2 = dfecha.Day.ToString().PadLeft(2, '0') + "/" + dfecha.Month.ToString().PadLeft(2, '0') + "/" + dfecha.Year.ToString().PadLeft(4, '0');
+                //string fechav = dfechav.Day.ToString().PadLeft(2, '0') + "/" + dfechav.Month.ToString().PadLeft(2, '0') + "/" + dfechav.Year.ToString().PadLeft(4, '0');
+
+
+                //sheet.Cells[lrenglon, lcolumna++].value = row["CFOLIO"].ToString().Trim();
+                sheet.Cells[lrenglon, lcolumna++].value = "'" + row["CCODIGOPRODUCTO"].ToString().Trim();
+                sheet.Cells[lrenglon, lcolumna++].value = row["CNOMBREPRODUCTO"].ToString().Trim(); //Serie Cargo
+
+                sheet.Cells[lrenglon, lcolumna++].value = row["cantidad"].ToString().Trim();
+                lcantidad += decimal.Parse(row["cantidad"].ToString().Trim());
+                //sheet.Cells[lrenglon, lcolumna].numberformat = "0.00";
+                sheet.Cells[lrenglon, lcolumna++].value = row["costo"].ToString().Trim(); //Serie Cargo
+                lcosto += decimal.Parse(row["costo"].ToString().Trim());
+
+                sheet.Cells[lrenglon, lcolumna++].value = row["TOTAL"].ToString().Trim(); //Fecha Cargo
+                ltotal += decimal.Parse(row["TOTAL"].ToString().Trim());
+                //sheet.Cells[lrenglon, lcolumna++].value = "'" + fecha2; //C
+
+                sheet.get_Range("C" + lrenglon.ToString(), "C" + lrenglon.ToString()).Style = "Comma";
+                sheet.get_Range("D" + lrenglon.ToString(), "E" + lrenglon.ToString()).Style = "Currency";
+
+                lrenglon++;
+
+
+            }
+            //sheet.Cells.EntireColumn.AutoFit();
+            sheet.get_Range("A" + lrenglon.ToString(), "A" + lrenglon.ToString()).EntireColumn.ColumnWidth = 25;
+            sheet.get_Range("B" + lrenglon.ToString(), "B" + lrenglon.ToString()).EntireColumn.ColumnWidth = 55;
+            sheet.get_Range("C" + lrenglon.ToString(), "C" + lrenglon.ToString()).EntireColumn.ColumnWidth = 20;
+            sheet.get_Range("D" + lrenglon.ToString(), "D" + lrenglon.ToString()).EntireColumn.ColumnWidth = 20;
+            sheet.get_Range("E" + lrenglon.ToString(), "E" + lrenglon.ToString()).EntireColumn.ColumnWidth = 20;
+            
+            return;
+        }
+
+
+        public void mReportePedidoFacturaComercial(string mEmpresa, DateTime lfechai, DateTime lfechaf)
+>>>>>>> 9a41ea45bd8e9002eb6a577c27983ff67c519b3f
         {
             MyExcel.Workbook newWorkbook = mIniciarExcel();
             int lrenglon = 1;
@@ -3221,7 +3344,45 @@ Cheque"	Devoluciones
              * */
         }
 
+<<<<<<< HEAD
         private int configuracionencabezadoCorteCaja(MyExcel.Worksheet sheet, string usuario, string fecha)
+=======
+
+
+        private void configuracionencabezadoForrajeraComercial(MyExcel.Worksheet sheet, string Empresa, string texto, int lrenglon, DateTime lfecha1, DateTime lfecha2)
+        {
+            int lcolumna = 1;
+           //EncabezadoEmpresa(sheet, Empresa, texto);
+
+            sheet.Cells[1,5].value = texto;
+            string fecha2 = lfecha1.Day.ToString().PadLeft(2, '0') + "/" + lfecha1.Month.ToString().PadLeft(2, '0') + "/" + lfecha1.Year.ToString().PadLeft(4, '0');
+            string fecha3 = lfecha2.Day.ToString().PadLeft(2, '0') + "/" + lfecha2.Month.ToString().PadLeft(2, '0') + "/" + lfecha2.Year.ToString().PadLeft(4, '0');
+
+            
+
+            sheet.Cells[2, 5].value = "Fecha del " + fecha2 + " al " + fecha3;
+
+
+            lrenglon += 4;
+            sheet.get_Range("A" + lrenglon.ToString(), "E" +
+            lrenglon.ToString()).Interior.Color = Color.Blue;
+
+            sheet.get_Range("A" + lrenglon.ToString(), "E" +
+            lrenglon.ToString()).Font.Color = Color.White;
+
+            sheet.Cells[lrenglon, lcolumna++].value = "Codigo Producto";
+            sheet.Cells[lrenglon, lcolumna++].value = "Nombre Producto";
+            sheet.Cells[lrenglon, lcolumna++].value = "Cantidad";
+            sheet.Cells[lrenglon, lcolumna++].value = "Costo Unitario";
+            sheet.Cells[lrenglon, lcolumna++].value = "Total";
+
+            sheet.get_Range("A" + lrenglon, "E" + lrenglon).Borders[MyExcel.XlBordersIndex.xlInsideHorizontal].LineStyle = 1;
+            sheet.get_Range("A" + lrenglon, "E" + lrenglon).Borders[MyExcel.XlBordersIndex.xlInsideVertical].LineStyle = 1;
+            sheet.get_Range("A" + lrenglon, "E" + lrenglon).Borders[MyExcel.XlBordersIndex.xlEdgeBottom].LineStyle = 1;
+            sheet.get_Range("A" + lrenglon, "E" + lrenglon).Borders[MyExcel.XlBordersIndex.xlEdgeTop].LineStyle = 1;
+        }
+        private void configuracionencabezadoRemisionesComercial(MyExcel.Worksheet sheet, string Empresa, string texto, int lrenglon, DateTime lfecha1, DateTime lfecha2)
+>>>>>>> 9a41ea45bd8e9002eb6a577c27983ff67c519b3f
         {
             int lcolumna = 1;
             int lrenglon = 1;
@@ -3362,6 +3523,11 @@ Cheque"	Devoluciones
 
             return lrenglon;
 
+            sheet.get_Range("A" + lrenglon.ToString(), "E" +
+            lrenglon.ToString()).Interior.Color = Color.Blue;
+
+            sheet.get_Range("A" + lrenglon.ToString(), "E" +
+            lrenglon.ToString()).Font.Color = Color.White;
 
 
 

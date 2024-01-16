@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\fromgithub\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\obj\Debug\VentasPorConcepto.csproj.ResolveComReference.cache
 C:\fromgithub\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\obj\Debug\VentasPorConcepto.csprojResolveAssemblyReference.cache
 C:\fromgithub\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\obj\Debug\VentasPorConcepto.Ajuste.resources
@@ -32,6 +33,9 @@ C:\fromgithub\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\VentasPorCon
 C:\fromgithub\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\bin\Debug\Remisiones.pdb
 C:\fromgithub\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\obj\Debug\Remisiones.exe
 C:\fromgithub\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\obj\Debug\Remisiones.pdb
+=======
+C:\fromgithub\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\obj\Debug\VentasPorConcepto.csprojResolveAssemblyReference.cache
+>>>>>>> 9a41ea45bd8e9002eb6a577c27983ff67c519b3f
 C:\fromgithub\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\obj\Debug\Interop.VBIDE.dll
 C:\fromgithub\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\obj\Debug\VentasPorConcepto.csproj.ResolveComReference.cache
 C:\fromgithub\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\obj\Debug\VentasPorConcepto.Ajuste.resources
@@ -48,7 +52,10 @@ C:\fromgithub\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\obj\Debug\Ve
 C:\fromgithub\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\obj\Debug\VentasPorConcepto.GridCatalogo.resources
 C:\fromgithub\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\obj\Debug\VentasPorConcepto.IEPScs.resources
 C:\fromgithub\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\obj\Debug\VentasPorConcepto.InventarioCapas.resources
+<<<<<<< HEAD
 C:\fromgithub\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\obj\Debug\VentasPorConcepto.NosSerieAmco.resources
+=======
+>>>>>>> 9a41ea45bd8e9002eb6a577c27983ff67c519b3f
 C:\fromgithub\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\obj\Debug\VentasPorConcepto.OC.resources
 C:\fromgithub\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\obj\Debug\VentasPorConcepto.Properties.Resources.resources
 C:\fromgithub\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\obj\Debug\VentasPorConcepto.Remisiones.resources
@@ -68,6 +75,7 @@ C:\fromgithub\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\bin\Debug\In
 C:\fromgithub\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\bin\Debug\LibreriaDoctos.pdb
 C:\fromgithub\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\obj\Debug\Remisiones.exe
 C:\fromgithub\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\obj\Debug\Remisiones.pdb
+<<<<<<< HEAD
 C:\fromgithub\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\bin\Debug\LibreriaDoctos.dll.config
 C:\fromgithub\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\obj\Debug\VentasPorConcepto.csproj.CopyComplete
 C:\fromgithub\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\obj\Debug\VentasPorConcepto.Antiguedad.resources
@@ -81,3 +89,5 @@ C:\fromgithub\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\obj\Debug\Ve
 C:\fromgithub\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\obj\Debug\VentasPorConcepto.csproj.CoreCompileInputs.cache
 C:\fromgithub\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\obj\Debug\VentasPorConcepto.VentasSegmentoNegocio.resources
 C:\fromgithub\VentasPorConcepto\VentasPorConcepto\VentasPorConcepto\obj\Debug\VentasPorConcepto.Form5.resources
+=======
+>>>>>>> 9a41ea45bd8e9002eb6a577c27983ff67c519b3f
